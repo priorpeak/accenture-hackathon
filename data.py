@@ -10,7 +10,7 @@ random.seed(datetime.now())
 n_cand = 1000
 n_role = 5000
 
-prof_fn = "profile_data.csv"
+prof_fn = "candidate_data.csv"
 proj_fn = "project_data.csv"
 
 wb = load_workbook(filename='Dataset.xlsx')
