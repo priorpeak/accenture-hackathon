@@ -55,8 +55,7 @@ with open(proj_fn, 'w+') as projects:
 	line = 'UID,'
 	for key in role_keys:
 		line += key + ','
-	line = line[:-1]
-	projects.write(line)
+	projects.write(line + 'Level')
 
 	for uid in range(n_role):
 		line = str(uid) + ','
@@ -76,7 +75,11 @@ with open(proj_fn, 'w+') as projects:
 			
 			line += str(elem) + ','
 
+		# add level range
+		lev = random.randint(2,11)
+		line += str(lev-1) + '-' + str(lev)
+
 		assert start_date < end_date
-		projects.write('\n' + line[:-1])
+		projects.write('\n' + line)
 
 
