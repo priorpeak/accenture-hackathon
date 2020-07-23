@@ -4,6 +4,20 @@ import turicreate as tc
 candidates = tc.SFrame.read_csv('Data Creation/Data/candidate_data.csv')
 projects = tc.SFrame.read_csv('Data Creation/Data/project_data.csv')
 
+# Choose model name and ratings
+def choose_model(*argv):
+	if '1' in argv[0]:
+		model_name = 'recommendations.model1'
+		ratings = tc.SFrame.read_csv('Data Creation/Data/model_data1.csv')
+	elif '2' in argv[0]:
+		model_name = 'recommendations.model2'
+		ratings = tc.SFrame.read_csv('Data Creation/Data/model_data2.csv')
+	else:
+		print("Please specify which model (1 or 2)")
+		quit()
+
+	return model_name, ratings
+
 # Pretty print a user object's relevant information (candidates)
 def user_string(user):
 	result = 'USER %4d:' % user['Candidate UID'][0]
@@ -24,6 +38,13 @@ def item_string(item):
 
 	return result
 
+# Print user and corresponding recommendations
+def print_recs(user, recs):
+	print('\n', user_string(user))
+	for rec in recs:
+		item = projects[projects['Project UID'] == rec['Project UID']]
+		print(item_string(item), '%.3f' % rec['score'])
+
 # Determines if a user has all the required skills of an item
 def contains_skills(user, item):
 	user_skills = set(str(user['Skills'][0]).split('/')) - {''}
@@ -37,18 +58,7 @@ def contains_skills(user, item):
 # Print recommendations for the first 10 users
 def print_test(*argv):
 	# Load model
-	model_name, ratings = None, None
-
-	if '1' in argv[0]:
-		model_name = 'recommendations.model1'
-		ratings = tc.SFrame.read_csv('Data Creation/Data/model_data1.csv')
-	elif '2' in argv[0]:
-		model_name = 'recommendations.model2'
-		ratings = tc.SFrame.read_csv('Data Creation/Data/model_data2.csv')
-	else:
-		print("Please specify which model (1 or 2)")
-		return
-	
+	model_name, ratings = choose_model(*argv)
 	model = tc.load_model(model_name)
 	training_data, validation_data = tc.recommender.util.random_split_by_user(ratings, 'Candidate UID', 'Project UID', max_num_users=200)
 
@@ -73,10 +83,21 @@ def print_test(*argv):
 		else:
 			recs = model.recommend(users=[str(u)])
 
-		print('\n', user_string(user))
-		for rec in recs:
-			item = projects[projects['Project UID'] == rec['Project UID']]
-			print(item_string(item), '%.3f' % rec['score'])
+		print_recs(user, recs)
+
+# Get recommendations for a specific user (UID can be int or string)
+def user_rec(user_uid, *argv):
+	# Load model
+	model_name, ratings = choose_model(*argv)
+	model = tc.load_model(model_name)
+
+	user = candidates[candidates['Candidate UID'] == int(user_uid)].unique()
+	recs = model.recommend(users=[str(user_uid)], exclude_known=False)
+
+	print_recs(user, recs)
 
 if __name__ == '__main__':
 	print_test(sys.argv[1:])
+	# user_rec(54, sys.argv[1:])
+
+
