@@ -6,7 +6,7 @@ projects = tc.SFrame.read_csv('Data Creation/Data/project_data.csv')
 
 # Pretty print a user object's relevant information (candidates)
 def user_string(user):
-	result = 'USER %d: ' % user['Candidate UID'][0]
+	result = 'USER %4d:' % user['Candidate UID'][0]
 
 	attr = ['Talent Segment', 'Level', 'Skills', 'Local Office', 'Local Preference']
 	for a in attr:
@@ -16,13 +16,23 @@ def user_string(user):
 
 # Pretty print an item object's relevant information (projects)
 def item_string(item):
-	result = '    ITEM %d:\t' % item['Project UID'][0]
+	result = '    ITEM %4d:' % item['Project UID'][0]
 
 	attr = ['Project Name', 'Level', 'Required Skills', 'Location', 'Local Requirement']
 	for a in attr:
 		result += ' ' + str(item[a][0])
 
 	return result
+
+# Determines if a user has all the required skills of an item
+def contains_skills(user, item):
+	user_skills = set(str(user['Skills'][0]).split('/')) - {''}
+	item_skills = set(str(item['Required Skills']).split('/')) - {''}
+
+	if item_skills.issubset(user_skills):
+		return True
+	
+	return False				
 
 # Print recommendations for the first 10 users
 def print_test(*argv):
@@ -49,15 +59,15 @@ def print_test(*argv):
 		
 		# Filter results by argument
 		if len(argv[0]) != 0:
-			items = projects['Project UID']
+			items = projects
 			if 'segment' in argv[0]:
 				segment = str(user['Talent Segment'][0]) + ' Project'
-				items = items[projects['Project Name'] == segment]
-			else:
-				# TODO: add other filters here
-				pass
+				items = items[items['Project Name'] == segment]
+			if 'skills' in argv[0]:
+				items = items[items.apply(lambda x: contains_skills(user, x))]
+			# TODO: add other filters here
 				
-			recs = model.recommend(users=[str(u)], items=items)
+			recs = model.recommend(users=[str(u)], items=items['Project UID'])
 
 		# Unfiltered results
 		else:
@@ -66,7 +76,7 @@ def print_test(*argv):
 		print('\n', user_string(user))
 		for rec in recs:
 			item = projects[projects['Project UID'] == rec['Project UID']]
-			print(item_string(item))
+			print(item_string(item), '%.3f' % rec['score'])
 
 if __name__ == '__main__':
 	print_test(sys.argv[1:])
