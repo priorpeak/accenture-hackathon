@@ -12,13 +12,16 @@ def choose_model(*argv):
 	elif '2' in argv[0]:
 		model_name = 'recommendations.model2'
 		ratings = tc.SFrame.read_csv('Data Creation/Data/model_data2.csv')
+	elif '3' in argv[0]:
+		model_name = 'recommendations.model3'
+		ratings = tc.SFrame.read_csv('Data Creation/Data/model_data2.csv')
 	else:
-		print("Please specify which model (1 or 2)")
+		print("Please specify which model (1, 2, 3)")
 		quit()
 
 	return model_name, ratings
 
-# Pretty print a user object's relevant information (candidates)
+# Stringify a user object's relevant information (candidates)
 def user_string(user):
 	result = 'USER %4d:' % user['Candidate UID'][0]
 
@@ -28,7 +31,7 @@ def user_string(user):
 
 	return result
 
-# Pretty print an item object's relevant information (projects)
+# Stringify an item object's relevant information (projects)
 def item_string(item):
 	result = '    ITEM %4d:' % item['Project UID'][0]
 

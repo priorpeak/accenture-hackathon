@@ -16,12 +16,15 @@ def make_model(*argv):
 	elif '2' in argv[0]:
 		model_name = 'recommendations.model2'
 		ratings = tc.SFrame.read_csv('Data Creation/Data/model_data2.csv')
+	elif '3' in argv[0]:
+		model_name = 'recommendations.model3'
+		ratings = tc.SFrame.read_csv('Data Creation/Data/model_data2.csv')		
 	else:
-		print("Please specify which model (1 or 2)")
+		print("Please specify which model (1, 2, 3)")
 		quit()
 	
 	training_data, validation_data = tc.recommender.util.random_split_by_user(ratings, 'Candidate UID', 'Project UID', max_num_users=200)
-	model = tc.factorization_recommender.create(training_data, \
+	model = tc.ranking_factorization_recommender.create(training_data, \
 												user_id='Candidate UID', \
 												item_id='Project UID', \
 												target='Rating', \
