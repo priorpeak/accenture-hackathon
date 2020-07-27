@@ -1,20 +1,20 @@
 import sys
 import turicreate as tc
 
-candidates = tc.SFrame.read_csv('Data Creation/Data/candidate_data.csv')
-projects = tc.SFrame.read_csv('Data Creation/Data/project_data.csv')
+candidates = tc.SFrame.read_csv('./Data Creation/Data/candidate_data.csv')
+projects = tc.SFrame.read_csv('./Data Creation/Data/project_data.csv')
 
 # Choose model name and ratings
 def choose_model(*argv):
 	if '1' in argv[0]:
-		model_name = 'recommendations.model1'
-		ratings = tc.SFrame.read_csv('Data Creation/Data/model_data1.csv')
+		model_name = './recommendations.model1'
+		ratings = tc.SFrame.read_csv('./Data Creation/Data/model_data1.csv')
 	elif '2' in argv[0]:
 		model_name = 'recommendations.model2'
-		ratings = tc.SFrame.read_csv('Data Creation/Data/model_data2.csv')
+		ratings = tc.SFrame.read_csv('./Data Creation/Data/model_data2.csv')
 	elif '3' in argv[0]:
 		model_name = 'recommendations.model3'
-		ratings = tc.SFrame.read_csv('Data Creation/Data/model_data2.csv')
+		ratings = tc.SFrame.read_csv('./Data Creation/Data/model_data2.csv')
 	else:
 		print("Please specify which model (1, 2, 3)")
 		quit()
