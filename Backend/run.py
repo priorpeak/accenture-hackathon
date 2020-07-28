@@ -117,6 +117,8 @@ def preferences_for_user(json_string):
 	# # TODO: Add column for service spec in projects data
 	# items = items[items['Service'] == service]
 
+	# TODO: Filter by start dates that occur after the user becomes free
+
 	# Deal with binary filters (skills and location)
 	if skills_filter:
 		items = items[items.apply(lambda x: contains_skills(user, x))]
@@ -160,7 +162,7 @@ def preferences_for_user(json_string):
 					'end_date': rec['End Date'][0].split(' ')[0], \
 					'client': rec['Client'][0], \
 					'name': rec['Project Name'][0], \
-					'skills': str(rec['Required Skills']).split('/')[:-1], \
+					'skills': str(rec['Required Skills'][0]).split('/')[:-1], \
 					'location': rec['Location'][0], \
 					'loc_requirement': rec['Local Requirement'][0]}
 
