@@ -6,6 +6,15 @@ import turicreate as tc
 
 ### HELPER FUNCTIONS ###
 
+def date_match(user, item):
+	'''
+	Determines if a user becomes free before the start date of the item
+	'''
+	date_free = datetime.fromisoformat(str(user['Coming Available'][0]))
+	start_date = datetime.fromisoformat(str(item['Start Date']))
+
+	return date_free < start_date
+
 def contains_skills(user, item):
 	'''
 	Determines if a user has all the required skills of an item
@@ -50,11 +59,12 @@ def preferences_for_user(json_string):
 			  "segment_filter": ["<SEGMENT_1>", "<SEGMENT_2>", ...],
 			  "skills_filter": <SKILLS_BOOL>,
 			  "level_filter": [<LOW_LVL>, <HIGH_LVL>],
-			  "location_filter": <LOCATION_BOOL>
+			  "location_filter": <LOCATION_BOOL>,
+			  "n": <NUM_RECS>
 			}'
 
 			- If a filter is not being applied, then the list for the filter will be empty (except
-			  the skills filter, which is a bool)
+			  the skills and location filters, which are bool values)
 			- Default filters when a filter is not specified are recorded in the function body below
 
 			- USER_UID (int): from range [0,999]
@@ -66,11 +76,12 @@ def preferences_for_user(json_string):
 				* LOW_LVL = HIGH_LVL if you only want to filter for one level
 				* No spec for LOW_LVL < HIGH_LVL or LOW_LVL > HIGH_LVL; will be handled in function
 			- LOCATION_BOOL (bool): true if looking for compliant locations, false otherwise
+			- NUM_RECS (int): number of recommendations wanted (if not specified, set to 10)
 
 	Returns:
 		JSON string in the format
 			'{"user": <USER_UID>,
-			  "projects": [0, 14, 135, 647],
+			  "projects": [0, 14, 135, 647, ...],
 			  "0": {
 					"start_date": "<DATE>",
 					"end_date": "<DATE>",
@@ -79,7 +90,11 @@ def preferences_for_user(json_string):
 					"skills": ["<SKILL_1>", "<SKILL_2>", ...],
 					"location": "<LOCATION>",
 					"loc_requirement": <LOC_REQ>
-			  }
+			  },
+			  "14": {
+					 ...,
+			  },
+			  ...
 			}'
 
 			- DATE (str): in the format '2020-01-31'
@@ -98,6 +113,10 @@ def preferences_for_user(json_string):
 	request = json.loads(json_string)
 	user_uid = int(request['user'])
 	service = str(request['service'])
+	if 'n' in request:
+		n = int(request['n'])
+	else:
+		n = 10 # Default to making 10 new recommendations
 
 	# Track any additional filters that were passed into the function
 	segment_filter = request['segment_filter']
@@ -116,16 +135,21 @@ def preferences_for_user(json_string):
 
 	# # TODO: Add column for service spec in projects data
 	# items = items[items['Service'] == service]
+	print("**", len(items))
 
-	# TODO: Filter by start dates that occur after the user becomes free
+	# Filter by start dates that occur after the user becomes free
+	items = items[items.apply(lambda x: date_match(user, x))]
+	print("***", len(items))
 
 	# Deal with binary filters (skills and location)
 	if skills_filter:
 		items = items[items.apply(lambda x: contains_skills(user, x))]
+		print("****", len(items))
 		# By default, apply no filter
 
 	if location_filter:
 		items = items[items.apply(lambda x: location_match(user, x))]
+		print("*****", len(items))
 		# By default, apply no filter
 
 	# Deal with talent segment filter
@@ -137,6 +161,7 @@ def preferences_for_user(json_string):
 		# By default, filter by the user's talent segment
 		project_name = str(user['Talent Segment'][0]) + ' Project'
 		items = items[items['Project Name'] == project_name]
+	print("******", len(items))
 
 	# Deal with level filter
 	if len(level_filter) > 0:
@@ -147,8 +172,9 @@ def preferences_for_user(json_string):
 		# By default, filter by the user's current level as greater and two higher as lesser
 		user_level = int(user['Level'][0])
 		items = items[items.apply(lambda x: in_range(user_level - 2, user_level, x))]
+	print("*******", len(items))
 
-	recs = model.recommend([user_uid], items=items['Project UID'])
+	recs = model.recommend([user_uid], items=items['Project UID'], k=n)
 
 	# Format response
 	response = {'user': user_uid}
@@ -166,6 +192,9 @@ def preferences_for_user(json_string):
 					'location': rec['Location'][0], \
 					'loc_requirement': rec['Local Requirement'][0]}
 
+		date_free = datetime.fromisoformat(str(user['Coming Available'][0]))
+		start_date = datetime.fromisoformat(str(rec['Start Date'][0]))
+
 		projects_list.append(project_uid)
 		response[key] = contents
 
@@ -177,10 +206,10 @@ def preferences_for_user(json_string):
 if __name__ == '__main__':
 	json_string = '{"user": 0,' + \
 			  '"service": "Technology",' + \
-			  '"segment_filter": ["Security", "Engineering"],' + \
+			  '"segment_filter": [],' + \
 			  '"skills_filter": true,' + \
 			  '"level_filter": [],' + \
-			  '"location_filter": true' + \
+			  '"location_filter": false' + \
 			'}'
 	print(preferences_for_user(json_string))
 

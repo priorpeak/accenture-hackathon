@@ -39,7 +39,6 @@ def item_string(item):
 	for a in attr:
 		result += ' ' + str(item[a][0])
 
-	print(item['Start Date'][0])
 	return result
 
 # Print user and corresponding recommendations
