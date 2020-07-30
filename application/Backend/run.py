@@ -1,8 +1,15 @@
 from datetime import datetime
 import json
+import pickle
 import turicreate as tc
 
+candidates = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/candidate_data.csv')
+projects = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/project_data.csv')
 
+model_name = './application/Backend/recommendations.model1'
+ratings = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/model_data1.csv')
+
+db_fn = './application/Backend/savedProjects'
 
 ### HELPER FUNCTIONS ###
 
@@ -42,9 +49,87 @@ def in_range(lesser, greater, item):
 
 	return lesser <= item_level + 1 and greater >= item_level
 
+def make_db():
+	'''
+	Make the pickled database.
+	'''
+	global db_fn
+
+	db = dict()
+	for i in range(1001):
+		db[str(i)] = set()
+	dbfile = open(db_fn, 'ab')
+
+	pickle.dump(db, dbfile)
+	dbfile.close()
+
 
 
 ### MAIN FUNCTIONS ###
+
+def store_project(user_uid, project_uid):
+	'''
+	Stores project as "saved" under user.
+	'''
+	global db_fn
+
+	dbfile = open(db_fn, 'rb')
+	db = pickle.load(dbfile)
+	dbfile.close()
+
+	dbfile = open(db_fn, 'wb')
+	
+	user = str(user_uid)
+	if user in db:
+		db[user].add(int(project_uid))
+	else:
+		db[user] = [int(project_uid)]
+
+	print(db)
+	pickle.dump(db, dbfile)
+	dbfile.close()
+
+def lookup_saved(user_uid):
+	'''
+	Looks up all saved projects of a user.
+	'''
+	global db_fn
+
+	with open(db_fn, 'rb') as dbfile:
+		db = pickle.load(dbfile)
+
+		return db[str(user_uid)]
+
+def saved_projects_information(user_uid):
+	'''
+	Takes in a user UID and returns information for each saved project for that user.
+	'''
+	global projects
+
+	project_uids = lookup_saved(user_uid)
+
+	def in_uids(item):
+		return item['Project UID'] in project_uids
+
+	items = projects[projects.apply(lambda x: in_uids(x))]
+	response = dict()
+
+	for item in items:
+		project_uid = int(item['Project UID'])
+		key = str(project_uid)
+
+		rec = projects[projects['Project UID'] == project_uid].unique()
+		contents = {'start_date': items['Start Date'][0].split(' ')[0], \
+					'end_date': items['End Date'][0].split(' ')[0], \
+					'client': items['Client'][0], \
+					'name': items['Project Name'][0], \
+					'skills': list(set(str(rec['Required Skills'][0]).split('/')[:-1])), \
+					'location': items['Location'][0], \
+					'loc_requirement': items['Local Requirement'][0]}
+
+		response[key] = contents
+
+	return response
 
 def preferences_for_user(json_string):
 	'''
@@ -102,11 +187,7 @@ def preferences_for_user(json_string):
 
 	'''
 	# Data variables
-	candidates = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/candidate_data.csv')
-	projects = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/project_data.csv')
-
-	model_name = './application/Backend/recommendations.model1'
-	ratings = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/model_data1.csv')
+	global candidates, projects, model_name, ratings
 
 
 	# Parse the JSON string and extract required information
@@ -188,12 +269,9 @@ def preferences_for_user(json_string):
 					'end_date': rec['End Date'][0].split(' ')[0], \
 					'client': rec['Client'][0], \
 					'name': rec['Project Name'][0], \
-					'skills': str(rec['Required Skills'][0]).split('/')[:-1], \
+					'skills': list(set(str(rec['Required Skills'][0]).split('/')[:-1])), \
 					'location': rec['Location'][0], \
 					'loc_requirement': rec['Local Requirement'][0]}
-
-		date_free = datetime.fromisoformat(str(user['Coming Available'][0]))
-		start_date = datetime.fromisoformat(str(rec['Start Date'][0]))
 
 		projects_list.append(project_uid)
 		response[key] = contents
@@ -211,5 +289,8 @@ if __name__ == '__main__':
 			  '"level_filter": [],' + \
 			  '"location_filter": false' + \
 			'}'
-	print(preferences_for_user(json_string))
-
+	# print(preferences_for_user(json_string))
+	# print(projects_information([4, 15]))
+	# store_project(1000, 14)
+	# store_project(1000, 19)
+	# print(saved_projects_information(1000))
