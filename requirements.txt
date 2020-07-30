@@ -6,3 +6,6 @@ click==7.1.2
 itsdangerous==1.1.0
 pip ==20.1.1
 setuptools==49.2.0
+turicreate==6.3
+datetime==4.3
+
