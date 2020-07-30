@@ -1,11 +1,10 @@
 import sys
 
 from flask import Flask, render_template, url_for, flash, redirect, jsonify, request
+from application import app
 
 sys.path.append('../')
 from Backend import run
-
-app = Flask(__name__)
 
 @app.route('/')
 @app.route('/home',methods=['GET','POST'])
@@ -28,7 +27,7 @@ def home():
     skills = []
     location = []
     loc_requirement = []
-    info = []
+
     for project in response['projects']:
         title_list.append(response[str(project)]['name'])
         start_date.append(response[str(project)]['start_date'])

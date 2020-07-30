@@ -63,9 +63,13 @@
 						<div id="box{{loop.index}}"> <!--one box container-->
 							
 							<div class="collapsible" data-toggle="collapse" href="#descrip{{loop.index}}">
-								<h4 class="projectTitle">{{name}}</h4>
-								<h3 class="service">{{client}}</h3>
-								//<h3 id="client">Client</h3>
+								<h4 class="projectTitle">{{name[i]}}</h4>
+								<h3 class="service" style="text-align:right;float:right;">services</h3>
+								<h3 id="client">{{client[i]}}</h3>
+								<h1 id="dates">{{start_date[i]}}-{{end_date[i]}}</h1>
+								<!--<h1 id="skills">{{skills}}</h1>
+								<h1 id="location">{{location}}</h1>
+								<h1 id="loc_req">{{loc_requirement}}</h1>-->
 
 
 							</div>
@@ -96,7 +100,7 @@
 								Project Description: words
 							</div>
 						</div> <!-- end of one box-->
-						{%endfor%}
+						{% endfor %}
 					</div> <!-- end of json replaced contents-->
 
 				</div> <!--end of available contents-->
@@ -157,8 +161,9 @@
 			}).done(function(data){
 				//console.log(data)
 				//$('div#info').html(data.tab)
-				//$('div#test').html(data.info)
-				console.log(data.info.user)
+				$('div#test').html(data.info)
+
+				console.log("endrequest")
 				//$('div#title_list').html(data.title_list)
 				$("#place_for_request").html(data);
 			});
@@ -237,7 +242,9 @@
 
 </script>
 <style>
-
+	h1 h2 h3 h4 h5 {
+		color:black;
+	}
 	.wrapper{
 		display: flex;
 		width: 100%;
@@ -297,16 +304,19 @@ a, a:hover, a:focus {
 	text-decoration: none;
 	transition: all 0.3s;
 }
-
+ 
 
 .collapsible {
-	background-color: #E5E7E9;
-    border: none;
-    color: white;
+    background-color: #fff;
+    border-top: 5px solid #a100ff;
+    border-left: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    /*color: white;*/
     cursor: pointer;
     padding: 10px;
     width: 500px;
-    height: 90px;
+    height: 120px;
     text-align: left;
     font: Graphik;
     font-size: 15px;
@@ -315,79 +325,173 @@ a, a:hover, a:focus {
     transition: 0.3s;
 }
 
+ 
+
 .collapsible .projectTitle {
-	font-family: 'Graphik';
-	font-weight: bold;
-	color: black;
+    font-family: 'Graphik';
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 30px;
 }
+
+ 
 
 .collapsible .service {
-	font-family: 'Graphik';
-	font-weight: normal;
-	color: black;
-
+    font-family: 'Graphik';
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+    float: left;
+    margin-top: 66px;
+    margin-left: -121px;
 }
+
+ 
+
+.collapsible .timeFrame {
+    font-family: 'Graphik';
+    font-weight: normal;
+    color: black;
+    font-size: 12px;
+    float: left;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 110px;
+}
+
+ 
+
+.collapsible .country {
+    font-family: 'Graphik';
+    font-weight: normal;
+    color: black;
+    font-size: 12px;
+    float: left;
+    margin-top: 7px;
+    margin-left: -121px;
+}
+
+ 
+
+.collapsible .divider {
+    background: #d9d9d9;
+    width: 2px;
+    height: 20px;
+    float: left;
+    margin-top: 5px;
+    margin-left: -80px;
+}
+
+ 
+
+.collapsible .location {
+    font-family: 'Graphik';
+    font-weight: normal;
+    color: black;
+    font-size: 12px;
+    float: left;
+    margin-top: 7px;
+    margin-left: -62px;
+}
+
+ 
 
 .collapsible:hover {
-	background-color: #555;
+    background-color: #e4e4e4;
 }
 
+ 
+
 .content {
-	padding: 0 18px;
-	margin-left: 20px;
-	width: 500px;
-	display: none;
-	overflow: hidden;
-	background-color: #f1f1f1;
+    padding: 0 15px;
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 500px;
+    display: none;
+    background-color: #fff;
+    border-left: #e4e4e4;
 }
+
+ 
 
 /*---Save Button---*/
 .save {
-	background: none;
+    background: none;
     border: none;
     outline: none;
     width: 0px;
     height: 0px;
     position: absolute;
-	margin-left: 445px;
-	margin-top: -88px;
+    margin-left: 447px;
+    margin-top: -85px;
 }
 
+ 
+
 .save .bi-bookmark-fill {
-  	display: none;
+      display: none;
 }
+
+ 
 
 .save:hover .bi-bookmark,
 .save:active .bi-bookmark{
-  	display: none;
+      display: none;
 }
+
+ 
 
 .save:hover .bi-bookmark-fill,
 .save:active .bi-bookmark-fill{
-  	display: block;
+      display: block;
 }
+
+ 
 
 /*---Trash Button---*/
 .trash {
-	background: none;
+    background: none;
     border: none;
     outline: none;
     position: absolute;
-	margin-left: 475px;
-	margin-top: -88px;
+    margin-left: 475px;
+    margin-top: -85px;
 }
+
+ 
 
 .trash .bi-trash-fill {
   display: none;
 }
+
+ 
 
 .trash:hover .bi-trash,
 .trash:active .bi-trash {
   display: none;
 }
 
+ 
+
 .trash:hover .bi-trash-fill,
 .trash:active .bi-trash-fill {
-  	display: block;
+      display: block;
 }
+
+ 
+
+
 </style>
+<html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
+                <script type="text/javascript">
+                 var gearPage = document.getElementById('GearPage');
+                 if(null != gearPage)
+                 {
+                     gearPage.parentNode.removeChild(gearPage);
+                     document.title = "Error";
+                 }
+                 </script>
+                 </html>
