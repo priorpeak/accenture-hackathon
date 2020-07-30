@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Icon CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!--<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/home.css') }}">-->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+
+<body>
+
+	<div class = "wrapper">
+		
+		<nav id="sidebar">
+			<div class="sidebar-header">
+
+				<a class="navbar-brand" href="/home">
+					<img id = "logo" src="{{ url_for('static',filename='pictures/accenturelogo.jpg')}}" width="200" height="auto" alt="">
+				</a>
+
+			</div> <!-- end of sidebar header-->
+
+			<ul class="list-unstyled components nav-tabs">
+				<li id="tab-1" >
+					<a href="#one" aria-controls="one" role="tab" data-toggle="tab">Technology</a>
+				</li>
+				<li id="tab-2" >
+					<a  href="#two" aria-controls="two" role="tab" data-toggle="tab">Strategy</a>
+				</li>
+				<li id="tab-3" >
+					<a href="#three" aria-controls="three" role="tab" data-toggle="tab">Interactive</a>
+				</li>
+				<li id="tab-4">
+					<a href="#four" aria-controls="four" role="tab" data-toggle="tab">Operations</a>
+				</li>
+
+			</ul> <!-- end of side bar lists-->
+		</nav>
+		<div> <!-- link top tabs and content-->
+			<nav>
+				<div class="nav nav-tabs" id="nav-tab" role="tablist">
+					<a class="nav-item nav-link active" id="nav-available-tab" data-toggle="tab" href="#nav-available" role="tab" aria-controls="nav-available" aria-selected="true">Available Projects</a>
+					<a class=" nav-item nav-link" id="nav-saved-tab" data-toggle="tab" href="#nav-saved" role="tab" aria-controls="nav-saved" aria-selected="false">Saved Projects</a>
+				</div>
+			</nav> <!--end of top tabs-->
+
+			<div class="tab-content" id="nav-TabContent">
+				<div class="tab-pane fade show active" id="nav-available" role="tabpanel" aria-labelledby="nav-available-tab">
+					<div class="container" id="place_for_request" >
+						<div id="#test">
+						</div>
+						<!-- Place contents here -->
+						{%for i in range(0,len)%}
+						
+						<div id="box{{loop.index}}"> <!--one box container-->
+							
+							<div class="collapsible" data-toggle="collapse" href="#descrip{{loop.index}}">
+								<h4 class="projectTitle">{{name}}</h4>
+								<h3 class="service">{{client}}</h3>
+								//<h3 id="client">Client</h3>
+
+
+							</div>
+							<!---Save Button--->
+							<button type="button" class="save" style="outline:none;">
+								<!---Empty save button--->
+								<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark" fill="black" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M8 12l5 3V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V3a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10.234z"/>
+								</svg>
+								<!---Filled save button--->
+								<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12l-5-3-5 3V3z"/>
+								</svg>
+							</button>
+							<!---Trash Button--->
+							<button type="button" class="trash" onclick="deleteFunction(this, {{loop.index}})" style="outline:none;">
+								<!---Empty trash button--->
+								<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+									<path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+								</svg>
+								<!---Filled trash button--->
+								<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" 	>
+									<path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+								</svg>
+							</button>
+							<div class="collapse" id = "descrip{{loop.index}}">
+								Project Description: words
+							</div>
+						</div> <!-- end of one box-->
+						{%endfor%}
+					</div> <!-- end of json replaced contents-->
+
+				</div> <!--end of available contents-->
+				<div class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab">
+					<div class="container">
+						<!-- Place contents here -->
+						saved stuff
+					</div>
+				</div> <!--end of saved contents-->
+			</div> <!-- end of tab contents-->
+
+
+		</div><!-- end of link top tabs and content-->
+	</div> <!-- end of wrapper-->
+
+
+</body>
+
+
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+	/*
+	function savedTabFunction(){
+		console.log('hellosaved')
+		$('#saved').addClass('active show')
+		$('#available').removeClass('active show')
+	}
+	function availableTabFunction(){
+		console.log('hello')
+		$('#saved').removeClass('active show')
+		$('#available').addClass('active show')
+	}*/
+
+
+	$('[id*="tab-"]').click(function (e) {
+		e.preventDefault()
+		//console.log(e);
+		
+		var tab_id = this.id
+		console.log($('.available-tab'))
+		$('#nav-saved-tab').removeClass('active')
+		$('#nav-available-tab').addClass('active')
+		$('#nav-saved').removeClass('active show')
+		$('#nav-available').addClass('active show')
+		$("document").ready(function(){
+
+
+			$.ajax({
+				url:"/project_info",
+				type:"POST",
+				contentType: 'application/json;charset=UTF-8',
+				data: JSON.stringify({"categorytab":tab_id})
+			}).done(function(data){
+				//console.log(data)
+				//$('div#info').html(data.tab)
+				//$('div#test').html(data.info)
+				console.log(data.info.user)
+				//$('div#title_list').html(data.title_list)
+				$("#place_for_request").html(data);
+			});
+		});
+
+		$(this).tab('show')
+
+		if(this.id=="tab-1"){
+			//$('body').css('background', '#00d700');
+			//linear-gradient(90deg, rgba(186,196,250,0.8412407199207808) 27%, rgba(98,195,241,0.47429394120929624) 62%, rgba(255,255,255,0.6171510840664391) 97%)');
+		}
+		else if(this.id=="tab-2"){
+			//$('body').css('background', '#ff3c10');
+		}
+		else if(this.id=="tab-3"){
+			//$('body').css('background', '#01b9ff');
+		}
+		else if(this.id=="tab-4"){
+			//$('body').css('background', '#be00fe');
+		}
+
+		else if(this.id=="tab-5"){
+			//$('body').css('background', '#ffd42e');
+		}
+
+
+	});
+	
+
+	function deleteFunction(el, num){
+
+		/*
+		var largename = "large" + el
+		var smallname = "descrip" + el
+
+		document.getElementById(largename).style.transition = "opacity "+seconds+"s ease";
+		document.getElementById(largename).style.opacity = 0;
+		document.getElementById(smallname).style.transition = "opacity "+seconds+"s ease";
+		document.getElementById(smallname).style.opacity = 0;
+		setTimeout(function() {
+			document.getElementById(largename).remove();
+			document.getElementById(smallname).remove();
+		}, 1000);*/
+		
+		//console.log(document.getElementById(name));
+		
+		//console.log($(el).parentNode.nextElementSibling());
+		//$(el).parent('div').nextElementSibling.remove();
+		el.parentNode.style.transition = "opacity "+1+"s ease";
+
+		$("#box5").animate({top: "+=100px"});
+		console.log($("#box1"));
+		el.parentNode.style.opacity = 0;
+		var next = el.parentNode.nextElementSibling;
+		setTimeout(function() {
+			while (next != null)
+			{
+			//move up
+			
+
+			console.log(next.offsetTop);
+			console.log(next.getBoundingClientRect());
+			next = next.nextElementSibling;
+			
+			}
+			setTimeout(function() {
+				el.parentNode.remove();
+			}, 100);
+   }, 1000);
+		
+
+		
+		
+	}
+
+
+</script>
+<style>
+
+	.wrapper{
+		display: flex;
+		width: 100%;
+		align-items:stretch;
+
+	}
+
+
+	#sidebar{
+		min-width: 250px;
+		max-width: 250px;
+		min-height: 100vh;
+		background: #7386D5;
+		color: #fff;
+		/*transition: all 0.3s;*/
+	}
+	#sidebar .sidebar-header {
+		padding: 20px;
+		background: #6d7fcc;
+	}
+/*
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+    }*/
+
+    #sidebar ul p {
+    	color: #fff;
+    	padding: 10px;
+    }
+
+    #sidebar ul li a {
+    	padding: 10px;
+    	font-size: 1.1em;
+    	display: block;
+    }
+    #sidebar ul li a:hover {
+    	color: #7386D5;
+    	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%);
+    }
+
+    body {
+    	font-family: 'Poppins', sans-serif;
+	/*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 15%, rgba(0,212,255,1) 100%);
+*/}
+
+p {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.1em;
+	font-weight: 300;
+	line-height: 1.7em;
+	color: #999;
+}
+
+a, a:hover, a:focus {
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+
+.collapsible {
+	background-color: #E5E7E9;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 500px;
+    height: 90px;
+    text-align: left;
+    font: Graphik;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.collapsible .projectTitle {
+	font-family: 'Graphik';
+	font-weight: bold;
+	color: black;
+}
+
+.collapsible .service {
+	font-family: 'Graphik';
+	font-weight: normal;
+	color: black;
+
+}
+
+.collapsible:hover {
+	background-color: #555;
+}
+
+.content {
+	padding: 0 18px;
+	margin-left: 20px;
+	width: 500px;
+	display: none;
+	overflow: hidden;
+	background-color: #f1f1f1;
+}
+
+/*---Save Button---*/
+.save {
+	background: none;
+    border: none;
+    outline: none;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+	margin-left: 445px;
+	margin-top: -88px;
+}
+
+.save .bi-bookmark-fill {
+  	display: none;
+}
+
+.save:hover .bi-bookmark,
+.save:active .bi-bookmark{
+  	display: none;
+}
+
+.save:hover .bi-bookmark-fill,
+.save:active .bi-bookmark-fill{
+  	display: block;
+}
+
+/*---Trash Button---*/
+.trash {
+	background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+	margin-left: 475px;
+	margin-top: -88px;
+}
+
+.trash .bi-trash-fill {
+  display: none;
+}
+
+.trash:hover .bi-trash,
+.trash:active .bi-trash {
+  display: none;
+}
+
+.trash:hover .bi-trash-fill,
+.trash:active .bi-trash-fill {
+  	display: block;
+}
+</style>

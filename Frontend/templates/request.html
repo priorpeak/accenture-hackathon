@@ -1,0 +1,17 @@
+<!-- Place contents here -->
+{{info}}
+<tr class="even"><td>{{keys}}</td><td>{{keys2}}</td></tr>
+
+ {% endfor %}
+{%for i in range(0,len)%}
+
+<div class="collapsible" onclick="clickedcollapse()">
+	<div class="projectTitle">{{title_list[i]}}</div>
+	<div class="service">Service</div>
+	<button type="button" id="savebutton">Save</button>
+	<button type="button" id="deletebutton">Delete</button>
+</div>
+<div class="content">
+	<p>Project Description: words</p>
+</div>
+{%endfor%}
