@@ -1,11 +1,9 @@
 import sys
 
 from flask import Flask, render_template, url_for, flash, redirect, jsonify, request
+from application.Backend import run
 
-sys.path.append('../')
-from Backend import run
-
-app = Flask(__name__)
+from application import app
 
 @app.route('/')
 @app.route('/home',methods=['GET','POST'])

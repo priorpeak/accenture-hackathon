@@ -102,11 +102,11 @@ def preferences_for_user(json_string):
 
 	'''
 	# Data variables
-	candidates = tc.SFrame.read_csv('./Data Creation/Data/candidate_data.csv')
-	projects = tc.SFrame.read_csv('./Data Creation/Data/project_data.csv')
+	candidates = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/candidate_data.csv')
+	projects = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/project_data.csv')
 
-	model_name = 'recommendations.model1'
-	ratings = tc.SFrame.read_csv('./Data Creation/Data/model_data1.csv')
+	model_name = './application/Backend/recommendations.model1'
+	ratings = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/model_data1.csv')
 
 
 	# Parse the JSON string and extract required information
