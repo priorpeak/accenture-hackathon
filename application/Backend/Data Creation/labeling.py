@@ -4,12 +4,15 @@ import random
 
 random.seed(datetime.now())
 
-candidates_df = pd.read_csv("Data/candidate_data.csv", header=0)
-projects_df = pd.read_csv("Data/project_data.csv", header=0)
+candidates_df = pd.read_csv("Data/candidate_data_new.csv", header=0)
+projects_df = pd.read_csv("Data/project_data_new.csv", header=0)
 
 # Determine if a project is a good match for a candidate (returns True, False)
 def calc_match(candidate, project):
 	probabilistic = {"Talent": False, "Skills": False, "Location": False, "Level": False}
+
+	# SERVICE
+	service = candidate.get("Service") == project.get("Service")
 
 	# TALENT SEGMENT
 	talent_match = candidate.get("Talent Segment") in project.get("Project Name")
@@ -56,10 +59,10 @@ def calc_match(candidate, project):
 		level_match = random.random() < 0.25
 		probabilistic["Level"] = True
 
-	return talent_match and skills_match and location_match and level_match, probabilistic
+	return service and talent_match and skills_match and location_match and level_match, probabilistic
 
 # Create csv file where rows are candidates and columns are projects (0 = no match, 1 = match)
-with open("Data/labeled_data.csv", "w+") as ld:
+with open("Data/labeled_data_new.csv", "w+") as ld:
 	for c in candidates_df.iterrows():
 		cand = c[1]
 		elems = []

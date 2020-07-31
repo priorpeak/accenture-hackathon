@@ -1,6 +1,6 @@
 # Create a csv file of candidate-project ratings in the format necessary for the model
-with open("Data/labeled_data.csv", "r") as ld:
-	with open("Data/model_data.csv", "w+") as md:
+with open("Data/labeled_data_new.csv", "r") as ld:
+	with open("Data/model_data_new.csv", "w+") as md:
 		header = "Candidate UID, Project UID, Rating"
 		md.write(header)
 		cand_uid = 0

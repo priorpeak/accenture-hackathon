@@ -1,0 +1,1001 @@
+Candidate UID,Service,Talent Segment,Level,Skills,Coming Available,Local Office,Local Preference
+0,Technology,Security,7,PowerPoint/Java/Excel/Excel/,2020-02-01 00:00:00,NYC,No
+1,Technology,Design,3,PowerPoint/,2020-08-01 00:00:00,Chicago,Yes
+2,Interactive,Security,3,Java/,2020-05-01 00:00:00,DC,Yes
+3,Operations,Finance,8,SAP/SAP/,2020-05-01 00:00:00,DC,No
+4,Interactive,Business,6,Salesforce/PowerPoint/,2020-02-01 00:00:00,NYC,No
+5,Technology,Human Resources,8,PowerPoint/Excel/PowerPoint/,2020-05-01 00:00:00,DC,No
+6,Technology,Finance,10,Excel/PowerPoint/PowerPoint/,2020-11-01 00:00:00,Boston,No
+7,Strategy & Consulting,Engineering,1,MATLAB/Excel/,2020-04-01 00:00:00,Boston,No
+8,Strategy & Consulting,Security,3,Oracle/ML/Java/Java/,2020-01-01 00:00:00,Denver,No
+9,Interactive,Legal,8,Excel/Excel/Bar/,2020-02-01 00:00:00,Chicago,Yes
+10,Strategy & Consulting,Security,5,Excel/Oracle/PowerPoint/,2020-10-01 00:00:00,DC,No
+11,Interactive,Legal,7,PowerPoint/Oral communication/Excel/,2020-03-01 00:00:00,Chicago,No
+12,Operations,Finance,4,SAP/QuickBooks/SAP/,2020-02-01 00:00:00,Boston,No
+13,Operations,Human Resources,4,Workday/Excel/,2020-01-01 00:00:00,Boston,No
+14,Strategy & Consulting,Strategy,10,PowerPoint/,2020-07-01 00:00:00,Boston,No
+15,Operations,Design,5,Excel/PhotoShop/React.js/,2020-04-01 00:00:00,Chicago,Yes
+16,Operations,Security,2,PowerPoint/Excel/Excel/,2020-04-01 00:00:00,Boston,No
+17,Technology,Strategy,1,Critical thinking/PowerPoint/,2020-08-01 00:00:00,Boston,Yes
+18,Operations,Account Leadership,7,Excel/ML/Leadership/ML/,2020-06-01 00:00:00,Chicago,No
+19,Interactive,Engineering,3,Java/Excel/Python/,2020-01-01 00:00:00,Boston,No
+20,Interactive,Security,10,Python/,2020-12-01 00:00:00,Chicago,Yes
+21,Interactive,Account Leadership,2,ML/Cloud/,2020-12-01 00:00:00,Boston,No
+22,Strategy & Consulting,Human Resources,8,Oral communication/Workday/,2020-06-01 00:00:00,DC,No
+23,Strategy & Consulting,Engineering,10,PowerPoint/Python/Excel/,2020-05-01 00:00:00,Denver,No
+24,Technology,IT Operations,2,Oracle/ML/Java/Python/,2020-06-01 00:00:00,Denver,No
+25,Operations,IT Operations,1,Oracle/Java/Cloud/,2020-07-01 00:00:00,Boston,Yes
+26,Strategy & Consulting,Security,4,Excel/ML/Java/,2020-05-01 00:00:00,Denver,Yes
+27,Interactive,Human Resources,3,PowerPoint/PowerPoint/Excel/,2020-02-01 00:00:00,Denver,No
+28,Interactive,IT Operations,1,Cloud/,2020-01-01 00:00:00,Chicago,No
+29,Technology,Engineering,8,Java/MATLAB/Python/MATLAB/,2020-06-01 00:00:00,DC,No
+30,Technology,Design,8,Excel/,2020-02-01 00:00:00,NYC,Yes
+31,Interactive,Finance,5,QuickBooks/SAP/,2020-10-01 00:00:00,Boston,No
+32,Interactive,Account Leadership,11,Excel/Leadership/Oral communication/,2020-01-01 00:00:00,Denver,Yes
+33,Operations,Legal,2,PowerPoint/Excel/,2020-05-01 00:00:00,DC,Yes
+34,Operations,Human Resources,9,Excel/Oral communication/PowerPoint/Excel/,2020-02-01 00:00:00,DC,No
+35,Strategy & Consulting,IT Operations,10,ML/Python/Oracle/,2020-01-01 00:00:00,NYC,Yes
+36,Strategy & Consulting,Business,1,PowerPoint/PowerPoint/Salesforce/,2020-03-01 00:00:00,NYC,No
+37,Operations,Design,3,PhotoShop/PhotoShop/Adobe/,2020-02-01 00:00:00,Denver,Yes
+38,Interactive,Design,8,Excel/PhotoShop/PowerPoint/,2020-11-01 00:00:00,Boston,Yes
+39,Technology,Finance,4,QuickBooks/QuickBooks/Excel/QuickBooks/,2020-10-01 00:00:00,Denver,No
+40,Technology,Design,4,Adobe/Adobe/PowerPoint/PhotoShop/,2020-08-01 00:00:00,Chicago,Yes
+41,Operations,Human Resources,5,PowerPoint/PowerPoint/Workday/Oral communication/,2020-08-01 00:00:00,DC,Yes
+42,Interactive,IT Operations,3,Java/Oracle/,2020-10-01 00:00:00,NYC,Yes
+43,Technology,Design,11,PowerPoint/PhotoShop/React.js/,2020-02-01 00:00:00,NYC,Yes
+44,Operations,IT Operations,9,ML/Python/,2020-01-01 00:00:00,Chicago,No
+45,Operations,Account Leadership,3,Oral communication/Oral communication/,2020-03-01 00:00:00,Boston,Yes
+46,Technology,Design,11,Adobe/,2020-12-01 00:00:00,Chicago,No
+47,Strategy & Consulting,Security,8,Python/Java/Excel/,2020-12-01 00:00:00,DC,Yes
+48,Operations,Engineering,9,MATLAB/,2020-03-01 00:00:00,Chicago,No
+49,Technology,Engineering,11,Java/Excel/Excel/,2020-01-01 00:00:00,Denver,Yes
+50,Operations,Strategy,6,Excel/,2020-07-01 00:00:00,Chicago,Yes
+51,Strategy & Consulting,IT Operations,4,ML/,2020-10-01 00:00:00,Boston,No
+52,Strategy & Consulting,Human Resources,8,Oral communication/Oral communication/,2020-02-01 00:00:00,NYC,No
+53,Interactive,Human Resources,4,PowerPoint/,2020-12-01 00:00:00,Chicago,No
+54,Operations,Account Leadership,5,Oral communication/PowerPoint/ML/,2020-11-01 00:00:00,Chicago,No
+55,Operations,Design,4,Excel/Excel/,2020-08-01 00:00:00,NYC,Yes
+56,Technology,IT Operations,2,Cloud/,2020-04-01 00:00:00,NYC,Yes
+57,Strategy & Consulting,Design,8,Adobe/Adobe/,2020-06-01 00:00:00,DC,No
+58,Technology,Finance,11,PowerPoint/,2020-03-01 00:00:00,Chicago,Yes
+59,Strategy & Consulting,Design,6,React.js/PhotoShop/,2020-05-01 00:00:00,DC,No
+60,Operations,IT Operations,1,Oracle/ML/,2020-12-01 00:00:00,Denver,Yes
+61,Technology,Strategy,9,PowerPoint/,2020-02-01 00:00:00,Denver,No
+62,Strategy & Consulting,Account Leadership,10,Oral communication/Excel/ML/,2020-04-01 00:00:00,NYC,Yes
+63,Interactive,Account Leadership,4,PowerPoint/,2020-01-01 00:00:00,Denver,No
+64,Technology,Engineering,7,Excel/Excel/Excel/Java/,2020-01-01 00:00:00,Denver,Yes
+65,Technology,IT Operations,4,Python/,2020-09-01 00:00:00,Denver,Yes
+66,Operations,Strategy,6,Excel/Critical thinking/Critical thinking/Excel/,2020-01-01 00:00:00,NYC,No
+67,Interactive,Security,10,Cloud/Cloud/,2020-05-01 00:00:00,Boston,No
+68,Technology,IT Operations,7,Cloud/Excel/PowerPoint/,2020-04-01 00:00:00,Boston,No
+69,Interactive,Account Leadership,6,Oral communication/Oral communication/,2020-08-01 00:00:00,Chicago,No
+70,Operations,Security,4,ML/,2020-11-01 00:00:00,DC,No
+71,Technology,Strategy,8,PowerPoint/Excel/,2020-11-01 00:00:00,NYC,No
+72,Interactive,Business,10,Salesforce/,2020-05-01 00:00:00,NYC,No
+73,Operations,Design,2,PowerPoint/PhotoShop/Excel/,2020-11-01 00:00:00,Boston,No
+74,Strategy & Consulting,Human Resources,7,Excel/PowerPoint/Excel/Excel/,2020-02-01 00:00:00,Chicago,No
+75,Strategy & Consulting,Business,5,PowerPoint/PowerPoint/,2020-01-01 00:00:00,Boston,No
+76,Operations,Security,3,Cloud/,2020-11-01 00:00:00,Denver,No
+77,Technology,Engineering,6,PowerPoint/Python/MATLAB/Java/,2020-09-01 00:00:00,NYC,Yes
+78,Strategy & Consulting,Design,10,PhotoShop/PhotoShop/,2020-02-01 00:00:00,Denver,Yes
+79,Interactive,Strategy,6,Excel/PowerPoint/,2020-06-01 00:00:00,DC,No
+80,Operations,Legal,3,Oral communication/PowerPoint/Excel/,2020-10-01 00:00:00,Boston,Yes
+81,Strategy & Consulting,Finance,7,QuickBooks/SAP/QuickBooks/SAP/,2020-11-01 00:00:00,Denver,No
+82,Interactive,Human Resources,6,Oral communication/Excel/,2020-05-01 00:00:00,Denver,No
+83,Operations,Strategy,1,Excel/PowerPoint/Critical thinking/,2020-08-01 00:00:00,Denver,Yes
+84,Operations,Human Resources,11,PowerPoint/Workday/,2020-02-01 00:00:00,NYC,Yes
+85,Operations,Human Resources,11,Excel/Oral communication/Workday/,2020-09-01 00:00:00,Denver,No
+86,Strategy & Consulting,Account Leadership,3,PowerPoint/,2020-04-01 00:00:00,Boston,No
+87,Technology,Business,1,PowerPoint/,2020-05-01 00:00:00,Denver,No
+88,Interactive,IT Operations,6,Oracle/Excel/Cloud/Oracle/,2020-10-01 00:00:00,NYC,Yes
+89,Operations,Legal,11,Excel/Bar/PowerPoint/Bar/,2020-12-01 00:00:00,Boston,No
+90,Technology,Engineering,10,Python/,2020-07-01 00:00:00,Boston,Yes
+91,Interactive,Security,10,PowerPoint/Cloud/Excel/Oracle/,2020-01-01 00:00:00,DC,No
+92,Operations,Security,11,Excel/Cloud/Excel/,2020-08-01 00:00:00,NYC,No
+93,Strategy & Consulting,Design,9,Adobe/PowerPoint/React.js/,2020-12-01 00:00:00,Boston,No
+94,Technology,Business,3,PowerPoint/,2020-06-01 00:00:00,Boston,No
+95,Operations,Strategy,1,Excel/Excel/Excel/,2020-02-01 00:00:00,Denver,Yes
+96,Interactive,Legal,7,Bar/Oral communication/,2020-08-01 00:00:00,Denver,No
+97,Interactive,Human Resources,2,Oral communication/,2020-11-01 00:00:00,Denver,No
+98,Strategy & Consulting,IT Operations,9,Cloud/Oracle/Excel/Java/,2020-05-01 00:00:00,Chicago,No
+99,Strategy & Consulting,Strategy,11,PowerPoint/,2020-12-01 00:00:00,Chicago,No
+100,Interactive,Human Resources,2,Workday/Oral communication/,2020-10-01 00:00:00,NYC,Yes
+101,Strategy & Consulting,Security,8,Python/Excel/Java/,2020-03-01 00:00:00,Boston,Yes
+102,Technology,Strategy,10,Critical thinking/Critical thinking/Critical thinking/,2020-11-01 00:00:00,DC,No
+103,Technology,Strategy,10,Critical thinking/Critical thinking/,2020-09-01 00:00:00,DC,Yes
+104,Interactive,Legal,7,Oral communication/,2020-11-01 00:00:00,Boston,No
+105,Interactive,Account Leadership,8,Leadership/ML/Leadership/Leadership/,2020-07-01 00:00:00,Chicago,Yes
+106,Interactive,Finance,6,SAP/,2020-07-01 00:00:00,Denver,Yes
+107,Technology,Finance,1,SAP/,2020-01-01 00:00:00,NYC,No
+108,Operations,Business,10,Salesforce/Salesforce/,2020-04-01 00:00:00,Chicago,No
+109,Interactive,Strategy,11,Critical thinking/Critical thinking/,2020-04-01 00:00:00,NYC,No
+110,Technology,Business,9,Salesforce/Salesforce/,2020-04-01 00:00:00,DC,Yes
+111,Interactive,Finance,1,PowerPoint/PowerPoint/PowerPoint/PowerPoint/,2020-04-01 00:00:00,NYC,Yes
+112,Strategy & Consulting,Finance,9,Excel/,2020-05-01 00:00:00,NYC,Yes
+113,Interactive,Account Leadership,8,Excel/Cloud/Leadership/Leadership/,2020-08-01 00:00:00,NYC,No
+114,Technology,Account Leadership,10,Leadership/,2020-12-01 00:00:00,Chicago,No
+115,Interactive,Security,8,Cloud/Python/Cloud/Oracle/,2020-01-01 00:00:00,Chicago,No
+116,Interactive,Legal,2,Excel/Oral communication/PowerPoint/Oral communication/,2020-06-01 00:00:00,NYC,No
+117,Interactive,Engineering,5,Python/MATLAB/,2020-08-01 00:00:00,Denver,No
+118,Operations,Human Resources,9,Workday/,2020-09-01 00:00:00,Boston,Yes
+119,Operations,IT Operations,1,Excel/Oracle/Java/,2020-08-01 00:00:00,Boston,No
+120,Interactive,Business,1,PowerPoint/Salesforce/PowerPoint/,2020-04-01 00:00:00,NYC,No
+121,Operations,Finance,9,PowerPoint/QuickBooks/Excel/SAP/,2020-10-01 00:00:00,NYC,No
+122,Interactive,Security,6,Excel/Oracle/Cloud/Java/,2020-08-01 00:00:00,NYC,Yes
+123,Technology,Legal,4,PowerPoint/,2020-09-01 00:00:00,NYC,No
+124,Technology,Engineering,3,Java/Python/MATLAB/Python/,2020-08-01 00:00:00,Chicago,No
+125,Operations,Design,11,React.js/PhotoShop/PowerPoint/,2020-11-01 00:00:00,Denver,Yes
+126,Interactive,Engineering,8,MATLAB/Python/MATLAB/MATLAB/,2020-01-01 00:00:00,Boston,No
+127,Technology,Design,5,Adobe/,2020-09-01 00:00:00,Boston,Yes
+128,Interactive,Legal,1,Excel/PowerPoint/Oral communication/Oral communication/,2020-12-01 00:00:00,Denver,Yes
+129,Technology,Engineering,9,Java/Java/Excel/,2020-12-01 00:00:00,NYC,Yes
+130,Operations,Finance,9,SAP/Excel/QuickBooks/,2020-07-01 00:00:00,Chicago,Yes
+131,Interactive,Business,11,PowerPoint/Salesforce/,2020-12-01 00:00:00,Boston,No
+132,Operations,Account Leadership,1,Leadership/ML/Cloud/,2020-04-01 00:00:00,DC,Yes
+133,Strategy & Consulting,Human Resources,7,Workday/Excel/,2020-12-01 00:00:00,NYC,Yes
+134,Operations,IT Operations,5,Python/Oracle/Oracle/Python/,2020-08-01 00:00:00,Chicago,No
+135,Technology,IT Operations,5,Oracle/Cloud/,2020-01-01 00:00:00,Chicago,No
+136,Interactive,Strategy,1,Excel/PowerPoint/PowerPoint/,2020-01-01 00:00:00,Boston,No
+137,Interactive,Finance,5,SAP/SAP/PowerPoint/PowerPoint/,2020-07-01 00:00:00,NYC,No
+138,Strategy & Consulting,Human Resources,10,Excel/,2020-05-01 00:00:00,Chicago,Yes
+139,Operations,Legal,10,PowerPoint/,2020-03-01 00:00:00,Chicago,No
+140,Operations,Legal,5,Bar/,2020-05-01 00:00:00,Denver,No
+141,Interactive,Finance,4,PowerPoint/PowerPoint/SAP/SAP/,2020-05-01 00:00:00,Denver,Yes
+142,Interactive,Finance,10,PowerPoint/Excel/SAP/Excel/,2020-11-01 00:00:00,Denver,No
+143,Technology,Business,6,PowerPoint/Excel/PowerPoint/,2020-07-01 00:00:00,DC,Yes
+144,Strategy & Consulting,Business,9,Salesforce/Excel/,2020-06-01 00:00:00,NYC,No
+145,Operations,Account Leadership,3,Cloud/Oral communication/Cloud/Oral communication/,2020-11-01 00:00:00,DC,Yes
+146,Technology,Human Resources,7,PowerPoint/Workday/Oral communication/,2020-04-01 00:00:00,Chicago,Yes
+147,Interactive,Strategy,5,Excel/PowerPoint/Excel/Critical thinking/,2020-01-01 00:00:00,DC,No
+148,Strategy & Consulting,Design,7,Adobe/PowerPoint/PhotoShop/PhotoShop/,2020-08-01 00:00:00,Chicago,Yes
+149,Technology,Finance,2,QuickBooks/,2020-03-01 00:00:00,Denver,Yes
+150,Interactive,Account Leadership,7,Cloud/Cloud/,2020-10-01 00:00:00,NYC,No
+151,Interactive,IT Operations,7,PowerPoint/Cloud/Python/ML/,2020-03-01 00:00:00,NYC,No
+152,Strategy & Consulting,IT Operations,7,Oracle/Java/PowerPoint/,2020-05-01 00:00:00,Chicago,Yes
+153,Strategy & Consulting,Security,10,Python/Python/Excel/,2020-02-01 00:00:00,DC,Yes
+154,Interactive,Business,8,Salesforce/,2020-05-01 00:00:00,Denver,No
+155,Operations,IT Operations,6,Oracle/,2020-04-01 00:00:00,Chicago,Yes
+156,Interactive,Strategy,3,Excel/PowerPoint/Critical thinking/Critical thinking/,2020-10-01 00:00:00,NYC,No
+157,Operations,Legal,9,Excel/Bar/Excel/PowerPoint/,2020-04-01 00:00:00,Denver,No
+158,Strategy & Consulting,Human Resources,6,Oral communication/Oral communication/,2020-11-01 00:00:00,Boston,No
+159,Interactive,Human Resources,3,Excel/PowerPoint/Workday/PowerPoint/,2020-06-01 00:00:00,Boston,Yes
+160,Technology,Security,11,Cloud/Excel/,2020-02-01 00:00:00,DC,No
+161,Technology,Human Resources,6,Oral communication/Excel/,2020-08-01 00:00:00,DC,No
+162,Operations,Business,4,Salesforce/Salesforce/Excel/Salesforce/,2020-07-01 00:00:00,NYC,Yes
+163,Operations,Finance,9,Excel/Excel/QuickBooks/Excel/,2020-10-01 00:00:00,Boston,No
+164,Interactive,Engineering,1,Java/Java/MATLAB/MATLAB/,2020-01-01 00:00:00,Denver,Yes
+165,Interactive,Strategy,11,PowerPoint/,2020-12-01 00:00:00,DC,No
+166,Strategy & Consulting,Legal,3,Excel/,2020-06-01 00:00:00,Chicago,No
+167,Operations,Security,5,PowerPoint/ML/,2020-11-01 00:00:00,Chicago,Yes
+168,Technology,Business,10,PowerPoint/,2020-06-01 00:00:00,Boston,No
+169,Operations,Strategy,7,Excel/,2020-11-01 00:00:00,Chicago,No
+170,Operations,Security,10,PowerPoint/Cloud/Java/PowerPoint/,2020-09-01 00:00:00,NYC,Yes
+171,Operations,Engineering,11,Java/Java/Excel/,2020-08-01 00:00:00,NYC,Yes
+172,Strategy & Consulting,Security,8,Java/PowerPoint/Oracle/Python/,2020-10-01 00:00:00,NYC,Yes
+173,Interactive,Finance,10,SAP/PowerPoint/,2020-05-01 00:00:00,Boston,Yes
+174,Interactive,Finance,9,PowerPoint/SAP/Excel/,2020-02-01 00:00:00,Denver,Yes
+175,Strategy & Consulting,Engineering,5,Python/,2020-06-01 00:00:00,Denver,No
+176,Operations,Account Leadership,9,Cloud/Cloud/Oral communication/,2020-04-01 00:00:00,Denver,Yes
+177,Interactive,Security,8,Python/,2020-02-01 00:00:00,Boston,No
+178,Technology,Account Leadership,3,Cloud/,2020-02-01 00:00:00,NYC,No
+179,Strategy & Consulting,Strategy,5,Excel/PowerPoint/,2020-10-01 00:00:00,NYC,Yes
+180,Technology,Engineering,1,PowerPoint/MATLAB/Excel/Excel/,2020-06-01 00:00:00,Denver,Yes
+181,Strategy & Consulting,IT Operations,4,Oracle/,2020-08-01 00:00:00,NYC,No
+182,Technology,Strategy,1,PowerPoint/Critical thinking/PowerPoint/,2020-07-01 00:00:00,NYC,Yes
+183,Interactive,IT Operations,4,Excel/ML/Oracle/,2020-06-01 00:00:00,Chicago,Yes
+184,Interactive,Engineering,5,PowerPoint/Python/,2020-05-01 00:00:00,NYC,Yes
+185,Operations,Engineering,2,Java/,2020-07-01 00:00:00,Denver,No
+186,Technology,Business,11,Excel/Salesforce/PowerPoint/,2020-01-01 00:00:00,Boston,Yes
+187,Interactive,Business,3,Excel/Excel/,2020-09-01 00:00:00,DC,Yes
+188,Strategy & Consulting,IT Operations,2,Excel/ML/Python/,2020-12-01 00:00:00,NYC,Yes
+189,Strategy & Consulting,Strategy,8,PowerPoint/,2020-11-01 00:00:00,Chicago,Yes
+190,Technology,Finance,11,Excel/PowerPoint/SAP/QuickBooks/,2020-03-01 00:00:00,Boston,Yes
+191,Technology,Finance,6,SAP/SAP/Excel/,2020-07-01 00:00:00,NYC,Yes
+192,Interactive,Security,7,Cloud/Oracle/ML/Java/,2020-07-01 00:00:00,NYC,No
+193,Strategy & Consulting,Security,9,ML/Java/Java/,2020-07-01 00:00:00,NYC,Yes
+194,Operations,Strategy,11,PowerPoint/Excel/Critical thinking/Excel/,2020-09-01 00:00:00,Denver,Yes
+195,Technology,Legal,6,Oral communication/PowerPoint/,2020-11-01 00:00:00,Boston,No
+196,Operations,Legal,10,Bar/PowerPoint/Bar/,2020-10-01 00:00:00,Denver,No
+197,Interactive,Security,5,Oracle/ML/Oracle/,2020-07-01 00:00:00,Chicago,No
+198,Strategy & Consulting,Human Resources,2,Excel/,2020-10-01 00:00:00,Chicago,No
+199,Strategy & Consulting,Business,2,PowerPoint/PowerPoint/Excel/,2020-01-01 00:00:00,Chicago,Yes
+200,Technology,Human Resources,10,Excel/Excel/Oral communication/,2020-01-01 00:00:00,Chicago,Yes
+201,Technology,Account Leadership,2,Leadership/Cloud/Oral communication/Leadership/,2020-08-01 00:00:00,Chicago,Yes
+202,Strategy & Consulting,Strategy,1,Excel/PowerPoint/Excel/,2020-03-01 00:00:00,Chicago,No
+203,Technology,Account Leadership,5,ML/Excel/,2020-04-01 00:00:00,DC,Yes
+204,Operations,Finance,9,PowerPoint/Excel/QuickBooks/QuickBooks/,2020-10-01 00:00:00,NYC,Yes
+205,Operations,Legal,10,PowerPoint/Bar/Bar/Oral communication/,2020-01-01 00:00:00,NYC,Yes
+206,Interactive,Finance,1,SAP/SAP/QuickBooks/Excel/,2020-01-01 00:00:00,DC,Yes
+207,Operations,Finance,6,Excel/QuickBooks/QuickBooks/,2020-09-01 00:00:00,DC,No
+208,Technology,Design,9,Excel/React.js/,2020-08-01 00:00:00,NYC,No
+209,Interactive,Business,8,Excel/PowerPoint/PowerPoint/PowerPoint/,2020-07-01 00:00:00,Chicago,Yes
+210,Technology,Design,5,Adobe/PhotoShop/Excel/React.js/,2020-03-01 00:00:00,DC,No
+211,Technology,Strategy,9,Critical thinking/PowerPoint/Critical thinking/,2020-08-01 00:00:00,DC,No
+212,Operations,Engineering,5,Java/,2020-08-01 00:00:00,NYC,Yes
+213,Interactive,Security,7,Oracle/ML/Excel/Java/,2020-02-01 00:00:00,NYC,Yes
+214,Strategy & Consulting,Design,6,Adobe/Adobe/PhotoShop/,2020-01-01 00:00:00,Chicago,No
+215,Strategy & Consulting,Strategy,5,Critical thinking/Excel/Critical thinking/Excel/,2020-12-01 00:00:00,Chicago,No
+216,Operations,Engineering,9,PowerPoint/Python/Java/,2020-06-01 00:00:00,DC,No
+217,Technology,Human Resources,9,Excel/,2020-02-01 00:00:00,Chicago,No
+218,Interactive,IT Operations,4,PowerPoint/Cloud/,2020-10-01 00:00:00,DC,Yes
+219,Operations,Engineering,7,Python/Python/MATLAB/PowerPoint/,2020-06-01 00:00:00,DC,Yes
+220,Technology,Account Leadership,2,Oral communication/,2020-08-01 00:00:00,Denver,No
+221,Technology,Security,8,Cloud/,2020-10-01 00:00:00,Denver,Yes
+222,Technology,IT Operations,3,ML/PowerPoint/,2020-10-01 00:00:00,Denver,No
+223,Operations,Human Resources,11,Oral communication/Excel/,2020-10-01 00:00:00,NYC,Yes
+224,Interactive,Human Resources,5,Excel/Oral communication/Workday/PowerPoint/,2020-05-01 00:00:00,Chicago,Yes
+225,Technology,Security,10,Python/,2020-07-01 00:00:00,DC,Yes
+226,Technology,IT Operations,5,Oracle/,2020-11-01 00:00:00,NYC,Yes
+227,Operations,IT Operations,5,Excel/Cloud/,2020-01-01 00:00:00,NYC,Yes
+228,Operations,Human Resources,11,Excel/Workday/Excel/Excel/,2020-02-01 00:00:00,NYC,Yes
+229,Technology,Account Leadership,6,Leadership/Cloud/,2020-03-01 00:00:00,Denver,Yes
+230,Operations,Business,5,Excel/Salesforce/,2020-12-01 00:00:00,Denver,No
+231,Interactive,Engineering,3,Excel/,2020-04-01 00:00:00,Denver,No
+232,Interactive,Strategy,6,PowerPoint/,2020-07-01 00:00:00,Chicago,No
+233,Technology,Legal,7,Oral communication/Bar/Bar/,2020-12-01 00:00:00,Chicago,No
+234,Operations,IT Operations,5,ML/,2020-03-01 00:00:00,Chicago,Yes
+235,Strategy & Consulting,IT Operations,11,Cloud/,2020-09-01 00:00:00,NYC,No
+236,Technology,Legal,11,PowerPoint/,2020-01-01 00:00:00,Denver,No
+237,Strategy & Consulting,Engineering,6,PowerPoint/PowerPoint/,2020-07-01 00:00:00,DC,Yes
+238,Technology,IT Operations,3,Java/,2020-02-01 00:00:00,Denver,Yes
+239,Interactive,Security,4,Oracle/,2020-02-01 00:00:00,Chicago,No
+240,Operations,Security,10,Excel/ML/,2020-06-01 00:00:00,Denver,No
+241,Technology,IT Operations,7,Python/PowerPoint/ML/,2020-03-01 00:00:00,Chicago,No
+242,Technology,Finance,2,QuickBooks/PowerPoint/,2020-07-01 00:00:00,NYC,Yes
+243,Interactive,Finance,10,SAP/PowerPoint/Excel/,2020-11-01 00:00:00,Denver,Yes
+244,Technology,Business,3,PowerPoint/PowerPoint/,2020-04-01 00:00:00,Chicago,No
+245,Strategy & Consulting,Human Resources,6,Oral communication/Excel/Workday/PowerPoint/,2020-03-01 00:00:00,DC,Yes
+246,Strategy & Consulting,Business,11,PowerPoint/PowerPoint/,2020-01-01 00:00:00,Denver,No
+247,Operations,Business,1,Salesforce/Salesforce/,2020-10-01 00:00:00,Denver,No
+248,Strategy & Consulting,Human Resources,9,Oral communication/Workday/Oral communication/,2020-12-01 00:00:00,DC,Yes
+249,Technology,Human Resources,11,PowerPoint/PowerPoint/,2020-07-01 00:00:00,Boston,No
+250,Operations,Design,1,PhotoShop/Excel/PhotoShop/PowerPoint/,2020-04-01 00:00:00,Denver,No
+251,Technology,IT Operations,8,Cloud/Java/,2020-07-01 00:00:00,Denver,Yes
+252,Interactive,IT Operations,3,Java/Python/,2020-12-01 00:00:00,NYC,Yes
+253,Interactive,Design,7,PowerPoint/Excel/Adobe/PhotoShop/,2020-10-01 00:00:00,Denver,Yes
+254,Strategy & Consulting,Legal,6,Excel/Oral communication/Bar/PowerPoint/,2020-03-01 00:00:00,Boston,Yes
+255,Strategy & Consulting,Finance,6,Excel/QuickBooks/PowerPoint/,2020-03-01 00:00:00,Boston,Yes
+256,Operations,Business,3,Salesforce/,2020-06-01 00:00:00,Denver,Yes
+257,Operations,Business,11,Excel/Salesforce/Salesforce/Salesforce/,2020-06-01 00:00:00,NYC,No
+258,Strategy & Consulting,Security,5,Python/Cloud/Python/Cloud/,2020-12-01 00:00:00,Denver,No
+259,Operations,Engineering,10,MATLAB/MATLAB/Java/,2020-01-01 00:00:00,Chicago,No
+260,Operations,IT Operations,1,PowerPoint/Oracle/Oracle/,2020-06-01 00:00:00,NYC,No
+261,Technology,Finance,8,PowerPoint/QuickBooks/QuickBooks/,2020-02-01 00:00:00,Boston,Yes
+262,Strategy & Consulting,Engineering,8,MATLAB/,2020-12-01 00:00:00,NYC,Yes
+263,Strategy & Consulting,Business,10,Salesforce/PowerPoint/Salesforce/,2020-08-01 00:00:00,DC,Yes
+264,Technology,IT Operations,4,ML/Python/PowerPoint/Python/,2020-03-01 00:00:00,Denver,Yes
+265,Technology,Business,5,PowerPoint/Excel/PowerPoint/PowerPoint/,2020-11-01 00:00:00,DC,Yes
+266,Operations,Human Resources,6,PowerPoint/,2020-06-01 00:00:00,NYC,Yes
+267,Technology,Design,5,React.js/Excel/React.js/,2020-07-01 00:00:00,NYC,No
+268,Technology,Strategy,10,Critical thinking/Excel/,2020-07-01 00:00:00,Denver,Yes
+269,Strategy & Consulting,Design,1,PhotoShop/PowerPoint/React.js/Excel/,2020-05-01 00:00:00,Denver,Yes
+270,Operations,Account Leadership,10,Excel/,2020-09-01 00:00:00,NYC,No
+271,Interactive,Strategy,1,Critical thinking/,2020-07-01 00:00:00,Boston,No
+272,Strategy & Consulting,Account Leadership,9,PowerPoint/Leadership/ML/ML/,2020-12-01 00:00:00,Denver,No
+273,Operations,Legal,7,Oral communication/PowerPoint/Oral communication/,2020-06-01 00:00:00,DC,No
+274,Strategy & Consulting,Legal,5,Excel/Oral communication/Bar/,2020-04-01 00:00:00,Chicago,No
+275,Strategy & Consulting,Security,8,Excel/Oracle/,2020-08-01 00:00:00,NYC,No
+276,Operations,Account Leadership,2,ML/Cloud/PowerPoint/Cloud/,2020-10-01 00:00:00,Chicago,No
+277,Operations,Human Resources,2,Workday/Oral communication/,2020-09-01 00:00:00,NYC,Yes
+278,Interactive,Security,2,Oracle/PowerPoint/,2020-07-01 00:00:00,Chicago,No
+279,Strategy & Consulting,Strategy,2,Excel/Critical thinking/PowerPoint/,2020-10-01 00:00:00,Denver,No
+280,Operations,Engineering,6,PowerPoint/MATLAB/Python/,2020-07-01 00:00:00,Denver,No
+281,Strategy & Consulting,Account Leadership,7,Leadership/,2020-11-01 00:00:00,Chicago,Yes
+282,Interactive,Account Leadership,10,Excel/ML/,2020-06-01 00:00:00,Boston,Yes
+283,Strategy & Consulting,Design,8,Adobe/,2020-07-01 00:00:00,Chicago,Yes
+284,Strategy & Consulting,IT Operations,10,Python/Java/,2020-09-01 00:00:00,NYC,No
+285,Operations,IT Operations,1,Oracle/Cloud/,2020-12-01 00:00:00,NYC,Yes
+286,Technology,Engineering,6,Excel/,2020-02-01 00:00:00,Denver,No
+287,Technology,Business,6,Excel/Salesforce/Salesforce/PowerPoint/,2020-11-01 00:00:00,Chicago,No
+288,Interactive,Security,4,Python/PowerPoint/,2020-07-01 00:00:00,Boston,Yes
+289,Operations,Finance,6,QuickBooks/SAP/,2020-09-01 00:00:00,Denver,No
+290,Interactive,Account Leadership,4,Oral communication/Cloud/ML/,2020-08-01 00:00:00,Denver,No
+291,Operations,Business,2,Salesforce/Excel/,2020-05-01 00:00:00,NYC,Yes
+292,Operations,Business,9,Salesforce/Excel/,2020-04-01 00:00:00,Chicago,Yes
+293,Strategy & Consulting,Human Resources,6,PowerPoint/Excel/,2020-05-01 00:00:00,DC,No
+294,Strategy & Consulting,Security,2,Java/,2020-11-01 00:00:00,NYC,Yes
+295,Strategy & Consulting,Design,2,React.js/Adobe/Adobe/,2020-11-01 00:00:00,Chicago,No
+296,Technology,Security,10,Python/PowerPoint/Cloud/PowerPoint/,2020-08-01 00:00:00,Chicago,Yes
+297,Strategy & Consulting,Account Leadership,8,Leadership/ML/PowerPoint/Cloud/,2020-08-01 00:00:00,Denver,Yes
+298,Strategy & Consulting,Account Leadership,2,Cloud/Leadership/ML/,2020-02-01 00:00:00,NYC,No
+299,Interactive,Engineering,3,Java/Excel/Java/,2020-04-01 00:00:00,Denver,No
+300,Interactive,Human Resources,9,Excel/Excel/PowerPoint/,2020-09-01 00:00:00,NYC,Yes
+301,Strategy & Consulting,IT Operations,8,ML/,2020-06-01 00:00:00,Boston,No
+302,Technology,Legal,11,Bar/,2020-02-01 00:00:00,Chicago,No
+303,Technology,Engineering,8,Python/Java/,2020-12-01 00:00:00,Chicago,Yes
+304,Strategy & Consulting,Finance,5,SAP/SAP/SAP/Excel/,2020-09-01 00:00:00,DC,Yes
+305,Strategy & Consulting,IT Operations,8,Cloud/Excel/,2020-01-01 00:00:00,Denver,No
+306,Strategy & Consulting,Security,11,Excel/Java/ML/PowerPoint/,2020-02-01 00:00:00,NYC,Yes
+307,Interactive,Engineering,11,Java/,2020-12-01 00:00:00,Denver,No
+308,Technology,IT Operations,6,Python/PowerPoint/Cloud/,2020-10-01 00:00:00,Chicago,No
+309,Operations,Finance,1,QuickBooks/PowerPoint/,2020-02-01 00:00:00,Boston,No
+310,Technology,Security,9,Excel/Cloud/ML/Java/,2020-05-01 00:00:00,Boston,Yes
+311,Technology,Legal,11,Excel/,2020-05-01 00:00:00,Chicago,No
+312,Technology,Strategy,7,PowerPoint/Excel/Excel/PowerPoint/,2020-05-01 00:00:00,DC,No
+313,Operations,Engineering,4,MATLAB/PowerPoint/,2020-09-01 00:00:00,DC,Yes
+314,Operations,Finance,1,SAP/SAP/PowerPoint/PowerPoint/,2020-09-01 00:00:00,NYC,No
+315,Technology,IT Operations,7,ML/,2020-08-01 00:00:00,Chicago,No
+316,Strategy & Consulting,Strategy,3,Excel/,2020-11-01 00:00:00,DC,Yes
+317,Interactive,Human Resources,4,Excel/Workday/,2020-08-01 00:00:00,DC,No
+318,Technology,IT Operations,5,Oracle/Java/,2020-06-01 00:00:00,Chicago,No
+319,Strategy & Consulting,Account Leadership,6,ML/Oral communication/,2020-11-01 00:00:00,Chicago,No
+320,Operations,Business,5,PowerPoint/,2020-09-01 00:00:00,DC,Yes
+321,Interactive,Account Leadership,8,Excel/Excel/ML/PowerPoint/,2020-10-01 00:00:00,Chicago,Yes
+322,Operations,Security,9,ML/Oracle/Python/ML/,2020-02-01 00:00:00,Boston,No
+323,Strategy & Consulting,Strategy,2,Critical thinking/Excel/PowerPoint/Excel/,2020-09-01 00:00:00,Boston,No
+324,Interactive,Legal,2,Excel/,2020-01-01 00:00:00,NYC,No
+325,Technology,Human Resources,4,Workday/Oral communication/PowerPoint/,2020-01-01 00:00:00,Chicago,No
+326,Operations,Finance,7,QuickBooks/Excel/PowerPoint/,2020-08-01 00:00:00,NYC,No
+327,Interactive,IT Operations,3,PowerPoint/,2020-04-01 00:00:00,NYC,No
+328,Technology,Security,5,Excel/,2020-07-01 00:00:00,Boston,No
+329,Interactive,Legal,11,Bar/,2020-06-01 00:00:00,NYC,No
+330,Interactive,Human Resources,1,Workday/,2020-10-01 00:00:00,DC,Yes
+331,Interactive,Engineering,8,Python/Python/,2020-06-01 00:00:00,NYC,Yes
+332,Operations,Finance,4,QuickBooks/QuickBooks/Excel/QuickBooks/,2020-04-01 00:00:00,Chicago,No
+333,Strategy & Consulting,Human Resources,7,Excel/Excel/Excel/,2020-09-01 00:00:00,NYC,Yes
+334,Interactive,Business,11,PowerPoint/PowerPoint/Excel/,2020-06-01 00:00:00,Boston,Yes
+335,Technology,Security,9,PowerPoint/,2020-04-01 00:00:00,Boston,Yes
+336,Technology,Human Resources,9,Oral communication/PowerPoint/Excel/,2020-11-01 00:00:00,NYC,Yes
+337,Operations,Engineering,8,MATLAB/Excel/,2020-09-01 00:00:00,DC,Yes
+338,Interactive,Legal,5,Oral communication/PowerPoint/Oral communication/Oral communication/,2020-04-01 00:00:00,DC,Yes
+339,Strategy & Consulting,Strategy,3,Critical thinking/PowerPoint/PowerPoint/,2020-08-01 00:00:00,Chicago,Yes
+340,Strategy & Consulting,Finance,9,PowerPoint/PowerPoint/QuickBooks/,2020-01-01 00:00:00,DC,No
+341,Strategy & Consulting,Design,10,React.js/Excel/Adobe/,2020-04-01 00:00:00,DC,Yes
+342,Operations,Legal,3,Excel/Oral communication/,2020-03-01 00:00:00,Boston,Yes
+343,Interactive,Account Leadership,5,PowerPoint/ML/Cloud/,2020-07-01 00:00:00,Chicago,Yes
+344,Interactive,Account Leadership,4,Leadership/Oral communication/ML/Excel/,2020-11-01 00:00:00,Boston,No
+345,Strategy & Consulting,Engineering,4,Python/Java/MATLAB/,2020-03-01 00:00:00,DC,Yes
+346,Technology,Business,9,PowerPoint/PowerPoint/PowerPoint/,2020-04-01 00:00:00,DC,Yes
+347,Strategy & Consulting,Business,1,PowerPoint/PowerPoint/,2020-10-01 00:00:00,NYC,Yes
+348,Operations,Finance,2,PowerPoint/SAP/QuickBooks/,2020-08-01 00:00:00,Boston,Yes
+349,Strategy & Consulting,Business,8,Salesforce/Salesforce/Excel/,2020-11-01 00:00:00,Boston,Yes
+350,Technology,Engineering,2,MATLAB/,2020-03-01 00:00:00,DC,Yes
+351,Interactive,Design,7,Excel/,2020-02-01 00:00:00,Denver,Yes
+352,Technology,Finance,8,Excel/,2020-01-01 00:00:00,DC,No
+353,Interactive,Strategy,10,PowerPoint/Excel/,2020-02-01 00:00:00,Boston,Yes
+354,Operations,Strategy,1,PowerPoint/Critical thinking/Excel/,2020-10-01 00:00:00,Denver,Yes
+355,Operations,Human Resources,1,Workday/Excel/,2020-09-01 00:00:00,DC,Yes
+356,Strategy & Consulting,Account Leadership,9,Oral communication/,2020-07-01 00:00:00,Chicago,Yes
+357,Strategy & Consulting,Business,2,Excel/Salesforce/,2020-04-01 00:00:00,Boston,Yes
+358,Operations,Design,6,PowerPoint/,2020-06-01 00:00:00,Denver,No
+359,Technology,IT Operations,7,PowerPoint/PowerPoint/PowerPoint/ML/,2020-05-01 00:00:00,DC,Yes
+360,Strategy & Consulting,Account Leadership,1,Excel/PowerPoint/PowerPoint/Oral communication/,2020-08-01 00:00:00,DC,No
+361,Technology,Legal,5,Oral communication/Bar/,2020-03-01 00:00:00,Boston,No
+362,Interactive,Business,11,PowerPoint/Salesforce/,2020-08-01 00:00:00,Chicago,No
+363,Operations,Account Leadership,6,ML/Excel/PowerPoint/Leadership/,2020-11-01 00:00:00,NYC,No
+364,Strategy & Consulting,Business,11,Excel/Salesforce/Excel/PowerPoint/,2020-02-01 00:00:00,Denver,No
+365,Technology,Strategy,6,Excel/,2020-09-01 00:00:00,DC,Yes
+366,Operations,Account Leadership,2,PowerPoint/Cloud/,2020-02-01 00:00:00,Boston,Yes
+367,Interactive,Security,10,PowerPoint/,2020-12-01 00:00:00,Boston,No
+368,Technology,Security,4,Java/Java/Excel/,2020-05-01 00:00:00,Denver,No
+369,Strategy & Consulting,Security,10,Cloud/Java/,2020-06-01 00:00:00,DC,Yes
+370,Strategy & Consulting,Engineering,11,MATLAB/Excel/,2020-09-01 00:00:00,DC,Yes
+371,Interactive,Design,7,PowerPoint/PowerPoint/,2020-06-01 00:00:00,Denver,No
+372,Interactive,Business,5,Excel/Excel/Salesforce/Salesforce/,2020-12-01 00:00:00,Chicago,No
+373,Strategy & Consulting,Finance,4,PowerPoint/SAP/,2020-10-01 00:00:00,Boston,No
+374,Operations,IT Operations,1,Excel/Java/Oracle/ML/,2020-07-01 00:00:00,Denver,Yes
+375,Interactive,Finance,7,SAP/Excel/SAP/,2020-12-01 00:00:00,Denver,No
+376,Interactive,Legal,6,PowerPoint/Oral communication/,2020-01-01 00:00:00,DC,No
+377,Technology,IT Operations,5,Cloud/Excel/,2020-08-01 00:00:00,DC,Yes
+378,Operations,Finance,11,Excel/PowerPoint/Excel/,2020-02-01 00:00:00,DC,No
+379,Strategy & Consulting,Finance,5,PowerPoint/PowerPoint/SAP/PowerPoint/,2020-08-01 00:00:00,NYC,No
+380,Strategy & Consulting,Strategy,9,Critical thinking/,2020-09-01 00:00:00,Denver,Yes
+381,Technology,Finance,2,Excel/SAP/,2020-07-01 00:00:00,DC,Yes
+382,Interactive,Strategy,1,PowerPoint/,2020-08-01 00:00:00,DC,Yes
+383,Technology,Finance,10,PowerPoint/,2020-12-01 00:00:00,Chicago,Yes
+384,Interactive,IT Operations,5,Java/,2020-07-01 00:00:00,DC,Yes
+385,Interactive,Engineering,10,Java/Excel/Excel/,2020-06-01 00:00:00,NYC,Yes
+386,Operations,Human Resources,7,Workday/PowerPoint/Oral communication/Workday/,2020-05-01 00:00:00,Boston,Yes
+387,Operations,Business,7,Excel/Salesforce/Excel/,2020-12-01 00:00:00,Denver,No
+388,Interactive,Design,10,React.js/PhotoShop/Adobe/,2020-09-01 00:00:00,Chicago,No
+389,Technology,Legal,3,Bar/,2020-08-01 00:00:00,Boston,Yes
+390,Interactive,Finance,2,Excel/PowerPoint/PowerPoint/Excel/,2020-09-01 00:00:00,Boston,No
+391,Interactive,Strategy,11,PowerPoint/Critical thinking/Excel/Excel/,2020-05-01 00:00:00,Boston,Yes
+392,Technology,Business,10,PowerPoint/Excel/PowerPoint/,2020-03-01 00:00:00,Boston,No
+393,Interactive,Account Leadership,9,Oral communication/Cloud/Cloud/,2020-12-01 00:00:00,Boston,No
+394,Operations,Finance,1,PowerPoint/,2020-09-01 00:00:00,Boston,Yes
+395,Interactive,Finance,11,QuickBooks/,2020-05-01 00:00:00,Chicago,No
+396,Interactive,Account Leadership,9,PowerPoint/,2020-04-01 00:00:00,Denver,Yes
+397,Interactive,Account Leadership,2,Cloud/PowerPoint/Cloud/,2020-01-01 00:00:00,Chicago,No
+398,Interactive,IT Operations,4,Cloud/,2020-11-01 00:00:00,Denver,No
+399,Technology,Finance,2,PowerPoint/QuickBooks/,2020-02-01 00:00:00,NYC,Yes
+400,Interactive,IT Operations,10,PowerPoint/,2020-07-01 00:00:00,NYC,No
+401,Interactive,Design,9,PhotoShop/Adobe/,2020-06-01 00:00:00,Denver,No
+402,Technology,Human Resources,9,Workday/Workday/,2020-07-01 00:00:00,Denver,No
+403,Technology,Account Leadership,5,ML/Oral communication/Oral communication/,2020-02-01 00:00:00,Boston,No
+404,Technology,Finance,4,QuickBooks/,2020-01-01 00:00:00,Chicago,Yes
+405,Technology,Finance,9,Excel/QuickBooks/,2020-02-01 00:00:00,DC,Yes
+406,Interactive,Finance,1,SAP/Excel/SAP/SAP/,2020-09-01 00:00:00,NYC,Yes
+407,Strategy & Consulting,Strategy,2,Excel/Critical thinking/PowerPoint/,2020-05-01 00:00:00,NYC,No
+408,Technology,Legal,1,PowerPoint/,2020-04-01 00:00:00,NYC,No
+409,Interactive,IT Operations,10,Java/Python/Excel/,2020-03-01 00:00:00,DC,Yes
+410,Strategy & Consulting,Account Leadership,5,Excel/,2020-02-01 00:00:00,Boston,No
+411,Operations,Human Resources,9,Excel/,2020-07-01 00:00:00,Denver,No
+412,Interactive,Legal,6,PowerPoint/Bar/,2020-08-01 00:00:00,NYC,No
+413,Interactive,Finance,3,Excel/QuickBooks/PowerPoint/,2020-01-01 00:00:00,Chicago,Yes
+414,Technology,Security,4,Python/Java/Oracle/Java/,2020-04-01 00:00:00,Boston,No
+415,Technology,Engineering,9,Java/,2020-04-01 00:00:00,Denver,Yes
+416,Operations,Design,3,PowerPoint/,2020-02-01 00:00:00,NYC,No
+417,Operations,Legal,4,Bar/Oral communication/,2020-03-01 00:00:00,NYC,Yes
+418,Interactive,Engineering,2,MATLAB/PowerPoint/Python/MATLAB/,2020-05-01 00:00:00,Chicago,Yes
+419,Operations,IT Operations,1,Oracle/Oracle/Oracle/Java/,2020-04-01 00:00:00,NYC,No
+420,Strategy & Consulting,Account Leadership,8,Excel/,2020-07-01 00:00:00,Chicago,No
+421,Technology,Engineering,2,PowerPoint/Python/PowerPoint/,2020-01-01 00:00:00,Chicago,No
+422,Interactive,Human Resources,7,Oral communication/Oral communication/PowerPoint/,2020-05-01 00:00:00,NYC,Yes
+423,Interactive,Design,5,Excel/,2020-07-01 00:00:00,Boston,No
+424,Interactive,Strategy,3,Excel/Critical thinking/Critical thinking/Critical thinking/,2020-02-01 00:00:00,Chicago,Yes
+425,Technology,Security,2,PowerPoint/Python/Excel/,2020-03-01 00:00:00,DC,No
+426,Technology,Account Leadership,11,Cloud/,2020-10-01 00:00:00,Boston,No
+427,Strategy & Consulting,Strategy,11,Excel/PowerPoint/,2020-10-01 00:00:00,Denver,No
+428,Strategy & Consulting,Legal,2,Excel/Excel/,2020-12-01 00:00:00,Chicago,No
+429,Operations,Business,5,Excel/PowerPoint/Excel/,2020-12-01 00:00:00,DC,Yes
+430,Operations,Engineering,7,Python/,2020-09-01 00:00:00,Denver,No
+431,Operations,IT Operations,2,Java/Java/Java/,2020-08-01 00:00:00,Boston,Yes
+432,Interactive,Security,5,Java/Excel/Cloud/PowerPoint/,2020-06-01 00:00:00,NYC,Yes
+433,Technology,Account Leadership,6,Cloud/ML/,2020-09-01 00:00:00,DC,No
+434,Interactive,Legal,1,PowerPoint/Bar/PowerPoint/,2020-10-01 00:00:00,Boston,Yes
+435,Operations,Legal,7,Bar/Bar/Bar/Excel/,2020-07-01 00:00:00,NYC,Yes
+436,Technology,Human Resources,9,Excel/Oral communication/Oral communication/Excel/,2020-11-01 00:00:00,Chicago,Yes
+437,Technology,Finance,4,QuickBooks/QuickBooks/,2020-07-01 00:00:00,Chicago,No
+438,Strategy & Consulting,IT Operations,10,ML/Java/,2020-08-01 00:00:00,NYC,Yes
+439,Strategy & Consulting,Security,8,Java/Python/Java/,2020-01-01 00:00:00,Denver,No
+440,Strategy & Consulting,Business,9,PowerPoint/,2020-05-01 00:00:00,Boston,Yes
+441,Operations,Strategy,11,Critical thinking/Excel/Excel/,2020-10-01 00:00:00,NYC,No
+442,Operations,Design,11,Adobe/,2020-02-01 00:00:00,Boston,No
+443,Interactive,Human Resources,2,PowerPoint/Oral communication/Workday/,2020-07-01 00:00:00,NYC,Yes
+444,Technology,Legal,6,Excel/,2020-09-01 00:00:00,DC,No
+445,Strategy & Consulting,Legal,1,PowerPoint/Excel/Bar/,2020-02-01 00:00:00,Boston,No
+446,Technology,Engineering,4,Python/PowerPoint/Java/MATLAB/,2020-01-01 00:00:00,Denver,Yes
+447,Strategy & Consulting,Business,5,Excel/Salesforce/Salesforce/Excel/,2020-06-01 00:00:00,Boston,Yes
+448,Technology,Security,5,ML/Oracle/ML/ML/,2020-12-01 00:00:00,DC,Yes
+449,Strategy & Consulting,Engineering,1,PowerPoint/Python/Excel/PowerPoint/,2020-10-01 00:00:00,Denver,Yes
+450,Technology,Finance,6,SAP/QuickBooks/Excel/,2020-04-01 00:00:00,NYC,No
+451,Interactive,Account Leadership,6,Leadership/PowerPoint/,2020-03-01 00:00:00,DC,No
+452,Interactive,Human Resources,6,Workday/Excel/Oral communication/PowerPoint/,2020-04-01 00:00:00,Boston,Yes
+453,Technology,Strategy,5,PowerPoint/,2020-08-01 00:00:00,DC,Yes
+454,Interactive,Strategy,2,Excel/,2020-04-01 00:00:00,NYC,No
+455,Strategy & Consulting,Engineering,9,Python/Java/PowerPoint/Python/,2020-06-01 00:00:00,DC,No
+456,Strategy & Consulting,Strategy,7,PowerPoint/PowerPoint/PowerPoint/,2020-02-01 00:00:00,Denver,Yes
+457,Interactive,Human Resources,10,Oral communication/Oral communication/Workday/,2020-01-01 00:00:00,DC,No
+458,Technology,Finance,2,PowerPoint/QuickBooks/,2020-11-01 00:00:00,Denver,No
+459,Interactive,Engineering,11,MATLAB/MATLAB/,2020-06-01 00:00:00,Chicago,Yes
+460,Strategy & Consulting,Design,6,PowerPoint/Adobe/PowerPoint/,2020-09-01 00:00:00,Boston,No
+461,Technology,Finance,2,PowerPoint/,2020-01-01 00:00:00,DC,No
+462,Operations,Design,2,PhotoShop/PowerPoint/Adobe/PhotoShop/,2020-03-01 00:00:00,DC,Yes
+463,Technology,IT Operations,3,PowerPoint/PowerPoint/PowerPoint/Excel/,2020-04-01 00:00:00,Boston,Yes
+464,Interactive,Human Resources,3,Excel/,2020-10-01 00:00:00,NYC,Yes
+465,Interactive,Account Leadership,2,ML/,2020-01-01 00:00:00,DC,No
+466,Interactive,Legal,10,Bar/Bar/Excel/Bar/,2020-09-01 00:00:00,Boston,No
+467,Technology,Engineering,2,MATLAB/Python/Python/,2020-03-01 00:00:00,Chicago,Yes
+468,Technology,Engineering,7,MATLAB/,2020-11-01 00:00:00,Boston,No
+469,Operations,Strategy,10,Excel/Excel/PowerPoint/PowerPoint/,2020-03-01 00:00:00,NYC,No
+470,Operations,IT Operations,6,Cloud/Oracle/Python/Oracle/,2020-01-01 00:00:00,Denver,Yes
+471,Operations,Design,9,React.js/PowerPoint/Excel/,2020-01-01 00:00:00,DC,Yes
+472,Interactive,Design,3,Adobe/Excel/PowerPoint/Adobe/,2020-09-01 00:00:00,Boston,No
+473,Strategy & Consulting,Human Resources,10,PowerPoint/,2020-02-01 00:00:00,Chicago,Yes
+474,Strategy & Consulting,Engineering,5,Python/,2020-09-01 00:00:00,Boston,Yes
+475,Operations,IT Operations,8,Java/ML/,2020-07-01 00:00:00,Denver,Yes
+476,Strategy & Consulting,Design,7,PowerPoint/Adobe/PhotoShop/,2020-12-01 00:00:00,NYC,No
+477,Strategy & Consulting,Business,6,Salesforce/,2020-11-01 00:00:00,NYC,Yes
+478,Strategy & Consulting,Finance,10,Excel/,2020-07-01 00:00:00,Boston,Yes
+479,Operations,Strategy,9,Critical thinking/PowerPoint/Excel/PowerPoint/,2020-12-01 00:00:00,Denver,Yes
+480,Operations,Business,7,Salesforce/,2020-05-01 00:00:00,Boston,Yes
+481,Technology,Design,2,React.js/PowerPoint/PowerPoint/React.js/,2020-01-01 00:00:00,DC,No
+482,Technology,Legal,6,PowerPoint/Excel/Bar/,2020-10-01 00:00:00,DC,Yes
+483,Interactive,Human Resources,7,Oral communication/Workday/,2020-05-01 00:00:00,Chicago,No
+484,Technology,Finance,11,Excel/PowerPoint/,2020-06-01 00:00:00,NYC,Yes
+485,Interactive,Business,11,Salesforce/Excel/PowerPoint/,2020-10-01 00:00:00,Denver,No
+486,Interactive,Human Resources,2,Oral communication/PowerPoint/Workday/PowerPoint/,2020-05-01 00:00:00,DC,Yes
+487,Operations,Business,11,PowerPoint/PowerPoint/,2020-05-01 00:00:00,DC,No
+488,Strategy & Consulting,Design,8,Adobe/,2020-09-01 00:00:00,DC,Yes
+489,Technology,Human Resources,4,PowerPoint/Workday/Workday/,2020-12-01 00:00:00,NYC,No
+490,Operations,Strategy,11,PowerPoint/,2020-11-01 00:00:00,Denver,Yes
+491,Technology,Account Leadership,10,Excel/,2020-09-01 00:00:00,Denver,No
+492,Interactive,Account Leadership,8,Cloud/Leadership/PowerPoint/Cloud/,2020-03-01 00:00:00,DC,No
+493,Strategy & Consulting,Finance,1,Excel/PowerPoint/PowerPoint/SAP/,2020-01-01 00:00:00,NYC,No
+494,Strategy & Consulting,Account Leadership,6,Leadership/Oral communication/Leadership/,2020-08-01 00:00:00,NYC,No
+495,Strategy & Consulting,Human Resources,4,Excel/Excel/Workday/,2020-06-01 00:00:00,NYC,Yes
+496,Interactive,Design,7,Adobe/React.js/,2020-08-01 00:00:00,Denver,No
+497,Operations,Account Leadership,3,ML/Cloud/,2020-10-01 00:00:00,Chicago,No
+498,Operations,Security,10,ML/Excel/,2020-05-01 00:00:00,Chicago,Yes
+499,Strategy & Consulting,IT Operations,1,PowerPoint/Python/Python/Oracle/,2020-03-01 00:00:00,Chicago,Yes
+500,Technology,IT Operations,1,Oracle/Cloud/Java/ML/,2020-10-01 00:00:00,Chicago,No
+501,Operations,Human Resources,3,PowerPoint/Oral communication/PowerPoint/,2020-11-01 00:00:00,Denver,No
+502,Technology,Business,3,Excel/,2020-08-01 00:00:00,Boston,Yes
+503,Strategy & Consulting,Security,3,Python/PowerPoint/PowerPoint/Excel/,2020-08-01 00:00:00,Denver,Yes
+504,Operations,Engineering,4,Excel/MATLAB/,2020-04-01 00:00:00,Boston,Yes
+505,Interactive,Account Leadership,7,Oral communication/,2020-01-01 00:00:00,DC,Yes
+506,Operations,Account Leadership,11,PowerPoint/Cloud/Leadership/ML/,2020-07-01 00:00:00,Chicago,No
+507,Operations,Security,6,PowerPoint/,2020-05-01 00:00:00,Denver,Yes
+508,Operations,Strategy,4,PowerPoint/PowerPoint/,2020-06-01 00:00:00,NYC,No
+509,Interactive,Business,5,Excel/PowerPoint/Salesforce/,2020-11-01 00:00:00,DC,Yes
+510,Strategy & Consulting,Finance,5,PowerPoint/Excel/Excel/,2020-04-01 00:00:00,Boston,Yes
+511,Strategy & Consulting,Business,2,Salesforce/Salesforce/PowerPoint/Salesforce/,2020-03-01 00:00:00,Boston,Yes
+512,Operations,Account Leadership,11,ML/,2020-01-01 00:00:00,Boston,No
+513,Operations,Business,1,Salesforce/Salesforce/,2020-06-01 00:00:00,Boston,No
+514,Technology,Human Resources,3,Oral communication/PowerPoint/Oral communication/,2020-04-01 00:00:00,DC,No
+515,Strategy & Consulting,Strategy,8,Critical thinking/PowerPoint/,2020-11-01 00:00:00,Boston,No
+516,Operations,Legal,8,Bar/Excel/Bar/Excel/,2020-04-01 00:00:00,Boston,No
+517,Operations,Human Resources,6,Oral communication/Workday/Oral communication/,2020-10-01 00:00:00,Denver,No
+518,Strategy & Consulting,Legal,4,Bar/PowerPoint/,2020-08-01 00:00:00,Chicago,Yes
+519,Operations,Security,6,Python/,2020-06-01 00:00:00,Denver,Yes
+520,Technology,Account Leadership,6,Oral communication/ML/Cloud/,2020-03-01 00:00:00,Chicago,Yes
+521,Technology,Business,9,PowerPoint/,2020-06-01 00:00:00,Boston,No
+522,Strategy & Consulting,Finance,7,Excel/SAP/QuickBooks/SAP/,2020-02-01 00:00:00,DC,No
+523,Strategy & Consulting,Human Resources,7,Excel/PowerPoint/PowerPoint/,2020-10-01 00:00:00,NYC,Yes
+524,Interactive,Strategy,11,Critical thinking/,2020-10-01 00:00:00,Boston,No
+525,Strategy & Consulting,Human Resources,8,Workday/Excel/Oral communication/PowerPoint/,2020-11-01 00:00:00,DC,No
+526,Interactive,Security,3,PowerPoint/,2020-08-01 00:00:00,DC,Yes
+527,Strategy & Consulting,Design,5,Adobe/Adobe/React.js/,2020-05-01 00:00:00,NYC,No
+528,Technology,Design,5,PhotoShop/React.js/Excel/,2020-10-01 00:00:00,Boston,No
+529,Interactive,Finance,10,Excel/,2020-07-01 00:00:00,Boston,No
+530,Operations,IT Operations,10,Cloud/ML/Oracle/Cloud/,2020-10-01 00:00:00,Denver,No
+531,Interactive,Finance,3,SAP/,2020-09-01 00:00:00,DC,Yes
+532,Interactive,Business,2,PowerPoint/PowerPoint/,2020-11-01 00:00:00,Denver,Yes
+533,Interactive,Strategy,9,Critical thinking/Critical thinking/Excel/Excel/,2020-07-01 00:00:00,Denver,Yes
+534,Technology,Security,6,Cloud/,2020-11-01 00:00:00,NYC,Yes
+535,Operations,Security,3,Java/ML/,2020-02-01 00:00:00,Chicago,Yes
+536,Technology,IT Operations,5,ML/Python/,2020-12-01 00:00:00,Chicago,Yes
+537,Strategy & Consulting,Security,7,Oracle/Python/PowerPoint/,2020-09-01 00:00:00,NYC,No
+538,Interactive,Account Leadership,6,Leadership/Leadership/Excel/,2020-09-01 00:00:00,Boston,Yes
+539,Operations,Engineering,4,Java/Excel/PowerPoint/,2020-11-01 00:00:00,Denver,No
+540,Interactive,Account Leadership,4,PowerPoint/,2020-02-01 00:00:00,NYC,No
+541,Technology,Account Leadership,5,Oral communication/PowerPoint/Cloud/,2020-08-01 00:00:00,DC,No
+542,Technology,Engineering,1,Excel/Python/Python/,2020-01-01 00:00:00,DC,Yes
+543,Strategy & Consulting,Design,4,PhotoShop/PhotoShop/PhotoShop/,2020-10-01 00:00:00,Denver,No
+544,Interactive,Human Resources,6,PowerPoint/PowerPoint/,2020-06-01 00:00:00,NYC,Yes
+545,Strategy & Consulting,Human Resources,9,Excel/Oral communication/,2020-03-01 00:00:00,NYC,Yes
+546,Operations,Strategy,1,Excel/Critical thinking/Excel/Critical thinking/,2020-02-01 00:00:00,DC,No
+547,Interactive,Finance,11,PowerPoint/PowerPoint/,2020-11-01 00:00:00,NYC,No
+548,Strategy & Consulting,Human Resources,7,PowerPoint/Workday/,2020-02-01 00:00:00,Chicago,No
+549,Technology,Finance,8,Excel/QuickBooks/QuickBooks/,2020-02-01 00:00:00,Boston,Yes
+550,Strategy & Consulting,Engineering,10,Java/Java/,2020-03-01 00:00:00,NYC,Yes
+551,Technology,Human Resources,2,PowerPoint/Excel/Oral communication/PowerPoint/,2020-12-01 00:00:00,DC,Yes
+552,Interactive,Human Resources,10,Oral communication/,2020-06-01 00:00:00,Boston,Yes
+553,Technology,IT Operations,10,Excel/ML/,2020-07-01 00:00:00,Denver,No
+554,Strategy & Consulting,Strategy,3,PowerPoint/Critical thinking/Excel/,2020-04-01 00:00:00,DC,No
+555,Strategy & Consulting,Legal,1,PowerPoint/PowerPoint/,2020-04-01 00:00:00,Denver,Yes
+556,Operations,Business,8,PowerPoint/PowerPoint/,2020-07-01 00:00:00,Denver,Yes
+557,Interactive,Strategy,2,Critical thinking/PowerPoint/,2020-05-01 00:00:00,Boston,Yes
+558,Technology,Account Leadership,3,Excel/Oral communication/ML/,2020-11-01 00:00:00,Denver,Yes
+559,Strategy & Consulting,Finance,10,PowerPoint/PowerPoint/,2020-05-01 00:00:00,Chicago,Yes
+560,Technology,Finance,7,PowerPoint/PowerPoint/PowerPoint/,2020-12-01 00:00:00,Boston,Yes
+561,Interactive,Engineering,1,MATLAB/Java/,2020-08-01 00:00:00,Boston,No
+562,Strategy & Consulting,Strategy,8,Critical thinking/PowerPoint/Excel/Excel/,2020-02-01 00:00:00,Boston,No
+563,Interactive,Legal,8,Excel/,2020-07-01 00:00:00,Boston,No
+564,Strategy & Consulting,Human Resources,9,Excel/Excel/Oral communication/PowerPoint/,2020-08-01 00:00:00,DC,Yes
+565,Interactive,Engineering,10,Python/,2020-05-01 00:00:00,Denver,Yes
+566,Operations,Design,3,React.js/Excel/,2020-07-01 00:00:00,DC,Yes
+567,Technology,Business,6,PowerPoint/,2020-05-01 00:00:00,Chicago,Yes
+568,Strategy & Consulting,Legal,10,Excel/PowerPoint/Oral communication/,2020-04-01 00:00:00,Chicago,Yes
+569,Operations,Legal,4,Excel/,2020-04-01 00:00:00,DC,No
+570,Strategy & Consulting,Legal,9,Bar/Excel/PowerPoint/PowerPoint/,2020-02-01 00:00:00,DC,Yes
+571,Strategy & Consulting,Legal,10,Bar/Oral communication/Bar/PowerPoint/,2020-11-01 00:00:00,NYC,No
+572,Strategy & Consulting,Design,5,PhotoShop/Adobe/,2020-07-01 00:00:00,Boston,No
+573,Strategy & Consulting,Engineering,3,Python/Python/,2020-01-01 00:00:00,DC,No
+574,Operations,Account Leadership,6,Excel/ML/PowerPoint/ML/,2020-05-01 00:00:00,DC,Yes
+575,Strategy & Consulting,Legal,11,Bar/Excel/,2020-11-01 00:00:00,Chicago,Yes
+576,Technology,Legal,10,Bar/Oral communication/PowerPoint/Oral communication/,2020-07-01 00:00:00,Chicago,No
+577,Technology,Finance,7,PowerPoint/Excel/,2020-05-01 00:00:00,Denver,Yes
+578,Strategy & Consulting,Design,3,PowerPoint/PhotoShop/PowerPoint/PhotoShop/,2020-12-01 00:00:00,Chicago,No
+579,Operations,Legal,10,Bar/Bar/Bar/PowerPoint/,2020-07-01 00:00:00,Chicago,Yes
+580,Technology,Business,1,Excel/Salesforce/Salesforce/Excel/,2020-07-01 00:00:00,Chicago,No
+581,Technology,IT Operations,11,PowerPoint/Python/,2020-02-01 00:00:00,NYC,Yes
+582,Strategy & Consulting,Human Resources,3,Workday/PowerPoint/,2020-05-01 00:00:00,Boston,No
+583,Technology,Business,7,Salesforce/Salesforce/PowerPoint/Salesforce/,2020-10-01 00:00:00,Chicago,Yes
+584,Interactive,Engineering,6,Java/Java/Excel/,2020-08-01 00:00:00,Chicago,Yes
+585,Technology,IT Operations,8,Python/Excel/Python/,2020-05-01 00:00:00,NYC,Yes
+586,Technology,Design,10,Excel/Excel/,2020-01-01 00:00:00,DC,Yes
+587,Technology,Human Resources,6,PowerPoint/Workday/,2020-06-01 00:00:00,DC,Yes
+588,Strategy & Consulting,Business,3,Excel/,2020-04-01 00:00:00,NYC,No
+589,Interactive,Design,11,Adobe/,2020-10-01 00:00:00,Denver,Yes
+590,Interactive,Business,11,Salesforce/PowerPoint/Salesforce/,2020-08-01 00:00:00,Denver,No
+591,Technology,Design,9,PowerPoint/PowerPoint/Adobe/Excel/,2020-02-01 00:00:00,Boston,No
+592,Strategy & Consulting,Account Leadership,11,PowerPoint/ML/Oral communication/,2020-02-01 00:00:00,DC,No
+593,Operations,Legal,11,Excel/,2020-08-01 00:00:00,DC,No
+594,Interactive,IT Operations,7,Python/Excel/Java/,2020-07-01 00:00:00,Denver,Yes
+595,Operations,IT Operations,6,Python/,2020-02-01 00:00:00,Boston,Yes
+596,Interactive,Human Resources,5,Workday/PowerPoint/Excel/Excel/,2020-01-01 00:00:00,DC,No
+597,Interactive,Engineering,3,Java/PowerPoint/PowerPoint/,2020-11-01 00:00:00,DC,No
+598,Operations,IT Operations,3,ML/,2020-04-01 00:00:00,Denver,Yes
+599,Interactive,Security,10,PowerPoint/,2020-07-01 00:00:00,DC,No
+600,Operations,Strategy,8,Critical thinking/Critical thinking/Critical thinking/Excel/,2020-12-01 00:00:00,Boston,Yes
+601,Operations,Human Resources,7,Workday/Oral communication/Workday/Workday/,2020-07-01 00:00:00,Denver,Yes
+602,Interactive,Strategy,7,Excel/,2020-11-01 00:00:00,NYC,No
+603,Interactive,Legal,4,Bar/Excel/Oral communication/,2020-08-01 00:00:00,Chicago,No
+604,Technology,Finance,3,SAP/,2020-05-01 00:00:00,Boston,Yes
+605,Interactive,Business,11,Salesforce/,2020-05-01 00:00:00,Denver,Yes
+606,Operations,Strategy,5,PowerPoint/Excel/Critical thinking/,2020-01-01 00:00:00,DC,Yes
+607,Strategy & Consulting,Security,4,Python/ML/Cloud/Oracle/,2020-08-01 00:00:00,Boston,No
+608,Operations,Engineering,5,Python/Java/PowerPoint/,2020-09-01 00:00:00,NYC,Yes
+609,Operations,Account Leadership,6,Excel/PowerPoint/Leadership/,2020-02-01 00:00:00,Denver,No
+610,Operations,Business,8,Salesforce/Excel/PowerPoint/PowerPoint/,2020-06-01 00:00:00,DC,No
+611,Technology,Human Resources,7,Excel/Excel/Excel/Oral communication/,2020-06-01 00:00:00,DC,No
+612,Interactive,Engineering,5,PowerPoint/PowerPoint/PowerPoint/MATLAB/,2020-12-01 00:00:00,NYC,No
+613,Interactive,IT Operations,4,ML/PowerPoint/PowerPoint/,2020-12-01 00:00:00,NYC,Yes
+614,Interactive,Account Leadership,2,Leadership/Cloud/PowerPoint/,2020-08-01 00:00:00,Denver,Yes
+615,Interactive,Design,4,Adobe/Excel/Excel/,2020-07-01 00:00:00,Chicago,No
+616,Interactive,Human Resources,2,Oral communication/,2020-09-01 00:00:00,Denver,Yes
+617,Operations,Design,10,PhotoShop/Adobe/Excel/,2020-02-01 00:00:00,NYC,Yes
+618,Interactive,Account Leadership,1,Oral communication/Excel/Leadership/ML/,2020-09-01 00:00:00,Denver,No
+619,Interactive,Strategy,6,Excel/Critical thinking/,2020-09-01 00:00:00,Boston,Yes
+620,Strategy & Consulting,Human Resources,10,Oral communication/Excel/PowerPoint/Workday/,2020-09-01 00:00:00,Chicago,No
+621,Interactive,Strategy,2,Excel/,2020-11-01 00:00:00,DC,Yes
+622,Strategy & Consulting,Account Leadership,4,ML/Oral communication/PowerPoint/,2020-10-01 00:00:00,NYC,No
+623,Interactive,Security,10,Java/Java/ML/Oracle/,2020-04-01 00:00:00,Chicago,No
+624,Operations,Strategy,5,Critical thinking/Critical thinking/,2020-01-01 00:00:00,Boston,Yes
+625,Strategy & Consulting,Strategy,11,Critical thinking/Critical thinking/Critical thinking/PowerPoint/,2020-10-01 00:00:00,NYC,No
+626,Strategy & Consulting,Strategy,11,Critical thinking/Excel/Critical thinking/Critical thinking/,2020-10-01 00:00:00,Denver,Yes
+627,Technology,IT Operations,9,Oracle/Excel/Python/Oracle/,2020-01-01 00:00:00,NYC,Yes
+628,Technology,Finance,11,Excel/Excel/,2020-09-01 00:00:00,Boston,Yes
+629,Operations,Account Leadership,8,Excel/Leadership/Oral communication/Cloud/,2020-11-01 00:00:00,Boston,No
+630,Technology,Engineering,11,Java/Excel/,2020-04-01 00:00:00,Chicago,Yes
+631,Strategy & Consulting,IT Operations,6,ML/Python/Excel/,2020-10-01 00:00:00,Chicago,Yes
+632,Interactive,Engineering,11,Python/PowerPoint/Excel/Java/,2020-09-01 00:00:00,NYC,Yes
+633,Operations,Design,5,Adobe/,2020-12-01 00:00:00,NYC,Yes
+634,Operations,Legal,3,PowerPoint/,2020-04-01 00:00:00,Boston,No
+635,Technology,Business,11,Excel/Excel/PowerPoint/Salesforce/,2020-07-01 00:00:00,DC,No
+636,Strategy & Consulting,Finance,1,QuickBooks/SAP/Excel/,2020-06-01 00:00:00,Chicago,Yes
+637,Technology,Strategy,5,PowerPoint/,2020-09-01 00:00:00,Boston,No
+638,Technology,IT Operations,5,Java/Cloud/,2020-06-01 00:00:00,DC,Yes
+639,Interactive,Account Leadership,6,Excel/,2020-08-01 00:00:00,NYC,Yes
+640,Technology,Business,1,Excel/Excel/Excel/,2020-08-01 00:00:00,Boston,Yes
+641,Operations,Strategy,5,Excel/Excel/,2020-08-01 00:00:00,Boston,Yes
+642,Technology,Finance,4,Excel/,2020-05-01 00:00:00,Denver,No
+643,Operations,Engineering,8,Excel/Java/PowerPoint/,2020-03-01 00:00:00,NYC,Yes
+644,Operations,Engineering,6,PowerPoint/MATLAB/Excel/,2020-01-01 00:00:00,DC,Yes
+645,Strategy & Consulting,Engineering,2,Java/Excel/,2020-08-01 00:00:00,DC,Yes
+646,Strategy & Consulting,Legal,3,Bar/Bar/Oral communication/,2020-01-01 00:00:00,Denver,Yes
+647,Operations,Engineering,10,PowerPoint/,2020-03-01 00:00:00,Chicago,Yes
+648,Operations,Design,11,Adobe/Excel/Adobe/,2020-09-01 00:00:00,DC,No
+649,Interactive,Legal,10,Bar/,2020-09-01 00:00:00,Boston,No
+650,Interactive,Engineering,6,Excel/PowerPoint/,2020-11-01 00:00:00,Boston,Yes
+651,Technology,IT Operations,7,Oracle/Python/Cloud/,2020-06-01 00:00:00,NYC,No
+652,Interactive,Engineering,8,MATLAB/MATLAB/Excel/,2020-05-01 00:00:00,DC,No
+653,Interactive,Design,1,PhotoShop/,2020-03-01 00:00:00,Denver,Yes
+654,Technology,Engineering,10,MATLAB/Python/,2020-05-01 00:00:00,Boston,Yes
+655,Strategy & Consulting,Finance,6,QuickBooks/QuickBooks/,2020-12-01 00:00:00,Boston,Yes
+656,Strategy & Consulting,Strategy,7,Excel/Excel/Excel/,2020-04-01 00:00:00,NYC,Yes
+657,Strategy & Consulting,Human Resources,2,Oral communication/Workday/Oral communication/Excel/,2020-01-01 00:00:00,Chicago,Yes
+658,Strategy & Consulting,Finance,8,SAP/,2020-12-01 00:00:00,Denver,No
+659,Technology,Account Leadership,10,Oral communication/ML/Excel/Oral communication/,2020-11-01 00:00:00,Boston,Yes
+660,Operations,Finance,6,Excel/,2020-11-01 00:00:00,DC,Yes
+661,Strategy & Consulting,Design,8,React.js/Adobe/,2020-06-01 00:00:00,Boston,Yes
+662,Interactive,Finance,4,SAP/SAP/,2020-03-01 00:00:00,Chicago,Yes
+663,Operations,Engineering,9,Excel/Python/Java/Python/,2020-04-01 00:00:00,Boston,No
+664,Technology,Business,8,Excel/Salesforce/Excel/Salesforce/,2020-01-01 00:00:00,Chicago,No
+665,Technology,Business,4,PowerPoint/,2020-02-01 00:00:00,Denver,No
+666,Strategy & Consulting,Human Resources,10,Excel/Excel/Workday/,2020-10-01 00:00:00,Denver,Yes
+667,Strategy & Consulting,Engineering,9,Java/,2020-04-01 00:00:00,Boston,Yes
+668,Interactive,Finance,9,QuickBooks/PowerPoint/QuickBooks/,2020-05-01 00:00:00,DC,No
+669,Operations,IT Operations,1,Python/,2020-07-01 00:00:00,Boston,No
+670,Operations,Business,11,PowerPoint/Excel/PowerPoint/PowerPoint/,2020-04-01 00:00:00,DC,Yes
+671,Operations,Security,7,PowerPoint/Java/Excel/,2020-06-01 00:00:00,DC,No
+672,Strategy & Consulting,Finance,11,PowerPoint/Excel/,2020-03-01 00:00:00,Denver,No
+673,Strategy & Consulting,Security,4,ML/Excel/,2020-10-01 00:00:00,Chicago,No
+674,Strategy & Consulting,IT Operations,10,Oracle/PowerPoint/Python/Python/,2020-02-01 00:00:00,NYC,Yes
+675,Interactive,Strategy,8,Critical thinking/Critical thinking/Critical thinking/Excel/,2020-01-01 00:00:00,Boston,Yes
+676,Strategy & Consulting,Security,2,Cloud/ML/Excel/PowerPoint/,2020-06-01 00:00:00,DC,Yes
+677,Operations,Finance,8,QuickBooks/SAP/QuickBooks/,2020-06-01 00:00:00,Chicago,Yes
+678,Interactive,Legal,10,Bar/Excel/,2020-11-01 00:00:00,NYC,No
+679,Technology,Design,1,PowerPoint/React.js/,2020-12-01 00:00:00,Boston,Yes
+680,Technology,Engineering,8,PowerPoint/,2020-08-01 00:00:00,Chicago,No
+681,Interactive,Human Resources,11,PowerPoint/PowerPoint/,2020-01-01 00:00:00,NYC,No
+682,Technology,Strategy,8,PowerPoint/Excel/Excel/,2020-10-01 00:00:00,NYC,No
+683,Operations,Engineering,3,PowerPoint/,2020-08-01 00:00:00,Denver,Yes
+684,Strategy & Consulting,Engineering,9,MATLAB/Java/,2020-09-01 00:00:00,Chicago,No
+685,Technology,Human Resources,2,Excel/,2020-05-01 00:00:00,Boston,No
+686,Strategy & Consulting,Finance,4,Excel/,2020-06-01 00:00:00,Chicago,Yes
+687,Strategy & Consulting,Account Leadership,1,Cloud/Leadership/,2020-12-01 00:00:00,DC,Yes
+688,Strategy & Consulting,Finance,8,PowerPoint/PowerPoint/,2020-07-01 00:00:00,NYC,Yes
+689,Technology,Security,11,PowerPoint/Java/Oracle/,2020-11-01 00:00:00,Boston,No
+690,Interactive,Account Leadership,9,Excel/ML/,2020-07-01 00:00:00,DC,No
+691,Strategy & Consulting,Legal,8,Bar/PowerPoint/Excel/,2020-07-01 00:00:00,DC,Yes
+692,Technology,Design,11,Excel/,2020-02-01 00:00:00,Chicago,No
+693,Interactive,Design,5,Excel/,2020-12-01 00:00:00,Chicago,Yes
+694,Interactive,Design,8,React.js/,2020-07-01 00:00:00,Chicago,Yes
+695,Operations,IT Operations,5,Python/Java/PowerPoint/ML/,2020-11-01 00:00:00,DC,Yes
+696,Strategy & Consulting,Account Leadership,2,ML/ML/Excel/Leadership/,2020-05-01 00:00:00,NYC,Yes
+697,Strategy & Consulting,Finance,11,Excel/SAP/Excel/PowerPoint/,2020-02-01 00:00:00,NYC,No
+698,Interactive,Strategy,1,PowerPoint/Critical thinking/Excel/Critical thinking/,2020-03-01 00:00:00,Boston,No
+699,Strategy & Consulting,Legal,6,Excel/Oral communication/Bar/,2020-02-01 00:00:00,NYC,Yes
+700,Strategy & Consulting,Legal,10,Excel/Excel/Bar/Bar/,2020-07-01 00:00:00,Chicago,Yes
+701,Technology,Security,6,Python/Cloud/Oracle/,2020-09-01 00:00:00,NYC,No
+702,Operations,Security,1,ML/,2020-09-01 00:00:00,Chicago,No
+703,Operations,Finance,11,PowerPoint/,2020-08-01 00:00:00,Chicago,Yes
+704,Operations,Security,2,Oracle/PowerPoint/PowerPoint/PowerPoint/,2020-11-01 00:00:00,Boston,No
+705,Interactive,Strategy,11,Excel/,2020-12-01 00:00:00,NYC,Yes
+706,Technology,Account Leadership,9,Cloud/,2020-01-01 00:00:00,Denver,No
+707,Technology,Account Leadership,7,Leadership/Cloud/,2020-07-01 00:00:00,DC,Yes
+708,Technology,Account Leadership,7,Leadership/ML/PowerPoint/,2020-03-01 00:00:00,Denver,Yes
+709,Strategy & Consulting,Engineering,11,Java/MATLAB/Excel/MATLAB/,2020-05-01 00:00:00,Denver,No
+710,Interactive,Strategy,5,Excel/,2020-06-01 00:00:00,NYC,Yes
+711,Strategy & Consulting,IT Operations,5,Java/Python/Cloud/,2020-09-01 00:00:00,Chicago,No
+712,Interactive,Design,9,Adobe/React.js/PowerPoint/PowerPoint/,2020-11-01 00:00:00,Chicago,Yes
+713,Interactive,Strategy,8,Excel/PowerPoint/Critical thinking/,2020-08-01 00:00:00,DC,Yes
+714,Interactive,Security,6,Cloud/ML/,2020-10-01 00:00:00,DC,Yes
+715,Operations,Legal,6,Excel/Excel/,2020-03-01 00:00:00,DC,Yes
+716,Technology,Human Resources,7,Oral communication/Excel/PowerPoint/,2020-03-01 00:00:00,Denver,Yes
+717,Interactive,Design,2,Excel/Adobe/,2020-11-01 00:00:00,NYC,No
+718,Operations,Business,6,Salesforce/,2020-07-01 00:00:00,Denver,Yes
+719,Operations,IT Operations,8,Java/Java/Python/Java/,2020-06-01 00:00:00,Boston,Yes
+720,Technology,Strategy,2,Critical thinking/PowerPoint/Critical thinking/Critical thinking/,2020-09-01 00:00:00,Chicago,Yes
+721,Operations,Strategy,10,PowerPoint/,2020-04-01 00:00:00,Denver,No
+722,Strategy & Consulting,Legal,4,PowerPoint/PowerPoint/Bar/PowerPoint/,2020-07-01 00:00:00,Boston,Yes
+723,Strategy & Consulting,IT Operations,4,Cloud/Oracle/Java/,2020-07-01 00:00:00,Chicago,Yes
+724,Interactive,IT Operations,4,ML/Python/,2020-02-01 00:00:00,Chicago,No
+725,Operations,Strategy,10,PowerPoint/Excel/Excel/,2020-08-01 00:00:00,Boston,No
+726,Technology,Security,5,PowerPoint/Cloud/Excel/Python/,2020-07-01 00:00:00,Boston,Yes
+727,Strategy & Consulting,Legal,11,PowerPoint/Oral communication/,2020-04-01 00:00:00,DC,Yes
+728,Interactive,Legal,7,Bar/Oral communication/Bar/,2020-01-01 00:00:00,NYC,No
+729,Interactive,Strategy,1,Critical thinking/Excel/,2020-12-01 00:00:00,NYC,Yes
+730,Technology,Design,7,Adobe/PhotoShop/,2020-01-01 00:00:00,Chicago,No
+731,Operations,Business,3,PowerPoint/PowerPoint/PowerPoint/,2020-01-01 00:00:00,Denver,No
+732,Strategy & Consulting,Engineering,9,Excel/Java/,2020-10-01 00:00:00,Chicago,No
+733,Technology,Design,3,React.js/Excel/,2020-09-01 00:00:00,Boston,Yes
+734,Technology,Business,1,Salesforce/Excel/PowerPoint/,2020-01-01 00:00:00,Denver,No
+735,Operations,Finance,9,Excel/SAP/Excel/,2020-12-01 00:00:00,DC,No
+736,Strategy & Consulting,Engineering,7,Python/Java/,2020-06-01 00:00:00,Denver,No
+737,Technology,Design,7,PhotoShop/Adobe/,2020-05-01 00:00:00,NYC,No
+738,Strategy & Consulting,Account Leadership,11,Oral communication/ML/Leadership/,2020-08-01 00:00:00,Chicago,No
+739,Interactive,IT Operations,3,PowerPoint/,2020-08-01 00:00:00,Denver,Yes
+740,Strategy & Consulting,Account Leadership,9,ML/ML/PowerPoint/,2020-01-01 00:00:00,Chicago,No
+741,Strategy & Consulting,Human Resources,5,PowerPoint/Workday/Excel/PowerPoint/,2020-11-01 00:00:00,NYC,Yes
+742,Operations,Business,6,PowerPoint/,2020-07-01 00:00:00,Denver,Yes
+743,Operations,Engineering,11,Python/MATLAB/Java/,2020-05-01 00:00:00,Chicago,No
+744,Strategy & Consulting,IT Operations,1,Oracle/Python/Excel/ML/,2020-01-01 00:00:00,NYC,No
+745,Strategy & Consulting,Legal,6,Excel/Excel/Excel/PowerPoint/,2020-12-01 00:00:00,Boston,No
+746,Technology,Engineering,7,Excel/MATLAB/,2020-03-01 00:00:00,Boston,Yes
+747,Technology,Strategy,10,Critical thinking/,2020-04-01 00:00:00,NYC,Yes
+748,Interactive,Design,8,Adobe/Adobe/Adobe/PhotoShop/,2020-09-01 00:00:00,Chicago,No
+749,Operations,Design,4,PowerPoint/,2020-06-01 00:00:00,Chicago,Yes
+750,Operations,Finance,8,QuickBooks/SAP/Excel/,2020-09-01 00:00:00,Boston,Yes
+751,Operations,Strategy,7,Critical thinking/Critical thinking/PowerPoint/PowerPoint/,2020-03-01 00:00:00,Boston,Yes
+752,Operations,IT Operations,5,ML/PowerPoint/Cloud/Excel/,2020-01-01 00:00:00,Denver,No
+753,Strategy & Consulting,Design,4,PhotoShop/PhotoShop/,2020-11-01 00:00:00,Boston,No
+754,Technology,Design,6,Adobe/,2020-04-01 00:00:00,Boston,Yes
+755,Strategy & Consulting,Finance,5,SAP/SAP/QuickBooks/SAP/,2020-10-01 00:00:00,NYC,Yes
+756,Operations,IT Operations,3,Java/Java/Python/,2020-07-01 00:00:00,Denver,No
+757,Operations,Design,8,PowerPoint/,2020-02-01 00:00:00,Chicago,No
+758,Technology,Finance,6,PowerPoint/Excel/PowerPoint/SAP/,2020-03-01 00:00:00,DC,Yes
+759,Technology,IT Operations,10,ML/Cloud/ML/,2020-02-01 00:00:00,Denver,No
+760,Interactive,Finance,8,QuickBooks/QuickBooks/QuickBooks/,2020-02-01 00:00:00,Chicago,Yes
+761,Technology,Engineering,5,Excel/PowerPoint/,2020-02-01 00:00:00,DC,No
+762,Strategy & Consulting,Engineering,10,Excel/PowerPoint/,2020-12-01 00:00:00,Chicago,Yes
+763,Operations,Strategy,7,Excel/,2020-01-01 00:00:00,DC,Yes
+764,Operations,IT Operations,4,ML/Java/Java/Oracle/,2020-05-01 00:00:00,Boston,No
+765,Interactive,Finance,4,PowerPoint/SAP/PowerPoint/PowerPoint/,2020-02-01 00:00:00,NYC,No
+766,Technology,Design,2,PowerPoint/Adobe/PhotoShop/Excel/,2020-02-01 00:00:00,NYC,Yes
+767,Operations,Human Resources,3,Oral communication/,2020-08-01 00:00:00,Denver,Yes
+768,Technology,Design,4,Adobe/Excel/Excel/,2020-09-01 00:00:00,Boston,No
+769,Technology,Business,10,Excel/PowerPoint/Salesforce/,2020-10-01 00:00:00,NYC,No
+770,Interactive,Account Leadership,8,Excel/Leadership/Cloud/,2020-09-01 00:00:00,Chicago,Yes
+771,Interactive,IT Operations,7,Python/ML/Excel/,2020-02-01 00:00:00,NYC,Yes
+772,Operations,Security,10,Oracle/,2020-08-01 00:00:00,Boston,Yes
+773,Operations,IT Operations,6,Excel/ML/,2020-01-01 00:00:00,Chicago,No
+774,Operations,Strategy,10,Critical thinking/Excel/Critical thinking/PowerPoint/,2020-08-01 00:00:00,DC,Yes
+775,Interactive,Business,8,Excel/,2020-10-01 00:00:00,NYC,Yes
+776,Technology,Design,2,PhotoShop/,2020-09-01 00:00:00,DC,No
+777,Strategy & Consulting,Account Leadership,7,PowerPoint/Excel/,2020-12-01 00:00:00,Boston,Yes
+778,Interactive,Strategy,8,Critical thinking/Critical thinking/PowerPoint/,2020-03-01 00:00:00,NYC,No
+779,Operations,Finance,4,QuickBooks/SAP/Excel/,2020-08-01 00:00:00,Denver,Yes
+780,Technology,Strategy,9,Critical thinking/PowerPoint/,2020-09-01 00:00:00,Chicago,No
+781,Operations,Engineering,1,Java/Python/,2020-05-01 00:00:00,DC,Yes
+782,Strategy & Consulting,Strategy,1,Excel/PowerPoint/Excel/,2020-09-01 00:00:00,Denver,No
+783,Operations,IT Operations,10,ML/Java/,2020-12-01 00:00:00,Denver,No
+784,Operations,Business,11,PowerPoint/PowerPoint/,2020-04-01 00:00:00,DC,No
+785,Strategy & Consulting,Design,9,React.js/PowerPoint/,2020-12-01 00:00:00,Chicago,Yes
+786,Interactive,Design,3,Excel/,2020-12-01 00:00:00,DC,No
+787,Strategy & Consulting,Strategy,7,Critical thinking/PowerPoint/,2020-07-01 00:00:00,DC,No
+788,Operations,Human Resources,11,Oral communication/Oral communication/Oral communication/Workday/,2020-04-01 00:00:00,DC,Yes
+789,Strategy & Consulting,Engineering,4,Java/Excel/PowerPoint/PowerPoint/,2020-12-01 00:00:00,Boston,Yes
+790,Interactive,IT Operations,3,Excel/,2020-02-01 00:00:00,Boston,No
+791,Strategy & Consulting,Security,7,ML/Oracle/,2020-03-01 00:00:00,Chicago,Yes
+792,Operations,Security,11,Java/ML/Python/Python/,2020-03-01 00:00:00,NYC,No
+793,Strategy & Consulting,Business,2,Salesforce/Excel/Salesforce/Salesforce/,2020-10-01 00:00:00,Boston,Yes
+794,Strategy & Consulting,Legal,6,Oral communication/Oral communication/Bar/,2020-08-01 00:00:00,Chicago,No
+795,Operations,Business,7,PowerPoint/PowerPoint/,2020-10-01 00:00:00,DC,Yes
+796,Strategy & Consulting,Finance,8,QuickBooks/Excel/Excel/,2020-07-01 00:00:00,DC,No
+797,Operations,Finance,7,QuickBooks/PowerPoint/SAP/,2020-09-01 00:00:00,Chicago,No
+798,Strategy & Consulting,Business,1,Salesforce/PowerPoint/,2020-10-01 00:00:00,DC,No
+799,Operations,Security,1,Cloud/ML/ML/ML/,2020-07-01 00:00:00,Chicago,Yes
+800,Technology,Legal,10,Oral communication/Oral communication/Excel/,2020-05-01 00:00:00,Chicago,Yes
+801,Technology,Security,1,Cloud/Java/,2020-11-01 00:00:00,NYC,No
+802,Interactive,IT Operations,3,ML/PowerPoint/Excel/,2020-05-01 00:00:00,Denver,Yes
+803,Strategy & Consulting,Business,9,Excel/Excel/PowerPoint/,2020-12-01 00:00:00,DC,Yes
+804,Operations,Engineering,5,Java/,2020-05-01 00:00:00,Denver,Yes
+805,Operations,IT Operations,3,PowerPoint/PowerPoint/,2020-06-01 00:00:00,DC,No
+806,Interactive,IT Operations,11,PowerPoint/,2020-06-01 00:00:00,Chicago,No
+807,Operations,Human Resources,5,Oral communication/,2020-10-01 00:00:00,Boston,Yes
+808,Interactive,Business,2,Excel/,2020-06-01 00:00:00,Boston,Yes
+809,Operations,Account Leadership,11,Cloud/Excel/,2020-08-01 00:00:00,Denver,Yes
+810,Strategy & Consulting,Design,10,PhotoShop/,2020-07-01 00:00:00,NYC,No
+811,Strategy & Consulting,Finance,3,QuickBooks/Excel/,2020-02-01 00:00:00,Denver,Yes
+812,Interactive,Business,8,Salesforce/,2020-11-01 00:00:00,Boston,Yes
+813,Interactive,Legal,10,Oral communication/PowerPoint/Excel/,2020-12-01 00:00:00,NYC,Yes
+814,Strategy & Consulting,Account Leadership,8,PowerPoint/Cloud/ML/ML/,2020-01-01 00:00:00,DC,No
+815,Interactive,Legal,5,Bar/Excel/,2020-06-01 00:00:00,NYC,No
+816,Technology,Human Resources,4,Oral communication/PowerPoint/PowerPoint/,2020-01-01 00:00:00,Boston,No
+817,Technology,Account Leadership,8,PowerPoint/Oral communication/Oral communication/ML/,2020-05-01 00:00:00,Chicago,No
+818,Operations,Strategy,10,Critical thinking/Critical thinking/,2020-01-01 00:00:00,DC,No
+819,Operations,Business,9,PowerPoint/Excel/,2020-08-01 00:00:00,Boston,No
+820,Technology,Finance,5,QuickBooks/Excel/,2020-06-01 00:00:00,Boston,No
+821,Technology,IT Operations,2,Python/Excel/Oracle/,2020-12-01 00:00:00,DC,Yes
+822,Operations,Finance,7,Excel/SAP/Excel/QuickBooks/,2020-01-01 00:00:00,Boston,No
+823,Strategy & Consulting,Finance,3,SAP/,2020-03-01 00:00:00,Boston,No
+824,Operations,Human Resources,9,PowerPoint/,2020-04-01 00:00:00,Boston,Yes
+825,Strategy & Consulting,Engineering,9,PowerPoint/PowerPoint/Java/Excel/,2020-07-01 00:00:00,DC,Yes
+826,Strategy & Consulting,Business,5,Salesforce/Excel/Salesforce/Salesforce/,2020-06-01 00:00:00,Chicago,Yes
+827,Interactive,Account Leadership,9,ML/,2020-11-01 00:00:00,Denver,No
+828,Interactive,Account Leadership,8,ML/,2020-02-01 00:00:00,Denver,Yes
+829,Interactive,Design,3,Adobe/PhotoShop/,2020-06-01 00:00:00,NYC,No
+830,Interactive,Finance,5,PowerPoint/,2020-12-01 00:00:00,Boston,No
+831,Strategy & Consulting,Account Leadership,5,PowerPoint/Excel/ML/,2020-12-01 00:00:00,NYC,Yes
+832,Technology,Engineering,8,Java/PowerPoint/,2020-08-01 00:00:00,NYC,No
+833,Technology,Engineering,8,PowerPoint/,2020-03-01 00:00:00,Chicago,No
+834,Strategy & Consulting,Strategy,9,Excel/PowerPoint/Critical thinking/Critical thinking/,2020-03-01 00:00:00,DC,No
+835,Technology,Strategy,5,PowerPoint/Critical thinking/,2020-10-01 00:00:00,Boston,No
+836,Strategy & Consulting,Design,5,Excel/Adobe/React.js/,2020-09-01 00:00:00,NYC,Yes
+837,Operations,Engineering,5,PowerPoint/Excel/,2020-08-01 00:00:00,DC,Yes
+838,Interactive,Security,5,PowerPoint/Python/Python/,2020-12-01 00:00:00,Denver,No
+839,Strategy & Consulting,Finance,7,QuickBooks/,2020-02-01 00:00:00,Chicago,No
+840,Strategy & Consulting,Engineering,8,MATLAB/,2020-05-01 00:00:00,Chicago,No
+841,Interactive,Legal,10,Excel/Oral communication/PowerPoint/PowerPoint/,2020-06-01 00:00:00,NYC,Yes
+842,Strategy & Consulting,Engineering,11,Python/,2020-08-01 00:00:00,Chicago,Yes
+843,Interactive,Account Leadership,11,ML/Oral communication/ML/,2020-04-01 00:00:00,NYC,Yes
+844,Technology,Account Leadership,5,PowerPoint/,2020-11-01 00:00:00,Denver,Yes
+845,Strategy & Consulting,Business,5,Salesforce/,2020-01-01 00:00:00,DC,No
+846,Interactive,Security,1,Java/ML/,2020-03-01 00:00:00,NYC,Yes
+847,Technology,Account Leadership,3,PowerPoint/,2020-03-01 00:00:00,Boston,Yes
+848,Operations,Human Resources,11,Workday/,2020-10-01 00:00:00,NYC,No
+849,Technology,Design,11,PowerPoint/PhotoShop/Excel/,2020-11-01 00:00:00,DC,Yes
+850,Strategy & Consulting,IT Operations,4,Java/PowerPoint/Python/,2020-10-01 00:00:00,Chicago,Yes
+851,Strategy & Consulting,Engineering,6,Python/PowerPoint/Python/MATLAB/,2020-08-01 00:00:00,DC,No
+852,Operations,Business,10,PowerPoint/PowerPoint/,2020-12-01 00:00:00,Boston,No
+853,Technology,Security,8,Oracle/Oracle/,2020-11-01 00:00:00,Boston,No
+854,Interactive,Account Leadership,6,Oral communication/Leadership/Oral communication/,2020-02-01 00:00:00,Chicago,Yes
+855,Technology,Design,9,PhotoShop/Excel/React.js/PhotoShop/,2020-05-01 00:00:00,DC,No
+856,Operations,IT Operations,7,Python/Python/,2020-11-01 00:00:00,NYC,No
+857,Technology,Account Leadership,5,Leadership/PowerPoint/Oral communication/PowerPoint/,2020-12-01 00:00:00,DC,No
+858,Technology,Business,6,Excel/PowerPoint/Salesforce/,2020-02-01 00:00:00,Denver,Yes
+859,Technology,Design,3,PhotoShop/,2020-12-01 00:00:00,Denver,Yes
+860,Interactive,Finance,5,PowerPoint/PowerPoint/PowerPoint/,2020-03-01 00:00:00,Denver,Yes
+861,Interactive,Account Leadership,10,Excel/Leadership/Excel/Oral communication/,2020-01-01 00:00:00,NYC,No
+862,Interactive,Business,9,Salesforce/Salesforce/PowerPoint/Excel/,2020-12-01 00:00:00,Boston,No
+863,Strategy & Consulting,Strategy,10,Excel/PowerPoint/Critical thinking/,2020-06-01 00:00:00,Chicago,No
+864,Strategy & Consulting,IT Operations,4,Oracle/,2020-10-01 00:00:00,NYC,Yes
+865,Operations,Engineering,10,MATLAB/,2020-09-01 00:00:00,Denver,No
+866,Interactive,Security,4,Python/ML/,2020-01-01 00:00:00,DC,No
+867,Interactive,Security,5,Python/Cloud/Python/Cloud/,2020-02-01 00:00:00,NYC,Yes
+868,Strategy & Consulting,Design,3,PhotoShop/,2020-04-01 00:00:00,Denver,No
+869,Interactive,Finance,11,SAP/,2020-12-01 00:00:00,NYC,Yes
+870,Technology,Business,5,PowerPoint/Salesforce/Salesforce/Excel/,2020-06-01 00:00:00,NYC,No
+871,Interactive,Design,7,PhotoShop/PowerPoint/Excel/,2020-10-01 00:00:00,Denver,No
+872,Strategy & Consulting,Legal,9,Oral communication/Bar/PowerPoint/Oral communication/,2020-01-01 00:00:00,DC,Yes
+873,Strategy & Consulting,Security,9,Java/Cloud/,2020-02-01 00:00:00,NYC,Yes
+874,Technology,Security,11,Excel/ML/Oracle/,2020-08-01 00:00:00,NYC,No
+875,Strategy & Consulting,Security,8,Oracle/Oracle/Python/Excel/,2020-10-01 00:00:00,NYC,Yes
+876,Technology,Strategy,11,PowerPoint/,2020-04-01 00:00:00,DC,No
+877,Technology,Engineering,9,Excel/MATLAB/PowerPoint/Python/,2020-01-01 00:00:00,Denver,No
+878,Strategy & Consulting,Legal,7,Excel/Bar/Excel/,2020-10-01 00:00:00,Denver,Yes
+879,Operations,Business,7,PowerPoint/,2020-08-01 00:00:00,DC,No
+880,Strategy & Consulting,Security,5,PowerPoint/Python/,2020-02-01 00:00:00,Boston,No
+881,Operations,Engineering,10,Python/Excel/Python/,2020-02-01 00:00:00,NYC,No
+882,Technology,Security,9,PowerPoint/,2020-07-01 00:00:00,NYC,No
+883,Interactive,IT Operations,1,Oracle/Excel/Python/,2020-03-01 00:00:00,DC,Yes
+884,Operations,Legal,4,Oral communication/,2020-07-01 00:00:00,NYC,No
+885,Technology,Legal,10,Excel/Bar/Bar/Bar/,2020-01-01 00:00:00,Denver,Yes
+886,Strategy & Consulting,Human Resources,1,Oral communication/Excel/Oral communication/,2020-11-01 00:00:00,Chicago,Yes
+887,Technology,Account Leadership,1,Oral communication/Excel/Leadership/Excel/,2020-11-01 00:00:00,DC,No
+888,Operations,Strategy,10,Critical thinking/PowerPoint/Critical thinking/,2020-12-01 00:00:00,NYC,Yes
+889,Technology,IT Operations,4,Oracle/Excel/,2020-09-01 00:00:00,NYC,No
+890,Operations,Legal,7,Bar/Excel/Bar/Oral communication/,2020-04-01 00:00:00,NYC,Yes
+891,Interactive,Business,10,PowerPoint/,2020-05-01 00:00:00,Boston,No
+892,Interactive,Account Leadership,2,Cloud/Oral communication/PowerPoint/Excel/,2020-12-01 00:00:00,Boston,Yes
+893,Technology,Design,8,React.js/Excel/,2020-07-01 00:00:00,Chicago,Yes
+894,Operations,Engineering,6,Java/Java/Excel/PowerPoint/,2020-10-01 00:00:00,NYC,Yes
+895,Technology,Security,5,ML/Oracle/,2020-03-01 00:00:00,Denver,No
+896,Technology,Security,9,Java/,2020-07-01 00:00:00,NYC,No
+897,Interactive,Human Resources,6,Workday/PowerPoint/,2020-12-01 00:00:00,Chicago,Yes
+898,Interactive,Finance,4,SAP/QuickBooks/QuickBooks/QuickBooks/,2020-08-01 00:00:00,Denver,Yes
+899,Technology,Engineering,7,Java/Python/Java/,2020-04-01 00:00:00,Chicago,Yes
+900,Strategy & Consulting,IT Operations,11,Cloud/PowerPoint/Python/Cloud/,2020-10-01 00:00:00,Chicago,Yes
+901,Interactive,Finance,7,PowerPoint/SAP/,2020-03-01 00:00:00,Boston,No
+902,Technology,Human Resources,3,Excel/,2020-09-01 00:00:00,DC,No
+903,Technology,Account Leadership,5,Cloud/ML/Leadership/Oral communication/,2020-02-01 00:00:00,Boston,No
+904,Interactive,Legal,10,Excel/,2020-08-01 00:00:00,Boston,Yes
+905,Interactive,Design,8,PowerPoint/PowerPoint/,2020-04-01 00:00:00,Boston,Yes
+906,Interactive,IT Operations,11,Cloud/PowerPoint/,2020-05-01 00:00:00,Denver,Yes
+907,Strategy & Consulting,Human Resources,6,PowerPoint/Workday/,2020-09-01 00:00:00,Denver,Yes
+908,Technology,Security,5,Oracle/,2020-02-01 00:00:00,Denver,Yes
+909,Strategy & Consulting,Security,3,Python/Java/Excel/Oracle/,2020-03-01 00:00:00,Boston,No
+910,Interactive,Business,3,PowerPoint/Excel/Salesforce/,2020-07-01 00:00:00,Denver,Yes
+911,Technology,Strategy,5,Excel/,2020-10-01 00:00:00,DC,Yes
+912,Technology,IT Operations,8,Java/PowerPoint/ML/,2020-10-01 00:00:00,DC,No
+913,Operations,Legal,9,Bar/,2020-02-01 00:00:00,Chicago,No
+914,Interactive,Business,5,Salesforce/Excel/,2020-05-01 00:00:00,DC,No
+915,Technology,Security,2,PowerPoint/Oracle/Excel/,2020-11-01 00:00:00,Denver,Yes
+916,Operations,Legal,4,PowerPoint/PowerPoint/,2020-08-01 00:00:00,Chicago,No
+917,Operations,Engineering,11,PowerPoint/PowerPoint/,2020-06-01 00:00:00,Boston,No
+918,Interactive,Security,4,Excel/,2020-05-01 00:00:00,Chicago,Yes
+919,Technology,Business,10,Salesforce/Excel/PowerPoint/,2020-10-01 00:00:00,NYC,Yes
+920,Technology,Legal,5,Bar/Bar/PowerPoint/,2020-12-01 00:00:00,Denver,Yes
+921,Operations,Strategy,2,PowerPoint/,2020-09-01 00:00:00,NYC,No
+922,Technology,Security,1,ML/Python/Excel/ML/,2020-03-01 00:00:00,NYC,Yes
+923,Operations,Account Leadership,2,Oral communication/,2020-11-01 00:00:00,Chicago,No
+924,Technology,Strategy,10,Critical thinking/,2020-02-01 00:00:00,Denver,No
+925,Technology,Human Resources,3,PowerPoint/PowerPoint/,2020-09-01 00:00:00,NYC,No
+926,Strategy & Consulting,IT Operations,10,ML/PowerPoint/,2020-05-01 00:00:00,NYC,No
+927,Strategy & Consulting,Strategy,10,Critical thinking/PowerPoint/Excel/,2020-07-01 00:00:00,Boston,No
+928,Technology,Legal,7,Oral communication/,2020-09-01 00:00:00,Chicago,No
+929,Interactive,Account Leadership,5,Oral communication/Oral communication/ML/Excel/,2020-04-01 00:00:00,Chicago,No
+930,Operations,Engineering,4,PowerPoint/Excel/Excel/Java/,2020-10-01 00:00:00,DC,Yes
+931,Interactive,Engineering,2,PowerPoint/Python/Python/MATLAB/,2020-07-01 00:00:00,Chicago,Yes
+932,Technology,IT Operations,1,ML/ML/,2020-09-01 00:00:00,Boston,Yes
+933,Operations,Legal,4,Bar/Bar/,2020-01-01 00:00:00,NYC,Yes
+934,Strategy & Consulting,IT Operations,3,PowerPoint/ML/,2020-05-01 00:00:00,DC,Yes
+935,Strategy & Consulting,Human Resources,7,Workday/,2020-07-01 00:00:00,Chicago,No
+936,Operations,Security,5,Excel/PowerPoint/,2020-06-01 00:00:00,NYC,Yes
+937,Operations,Legal,2,Bar/PowerPoint/Oral communication/PowerPoint/,2020-09-01 00:00:00,Chicago,No
+938,Strategy & Consulting,Security,11,ML/,2020-10-01 00:00:00,Boston,Yes
+939,Interactive,Business,5,Excel/,2020-03-01 00:00:00,DC,Yes
+940,Operations,Security,6,Python/Java/,2020-04-01 00:00:00,Chicago,Yes
+941,Strategy & Consulting,Human Resources,6,Oral communication/Workday/PowerPoint/,2020-03-01 00:00:00,Boston,No
+942,Interactive,Business,1,PowerPoint/PowerPoint/,2020-07-01 00:00:00,NYC,No
+943,Strategy & Consulting,Account Leadership,11,ML/Excel/,2020-03-01 00:00:00,DC,Yes
+944,Strategy & Consulting,Human Resources,11,Workday/,2020-07-01 00:00:00,DC,No
+945,Operations,Strategy,1,Critical thinking/Excel/PowerPoint/,2020-04-01 00:00:00,NYC,No
+946,Operations,Account Leadership,7,Leadership/Oral communication/Cloud/PowerPoint/,2020-05-01 00:00:00,Boston,No
+947,Interactive,Business,11,Excel/PowerPoint/Excel/,2020-09-01 00:00:00,NYC,No
+948,Interactive,IT Operations,5,Cloud/Cloud/Java/,2020-10-01 00:00:00,Chicago,Yes
+949,Operations,Engineering,7,Excel/Java/Java/,2020-11-01 00:00:00,NYC,No
+950,Operations,Engineering,1,PowerPoint/Python/Python/,2020-12-01 00:00:00,DC,No
+951,Technology,Engineering,11,PowerPoint/MATLAB/,2020-04-01 00:00:00,DC,No
+952,Technology,Legal,8,Excel/,2020-02-01 00:00:00,DC,No
+953,Technology,Strategy,7,Excel/,2020-01-01 00:00:00,Chicago,No
+954,Strategy & Consulting,Strategy,8,PowerPoint/Excel/,2020-06-01 00:00:00,DC,No
+955,Interactive,Account Leadership,11,ML/Leadership/ML/Oral communication/,2020-05-01 00:00:00,Denver,Yes
+956,Strategy & Consulting,Legal,10,PowerPoint/Bar/PowerPoint/,2020-10-01 00:00:00,Denver,Yes
+957,Technology,Business,11,Excel/Excel/Excel/Salesforce/,2020-06-01 00:00:00,Chicago,No
+958,Operations,Human Resources,1,Workday/PowerPoint/Workday/,2020-03-01 00:00:00,Boston,Yes
+959,Technology,Security,5,Python/Oracle/PowerPoint/,2020-01-01 00:00:00,DC,No
+960,Strategy & Consulting,Security,10,PowerPoint/Java/Cloud/,2020-08-01 00:00:00,Denver,Yes
+961,Operations,Strategy,9,Excel/Critical thinking/PowerPoint/Excel/,2020-03-01 00:00:00,DC,Yes
+962,Strategy & Consulting,IT Operations,3,Python/Python/,2020-10-01 00:00:00,Chicago,No
+963,Strategy & Consulting,Business,7,PowerPoint/,2020-10-01 00:00:00,Denver,Yes
+964,Technology,Strategy,2,Excel/Critical thinking/,2020-03-01 00:00:00,Chicago,No
+965,Technology,Business,9,Salesforce/,2020-07-01 00:00:00,NYC,Yes
+966,Interactive,Human Resources,2,Workday/,2020-04-01 00:00:00,NYC,Yes
+967,Interactive,Human Resources,2,Workday/Workday/Oral communication/,2020-06-01 00:00:00,DC,Yes
+968,Interactive,Human Resources,3,Oral communication/PowerPoint/Workday/,2020-04-01 00:00:00,Boston,Yes
+969,Technology,Engineering,9,PowerPoint/Java/,2020-05-01 00:00:00,Chicago,No
+970,Strategy & Consulting,Business,4,Salesforce/Excel/Salesforce/PowerPoint/,2020-09-01 00:00:00,Denver,No
+971,Strategy & Consulting,Account Leadership,4,Excel/Oral communication/Cloud/,2020-04-01 00:00:00,DC,No
+972,Operations,Account Leadership,8,Cloud/Cloud/PowerPoint/,2020-10-01 00:00:00,Denver,Yes
+973,Interactive,Finance,2,Excel/QuickBooks/,2020-11-01 00:00:00,Chicago,No
+974,Interactive,Account Leadership,1,ML/Leadership/PowerPoint/,2020-01-01 00:00:00,Boston,No
+975,Interactive,Human Resources,6,Excel/,2020-03-01 00:00:00,Chicago,Yes
+976,Interactive,Security,7,Cloud/Excel/Oracle/Oracle/,2020-02-01 00:00:00,DC,Yes
+977,Technology,Business,6,Salesforce/Salesforce/Salesforce/PowerPoint/,2020-04-01 00:00:00,DC,No
+978,Operations,IT Operations,2,Cloud/,2020-06-01 00:00:00,NYC,Yes
+979,Operations,IT Operations,10,Excel/Cloud/,2020-02-01 00:00:00,Chicago,Yes
+980,Strategy & Consulting,Human Resources,3,PowerPoint/Excel/Workday/,2020-08-01 00:00:00,Boston,No
+981,Interactive,Strategy,3,Excel/PowerPoint/PowerPoint/Excel/,2020-10-01 00:00:00,DC,Yes
+982,Technology,Security,5,PowerPoint/ML/Oracle/Python/,2020-07-01 00:00:00,DC,No
+983,Interactive,Human Resources,6,PowerPoint/Excel/Workday/,2020-04-01 00:00:00,DC,No
+984,Strategy & Consulting,Engineering,3,PowerPoint/,2020-10-01 00:00:00,NYC,No
+985,Operations,Legal,8,Bar/,2020-05-01 00:00:00,Chicago,No
+986,Technology,Security,6,Oracle/,2020-10-01 00:00:00,Denver,No
+987,Strategy & Consulting,Business,5,Excel/Excel/Excel/PowerPoint/,2020-04-01 00:00:00,NYC,No
+988,Strategy & Consulting,Business,7,Salesforce/PowerPoint/,2020-07-01 00:00:00,NYC,Yes
+989,Operations,Account Leadership,1,Cloud/ML/,2020-03-01 00:00:00,Boston,Yes
+990,Operations,IT Operations,9,Excel/Excel/,2020-01-01 00:00:00,DC,No
+991,Technology,Design,11,PhotoShop/PowerPoint/PowerPoint/,2020-09-01 00:00:00,DC,Yes
+992,Operations,Account Leadership,2,Leadership/,2020-12-01 00:00:00,NYC,Yes
+993,Strategy & Consulting,IT Operations,10,Java/Java/,2020-12-01 00:00:00,Denver,Yes
+994,Technology,Design,10,PowerPoint/PowerPoint/,2020-05-01 00:00:00,Chicago,No
+995,Interactive,Security,5,PowerPoint/Java/Python/,2020-09-01 00:00:00,DC,No
+996,Strategy & Consulting,Legal,6,Excel/Excel/PowerPoint/,2020-01-01 00:00:00,NYC,Yes
+997,Interactive,Strategy,8,PowerPoint/Excel/PowerPoint/,2020-06-01 00:00:00,Denver,No
+998,Operations,Design,5,PhotoShop/PhotoShop/React.js/,2020-01-01 00:00:00,Boston,Yes
+999,Strategy & Consulting,Engineering,7,Python/Java/MATLAB/Java/,2020-11-01 00:00:00,Chicago,Yes
