@@ -88,11 +88,12 @@ def format_preferences(prefs):
 	'''
 	Format preferences dict for terminal printing
 	'''
-	result = "RANK\tPROJ\tNAME\t\t\tLEVEL\tCLIENT\tSTART DATE\tEND DATE\tLOCATION\tLOC REQ\tSKILLS\n"
+	result = "RANK\tPROJ\tSERVICE\t\tNAME\t\t\tLEVEL\tCLIENT\tSTART DATE\tEND DATE\tLOCATION\tLOC REQ\tSKILLS\n"
 	rank = 1
 
 	for project_uid in prefs['projects']:
 		uid = str(project_uid)
+		service = str(prefs[uid]['service'])[:12]
 		name = str(prefs[uid]['name'])
 		level = str(prefs[uid]['level'])
 		client = str(prefs[uid]['client'])
@@ -101,8 +102,8 @@ def format_preferences(prefs):
 		location = str(prefs[uid]['location'])
 		loc_req = str(prefs[uid]['loc_requirement'])
 		skills = str(prefs[uid]['skills'])
-		result += "%d\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t\t%s\t%s\n" \
-					% (rank, uid, name, level, client, start, end, location, loc_req, skills)
+		result += "%d\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t\t%s\t%s\n" \
+					% (rank, uid, service, name, level, client, start, end, location, loc_req, skills)
 		rank += 1
 
 	return result[:-1]
@@ -169,7 +170,9 @@ def saved_projects_information(user_uid):
 					'name': items['Project Name'][0], \
 					'skills': list(set(str(rec['Required Skills'][0]).split('/')[:-1])), \
 					'location': items['Location'][0], \
-					'loc_requirement': items['Local Requirement'][0]}
+					'loc_requirement': items['Local Requirement'][0], \
+					'level': items['Level'][0], \
+					'service': items['Service'][0]}
 
 		response[key] = contents
 
@@ -219,7 +222,8 @@ def preferences_for_user(json_string):
 					"skills": ["<SKILL_1>", "<SKILL_2>", ...],
 					"location": "<LOCATION>",
 					"loc_requirement": <LOC_REQ>,
-					"level": "<LEVEL_RANGE>"
+					"level": "<LEVEL_RANGE>",
+					"service": "<SERVICE>"
 			  },
 			  "14": {
 					 ...,
@@ -258,9 +262,7 @@ def preferences_for_user(json_string):
 
 	# Filter results by service
 	items = projects
-
-	# # TODO: Add column for service spec in projects data
-	# items = items[items['Service'] == service]
+	items = items[items['Service'] == service]
 	# print("**", len(items))
 
 	# Filter by start dates that occur after the user becomes free
@@ -317,7 +319,8 @@ def preferences_for_user(json_string):
 					'skills': list(set(str(rec['Required Skills'][0]).split('/')[:-1])), \
 					'location': rec['Location'][0], \
 					'loc_requirement': rec['Local Requirement'][0], \
-					'level': rec['Level'][0]}
+					'level': rec['Level'][0], \
+					'service': rec['Service'][0]}
 
 		projects_list.append(project_uid)
 		response[key] = contents
@@ -334,9 +337,10 @@ if __name__ == '__main__':
 	skills_filter = str(args[1])
 
 	user = candidates[candidates['Candidate UID'] == int(user_uid)].unique()
+	user_service = user['Service'][0]
 
 	json_string = '{"user": %d,' % user_uid + \
-			  '"service": "Operations",' + \
+			  '"service": "%s",' % user_service + \
 			  '"segment_filter": [],' + \
 			  '"skills_filter": %s,' % skills_filter + \
 			  '"level_filter": [],' + \
