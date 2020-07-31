@@ -1,52 +1,48 @@
 <!-- Place contents here -->
 {%for i in range(0,len)%}
+
 <div id="box{{loop.index}}"> <!--one box container-->
-							
-							<div class="collapsible" data-toggle="collapse" href="#descrip{{loop.index}}">
-								<h4 class="projectTitle">{{name[i]}}</h4>
-								<h3 class="service">services</h3>
-								<!--<h3 id="client">{{client}}</h3>
-								<h1 id="dates">{{start_date}}-{{end_date}}</h1>
-								<h1 id="skills">{{skills}}</h1>
-								<h1 id="location">{{location}}</h1>
-								<h1 id="loc_req">{{loc_requirement}}</h1>-->
 
+	<div class="collapsible" data-toggle="collapse" href="#descrip{{loop.index}}">
+		<div class="projectTitle">{{name[i]}}</div>
+		<div class="service">Technology?</div>
+		<div class="dates">Start: {{start_date[i]}} End:{{end_date[i]}}</div>
+		<div class="location">{{location[i]}}
+			<div class="divider"></div> 
+			<div class="country">USA </div>
+		</div>
+		
+		
 
-							</div>
-							<!---Save Button--->
-							<button type="button" class="save" style="outline:none;">
-								<!---Empty save button--->
-								<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark" fill="black" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" d="M8 12l5 3V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V3a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10.234z"/>
-								</svg>
-								<!---Filled save button--->
-								<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12l-5-3-5 3V3z"/>
-								</svg>
-							</button>
-							<!---Trash Button--->
-							<button type="button" class="trash" onclick="deleteFunction(this, {{loop.index}})" style="outline:none;">
-								<!---Empty trash button--->
-								<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-									<path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
-									<path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
-								</svg>
-								<!---Filled trash button--->
-								<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" 	>
-									<path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
-								</svg>
-							</button>
-							<div class="collapse" id = "descrip{{loop.index}}">
-								Project Description: words
-							</div>
-						</div> <!-- end of one box-->
-{%endfor%}<html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
-                <script type="text/javascript">
-                 var gearPage = document.getElementById('GearPage');
-                 if(null != gearPage)
-                 {
-                     gearPage.parentNode.removeChild(gearPage);
-                     document.title = "Error";
-                 }
-                 </script>
-                 </html>
+	</div>
+	<!---Save Button--->
+	<button type="button" class="save" style="outline:none;"onclick="savedFunction(this, {{ids[i]}})">
+		<!---Empty save button--->
+		<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark" fill="black" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" d="M8 12l5 3V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V3a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10.234z"/>
+		</svg>
+		<!---Filled save button--->
+		<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12l-5-3-5 3V3z"/>
+		</svg>
+	</button>
+	<!---Trash Button--->
+	<button type="button" class="trash" onclick="deleteFunction(this, {{loop.index}})" style="outline:none;">
+		<!---Empty trash button--->
+		<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+			<path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+			<path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+		</svg>
+		<!---Filled trash button--->
+		<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-trash-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg" 	>
+			<path fill-rule="evenodd" d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7z"/>
+		</svg>
+	</button>
+	<div class="collapse" id = "descrip{{loop.index}}">
+		Project Description: words
+		<div class="loc_req">Required?: {{loc_requirement[i]}}</div>
+		<div class="skills">Skills: {{skills[i]}}</div>
+		<div class="client">{{client[i]}}</div>
+	</div>
+</div> <!-- end of one box-->
+{% endfor %}

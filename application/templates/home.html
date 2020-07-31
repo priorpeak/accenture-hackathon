@@ -48,7 +48,7 @@
 			<nav>
 				<div class="nav nav-tabs" id="nav-tab" role="tablist">
 					<a class="nav-item nav-link active" id="nav-available-tab" data-toggle="tab" href="#nav-available" role="tab" aria-controls="nav-available" aria-selected="true">Available Projects</a>
-					<a class=" nav-item nav-link" id="nav-saved-tab" data-toggle="tab" href="#nav-saved" role="tab" aria-controls="nav-saved" aria-selected="false">Saved Projects</a>
+					<a class=" nav-item nav-link" id="nav-saved-tab" data-toggle="tab" href="#nav-saved" role="tab" aria-controls="nav-saved" aria-selected="false"  onclick="savedFunction(this, 'N/A')">Saved Projects</a>
 				</div>
 			</nav> <!--end of top tabs-->
 
@@ -56,25 +56,27 @@
 				<div class="tab-pane fade show active" id="nav-available" role="tabpanel" aria-labelledby="nav-available-tab">
 					<div class="container" id="place_for_request" >
 						<div id="#test">
+
 						</div>
 						<!-- Place contents here -->
 						{%for i in range(0,len)%}
 						
 						<div id="box{{loop.index}}"> <!--one box container-->
-							
+
 							<div class="collapsible" data-toggle="collapse" href="#descrip{{loop.index}}">
-								<h4 class="projectTitle">{{name[i]}}</h4>
-								<h3 class="service" style="text-align:right;float:right;">services</h3>
-								<h3 id="client">{{client[i]}}</h3>
-								<h1 id="dates">{{start_date[i]}}-{{end_date[i]}}</h1>
-								<!--<h1 id="skills">{{skills}}</h1>
-								<h1 id="location">{{location}}</h1>
-								<h1 id="loc_req">{{loc_requirement}}</h1>-->
+                                  <div class="projectTitle">{{name[i]}}</div>
+                                  <div class="service">Technology?</div>
+                                  <div class="dates">Start: {{start_date[i]}} End:{{end_date[i]}}</div>
+                                  <div class="location">{{location[i]}}
+                                  	<div class="divider"></div> 
+                                  	<div class="country">USA </div>
+                                  </div>
+                                  
+                                  
 
-
-							</div>
+                            </div>
 							<!---Save Button--->
-							<button type="button" class="save" style="outline:none;">
+							<button type="button" class="save" style="outline:none;"onclick="savedFunction(this, {{ids[i]}})">
 								<!---Empty save button--->
 								<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-bookmark" fill="black" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" d="M8 12l5 3V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V3a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10.234z"/>
@@ -98,6 +100,9 @@
 							</button>
 							<div class="collapse" id = "descrip{{loop.index}}">
 								Project Description: words
+								<div class="loc_req">Required?: {{loc_requirement[i]}}</div>
+                                <div class="skills">Skills: {{skills[i]}}</div>
+                                <div class="client">{{client[i]}}</div>
 							</div>
 						</div> <!-- end of one box-->
 						{% endfor %}
@@ -105,9 +110,10 @@
 
 				</div> <!--end of available contents-->
 				<div class="tab-pane fade" id="nav-saved" role="tabpanel" aria-labelledby="nav-saved-tab">
-					<div class="container">
+					<div class="container" id = "stored_saved_info">
 						<!-- Place contents here -->
-						saved stuff
+						No Saved Projects
+						
 					</div>
 				</div> <!--end of saved contents-->
 			</div> <!-- end of tab contents-->
@@ -145,7 +151,7 @@
 		//console.log(e);
 		
 		var tab_id = this.id
-		console.log($('.available-tab'))
+		//console.log($('.available-tab'))
 		$('#nav-saved-tab').removeClass('active')
 		$('#nav-available-tab').addClass('active')
 		$('#nav-saved').removeClass('active show')
@@ -163,7 +169,6 @@
 				//$('div#info').html(data.tab)
 				$('div#test').html(data.info)
 
-				console.log("endrequest")
 				//$('div#title_list').html(data.title_list)
 				$("#place_for_request").html(data);
 			});
@@ -192,7 +197,49 @@
 
 	});
 	
+	function savedFunction(el,num){
+		console.log(num)
 
+
+		$("document").ready(function(){
+
+
+			$.ajax({
+				url:"/saved_projects",
+				type:"POST",
+				contentType: 'application/json;charset=UTF-8',
+				data: JSON.stringify({"id":num})
+			}).done(function(data){
+				//console.log(data)
+				//$('div#info').html(data.tab)
+
+				console.log("endrequest")
+				//$('div#title_list').html(data.title_list)
+				$("#stored_saved_info").html(data);
+			});
+		});
+
+		if (num != 'N/A'){
+		el.parentNode.style.transition = "opacity "+1+"s ease";
+
+		el.parentNode.style.opacity = 0;
+		var next = el.parentNode.nextElementSibling;
+		setTimeout(function() {
+			while (next != null)
+			{
+			//move up
+			console.log(next.offsetTop);
+			console.log(next.getBoundingClientRect());
+			next = next.nextElementSibling;
+			
+			}
+			setTimeout(function() {
+				el.parentNode.remove();
+			}, 100);
+   }, 1000);
+	}
+
+	}
 	function deleteFunction(el, num){
 
 		/*
@@ -214,8 +261,6 @@
 		//$(el).parent('div').nextElementSibling.remove();
 		el.parentNode.style.transition = "opacity "+1+"s ease";
 
-		$("#box5").animate({top: "+=100px"});
-		console.log($("#box1"));
 		el.parentNode.style.opacity = 0;
 		var next = el.parentNode.nextElementSibling;
 		setTimeout(function() {
@@ -312,7 +357,7 @@ a, a:hover, a:focus {
     border-left: 1px solid #e4e4e4;
     border-bottom: 1px solid #e4e4e4;
     border-right: 1px solid #e4e4e4;
-    /*color: white;*/
+    color: white;
     cursor: pointer;
     padding: 10px;
     width: 500px;
@@ -325,98 +370,98 @@ a, a:hover, a:focus {
     transition: 0.3s;
 }
 
- 
-
 .collapsible .projectTitle {
-    font-family: 'Graphik';
+	position: absolute;
+	font-family: 'Graphik';
     font-weight: bold;
-    color: black;
-    font-size: 20px;
+	color: black;
+	font-size: 20px;
     float: left;
     margin-left: 5px;
     margin-top: 30px;
 }
 
- 
-
 .collapsible .service {
-    font-family: 'Graphik';
+	position: absolute;
+	font-family: 'Graphik';
     font-weight: bold;
-    color: black;
-    font-size: 15px;
+	color: black;
+	font-size: 15px;
     float: left;
     margin-top: 66px;
-    margin-left: -121px;
+    margin-left: 5px;
 }
 
- 
-
-.collapsible .timeFrame {
-    font-family: 'Graphik';
+.country {
+	position: absolute;
+	font-family: 'Graphik';
     font-weight: normal;
-    color: black;
-    font-size: 12px;
+	color: black;
+	right: -42px;
+	top: 0px;
+	font-size: 12px;
     float: left;
-    position: absolute;
-    margin-top: 70px;
-    margin-left: 110px;
 }
 
- 
-
-.collapsible .country {
-    font-family: 'Graphik';
-    font-weight: normal;
-    color: black;
-    font-size: 12px;
-    float: left;
-    margin-top: 7px;
-    margin-left: -121px;
-}
-
- 
-
-.collapsible .divider {
-    background: #d9d9d9;
+.divider {
+	position: absolute;
+	background: #d9d9d9;
+	right: -10px;
+	top: 1px;
     width: 2px;
     height: 20px;
     float: left;
-    margin-top: 5px;
-    margin-left: -80px;
+    
 }
-
- 
 
 .collapsible .location {
-    font-family: 'Graphik';
+	position: absolute;
+	font-family: 'Graphik';
     font-weight: normal;
-    color: black;
-    font-size: 12px;
+	color: black;
+	font-size: 12px;
     float: left;
     margin-top: 7px;
-    margin-left: -62px;
+
+
 }
 
- 
+.collapsible .dates {
+	position: absolute;
+	font-family: 'Graphik';
+    font-weight: normal;
+	color: black;
+	font-size: 14px;
+    float: left;
+    margin-top: 70px;
+    margin-left: 120px;
+}
 
 .collapsible:hover {
     background-color: #e4e4e4;
 }
 
- 
-
-.content {
-    padding: 0 15px;
+.collapsing{
+	padding: 0 15px;
     margin-top: 5px;
     margin-left: 20px;
     width: 500px;
-    display: none;
     background-color: #fff;
     border-left: #e4e4e4;
 }
 
+.collapse {
+    padding: 0 15px;
+    margin-top: 5px;
+    margin-left: 20px;
+    width: 500px;
+    background-color: #fff;
+    border-left: #e4e4e4;
+}
  
 
+
+ 
 /*---Save Button---*/
 .save {
     background: none;
@@ -425,31 +470,31 @@ a, a:hover, a:focus {
     width: 0px;
     height: 0px;
     position: absolute;
-    margin-left: 447px;
-    margin-top: -85px;
+    margin-left: 457px;
+    margin-top: -110px;
 }
 
- 
+
 
 .save .bi-bookmark-fill {
       display: none;
 }
 
- 
+
 
 .save:hover .bi-bookmark,
 .save:active .bi-bookmark{
       display: none;
 }
 
- 
+
 
 .save:hover .bi-bookmark-fill,
 .save:active .bi-bookmark-fill{
       display: block;
 }
 
- 
+
 
 /*---Trash Button---*/
 .trash {
@@ -457,41 +502,30 @@ a, a:hover, a:focus {
     border: none;
     outline: none;
     position: absolute;
-    margin-left: 475px;
-    margin-top: -85px;
+    margin-left: 483px;
+    margin-top: -110px;
 }
 
- 
+
 
 .trash .bi-trash-fill {
   display: none;
 }
 
- 
+
 
 .trash:hover .bi-trash,
 .trash:active .bi-trash {
   display: none;
 }
 
- 
+
 
 .trash:hover .bi-trash-fill,
 .trash:active .bi-trash-fill {
       display: block;
 }
-
  
 
 
 </style>
-<html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8"><meta name="Robots" content="NOINDEX " /></head><body></body>
-                <script type="text/javascript">
-                 var gearPage = document.getElementById('GearPage');
-                 if(null != gearPage)
-                 {
-                     gearPage.parentNode.removeChild(gearPage);
-                     document.title = "Error";
-                 }
-                 </script>
-                 </html>
