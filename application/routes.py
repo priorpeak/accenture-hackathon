@@ -41,7 +41,7 @@ def home():
         location.append(response[str(project)]['location'])
         loc_requirement.append(response[str(project)]['loc_requirement'])
 
-    return render_template("home.html", len = len(name), client = client, start_date = start_date, end_date = end_date,name = name, loc_requirement = loc_requirement, location = location, )
+    return render_template("home.html", ids = ids, skills = skills, len = len(name), client = client, start_date = start_date, end_date = end_date,name = name, loc_requirement = loc_requirement, location = location)
 
 
 @app.route('/saved_projects', methods=['GET','POST'])
@@ -49,8 +49,8 @@ def saved_info():
     response = request.get_json()
     id_number = response["id"]
     if (id_number != 'N/A'):
-       saved_project_list=[].append(id_number)
-    return render_template("saved.html", ids = saved_project_list=[])
+       saved_project_list.append(id_number)
+    return render_template("saved.html", ids = saved_project_list)
 
 
 
