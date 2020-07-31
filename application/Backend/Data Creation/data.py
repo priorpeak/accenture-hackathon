@@ -9,11 +9,11 @@ random.seed(datetime.now())
 
 # Set number of profiles and projects to generate for randomized dataset
 n_cand = 1000
-n_role = 5000
+n_role = 20000
 
 # Input filenames to input randomized data
-prof_fn = 'Data/candidate_data.csv'
-proj_fn = 'Data/project_data.csv'
+prof_fn = 'Data/candidate_data_new.csv'
+proj_fn = 'Data/project_data_new.csv'
 
 # Load sample data workbook
 wb = load_workbook(filename='Data/Dataset.xlsx')
@@ -89,7 +89,7 @@ with open(proj_fn, 'w+') as projects:
 	line = 'UID,'
 	for key in role_keys:
 		line += key + ','
-	projects.write(line + 'Level')
+	projects.write(line + 'Level,Service')
 
 	for uid in range(n_role):
 		project = None
@@ -100,10 +100,6 @@ with open(proj_fn, 'w+') as projects:
 		end_date = None
 
 		for key in role_keys:
-			if uid == 0:
-				print(key)
-				print(line)
-
 			if key == 'Start Date':
 				elem = random.choice(role_vars[key])
 				start_date_idx = role_vars[key].index(elem)
@@ -116,8 +112,6 @@ with open(proj_fn, 'w+') as projects:
 			elif key == "Project Name":
 				project = random.choice(role_vars[key])
 				line += str(project) + " Project" + ','
-				if uid == 0:
-					print(project, line)
 			elif key == "Required Skills":
 				n_skills = random.randint(1,3)
 				skills = ""
@@ -126,12 +120,14 @@ with open(proj_fn, 'w+') as projects:
 				line += str(skills) + ','
 			else:
 				line += str(random.choice(role_vars[key])) + ','
-				if uid == 0:
-					print("else", line)
 
 		# add level range
 		lev = random.randint(2,11)
-		line += str(lev-1) + '-' + str(lev)
+		line += str(lev-1) + '-' + str(lev) + ','
+
+		# add service
+		service = random.choice(["Interactive", "Strategy & Consulting", "Operations", "Technology"])
+		line += service
 
 		assert start_date < end_date
 		projects.write('\n' + line)
