@@ -51,37 +51,15 @@ def saved_info():
 
 @app.route('/project_info', methods=['GET','POST'])
 def project_info():
+
     response = request.get_json()
-    id_number = response["categorytab"]
-    response = {'user': 0, '1683': {'start_date': '2020-07-01', 'end_date': '2020-07-15', 'client': 'B',
-                                    'name': 'Strategy Project', 'skills': ['Critical thinking'], 'location': 'NYC',
-                                    'loc_requirement': 'No'},
-                '4286': {'start_date': '2020-12-01', 'end_date': '2020-12-15', 'client': 'F',
-                         'name': 'Strategy Project', 'skills': ['Excel'], 'location': 'Chicago',
-                         'loc_requirement': 'No'},
-                '1368': {'start_date': '2020-10-01', 'end_date': '2020-12-15', 'client': 'G',
-                         'name': 'Strategy Project', 'skills': ['Excel'], 'location': 'Chicago',
-                         'loc_requirement': 'No'},
-                '2266': {'start_date': '2020-12-01', 'end_date': '2020-12-15', 'client': 'G',
-                         'name': 'Strategy Project',
-                         'skills': ['Critical thinking', 'Critical thinking', 'Critical thinking'],
-                         'location': 'Boston', 'loc_requirement': 'No'},
-                '2044': {'start_date': '2020-07-01', 'end_date': '2020-07-15', 'client': 'B',
-                         'name': 'Strategy Project', 'skills': ['Excel', 'Excel', 'Excel'], 'location': 'NYC',
-                         'loc_requirement': 'No'},
-                '4464': {'start_date': '2020-06-01', 'end_date': '2020-11-15', 'client': 'A',
-                         'name': 'Strategy Project', 'skills': ['Critical thinking'], 'location': 'DC',
-                         'loc_requirement': 'Yes'},
-                '53': {'start_date': '2020-06-01', 'end_date': '2020-09-15', 'client': 'A', 'name': 'Strategy Project',
-                       'skills': ['Excel', 'Excel'], 'location': 'Denver', 'loc_requirement': 'Yes'},
-                '4038': {'start_date': '2020-06-01', 'end_date': '2020-12-15', 'client': 'H',
-                         'name': 'Strategy Project', 'skills': ['Critical thinking', 'Excel', 'Excel'],
-                         'location': 'Chicago', 'loc_requirement': 'Yes'},
-                '42': {'start_date': '2020-11-01', 'end_date': '2020-11-15', 'client': 'G', 'name': 'Strategy Project',
-                       'skills': ['Critical thinking'], 'location': 'NYC', 'loc_requirement': 'No'},
-                '3253': {'start_date': '2020-06-01', 'end_date': '2020-07-15', 'client': 'C',
-                         'name': 'Strategy Project', 'skills': ['Critical thinking'], 'location': 'Chicago',
-                         'loc_requirement': 'No'}, 'projects': [1683, 4286, 1368, 2266, 2044, 4464, 53, 4038, 42, 3253]}
+    categories = response["categorytab"]
+    checked = response["checked"]
+    if categories in filter_list:
+        filter_list.remove(categories)
+    else:
+        filter_list.append(categories)
+
 
     ids = []
     title_list = []
@@ -102,8 +80,8 @@ def project_info():
         skills.append(response[str(project)]['skills'])
         location.append(response[str(project)]['location'])
         loc_requirement.append(response[str(project)]['loc_requirement'])
-    name[1] = "filter1"
-    name[0] = "filter2"
+    name[1] = "asdf"
+    name[0] = "asdfasdf"
 
 
 
