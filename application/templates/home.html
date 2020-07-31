@@ -29,17 +29,81 @@
 			</div> <!-- end of sidebar header-->
 
 			<ul class="list-unstyled components nav-tabs">
-				<li id="tab-1" >
-					<a href="#one" aria-controls="one" role="tab" data-toggle="tab">Technology</a>
+
+
+				<li id="" class = "dropdown" onclick="dropdownFunction(this)">
+					<a >Services</a><!--href="#one" aria-controls="one" role="tab" data-toggle="tab" -->
 				</li>
-				<li id="tab-2" >
-					<a  href="#two" aria-controls="two" role="tab" data-toggle="tab">Strategy</a>
+				<div class="dropdown-container">
+					<div class="custom-control custom-checkbox" >
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked">Technology</label>
+					</div>
+
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked2" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked2">Strategy</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked3" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked3">Interactive</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked4" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked4">Operations</label>
+					</div>
+
+				</div>
+				<li id=""class = "dropdown" onclick="dropdownFunction(this)" >
+					<a  href="#two" aria-controls="two" role="tab" data-toggle="tab">Segment</a>
 				</li>
-				<li id="tab-3" >
-					<a href="#three" aria-controls="three" role="tab" data-toggle="tab">Interactive</a>
+				<div class="dropdown-container">
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked5" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked5">Account Leadership</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked6" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked6">Business</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked7" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked7">Design</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked8" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked8">Engineering</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked9" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked9">Finance</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked10" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked10">Human Resources</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked11" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked11">IT Operations</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked12" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked12">Legal</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked13" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked13">Security</label>
+					</div>
+					<div class="custom-control custom-checkbox">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked14" onclick="filterFunction(this)">
+						<label class="custom-control-label" for="defaultUnchecked14">Strategy</label>
+					</div>
+				</div>
+				<li id="" >
+					<a href="#three" aria-controls="three" role="tab" data-toggle="tab">Skills</a>
 				</li>
 				<li id="tab-4">
-					<a href="#four" aria-controls="four" role="tab" data-toggle="tab">Operations</a>
+					<a href="#four" aria-controls="four" role="tab" data-toggle="tab">Level</a>
 				</li>
 
 			</ul> <!-- end of side bar lists-->
@@ -63,18 +127,18 @@
 						
 						<div id="box{{loop.index}}"> <!--one box container-->
 
-							<div class="collapsible" data-toggle="collapse" href="#descrip{{loop.index}}">
-                                  <div class="projectTitle">{{name[i]}}</div>
-                                  <div class="service">Technology?</div>
-                                  <div class="dates">Start: {{start_date[i]}} End:{{end_date[i]}}</div>
-                                  <div class="location">{{location[i]}}
-                                  	<div class="divider"></div> 
-                                  	<div class="country">USA </div>
-                                  </div>
-                                  
-                                  
+							<div class="collapsible collapsed" data-toggle="collapse" href="#descrip{{loop.index}}">
+								<div class="projectTitle">{{name[i]}}</div>
+								<div class="service">Technology?</div>
+								<div class="dates">Start: {{start_date[i]}} End:{{end_date[i]}}</div>
+								<div class="location">{{location[i]}}
+									<div class="divider"></div> 
+									<div class="country">USA </div>
+								</div>
 
-                            </div>
+
+
+							</div>
 							<!---Save Button--->
 							<button type="button" class="save" style="outline:none;"onclick="savedFunction(this, {{ids[i]}})">
 								<!---Empty save button--->
@@ -101,8 +165,8 @@
 							<div class="collapse" id = "descrip{{loop.index}}">
 								Project Description: words
 								<div class="loc_req">Required?: {{loc_requirement[i]}}</div>
-                                <div class="skills">Skills: {{skills[i]}}</div>
-                                <div class="client">{{client[i]}}</div>
+								<div class="skills">Skills: {{skills[i]}}</div>
+								<div class="client">{{client[i]}}</div>
 							</div>
 						</div> <!-- end of one box-->
 						{% endfor %}
@@ -120,6 +184,22 @@
 
 
 		</div><!-- end of link top tabs and content-->
+		<div> <!--chatbox-->
+			<button class="chatButton">ChatBot</button>
+			<div class="chatPane">
+				<div class="chat">
+					<div class="chatTitle">Title</div>
+					<div class="botIcon">
+						<svg width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-chat-square-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2.5a2 2 0 0 1 1.6.8L8 14.333 9.9 11.8a2 2 0 0 1 1.6-.8H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+							<path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+						</svg>
+					</div>
+					<div class="botMessage">Ask me anything!</div>
+					<input class="chatInput" placeholder="Type your message">
+				</div>
+			</div>
+		</div>
 	</div> <!-- end of wrapper-->
 
 
@@ -144,8 +224,42 @@
 		$('#saved').removeClass('active show')
 		$('#available').addClass('active show')
 	}*/
+	function filterFunction(id){
+		console.log($(id)[0].checked);
+		console.log($(id)[0].id);
+		console.log($(id)[0].nextElementSibling.innerHTML);
+		var category = $(id)[0].nextElementSibling.innerHTML
+		/*
+		$.ajax({
+				url:"/project_info",
+				type:"POST",
+				contentType: 'application/json;charset=UTF-8',
+				data: JSON.stringify({"categorytab":category , "checked": $(id)[0].checked})
+			}).done(function(data){
+				//console.log(data)
+				//$('div#info').html(data.tab)
+				//$('div#test').html(data.info)
 
+				//$('div#title_list').html(data.title_list)
+				$("#place_for_request").html(data);
+			}); */
+			$.ajax({
+				url:"/saved_projects",
+				type:"POST",
+				contentType: 'application/json;charset=UTF-8',
+				data: JSON.stringify({"categorytab":category , "checked": $(id)[0].checked})
+			}).done(function(data){
+				//console.log(data)
+				//$('div#info').html(data.tab)
 
+				console.log("endrequest")
+				//$('div#title_list').html(data.title_list)
+				$("#stored_saved_info").html(data);
+			});
+		
+	}
+
+/*
 	$('[id*="tab-"]').click(function (e) {
 		e.preventDefault()
 		//console.log(e);
@@ -195,7 +309,7 @@
 		}
 
 
-	});
+	});*/
 	
 	function savedFunction(el,num){
 		console.log(num)
@@ -220,24 +334,24 @@
 		});
 
 		if (num != 'N/A'){
-		el.parentNode.style.transition = "opacity "+1+"s ease";
+			el.parentNode.style.transition = "opacity "+1+"s ease";
 
-		el.parentNode.style.opacity = 0;
-		var next = el.parentNode.nextElementSibling;
-		setTimeout(function() {
-			while (next != null)
-			{
+			el.parentNode.style.opacity = 0;
+			var next = el.parentNode.nextElementSibling;
+			setTimeout(function() {
+				while (next != null)
+				{
 			//move up
 			console.log(next.offsetTop);
 			console.log(next.getBoundingClientRect());
 			next = next.nextElementSibling;
 			
-			}
-			setTimeout(function() {
-				el.parentNode.remove();
-			}, 100);
-   }, 1000);
-	}
+		}
+		setTimeout(function() {
+			el.parentNode.remove();
+		}, 100);
+	}, 1000);
+		}
 
 	}
 	function deleteFunction(el, num){
@@ -273,20 +387,134 @@
 			console.log(next.getBoundingClientRect());
 			next = next.nextElementSibling;
 			
-			}
-			setTimeout(function() {
-				el.parentNode.remove();
-			}, 100);
-   }, 1000);
+		}
+		setTimeout(function() {
+			el.parentNode.remove();
+		}, 100);
+	}, 1000);
 		
 
 		
 		
 	}
 
+	function dropdownFunction(el){
+		
+		var dropdownContent = el.nextElementSibling;
+		//console.log(dropdownContent);
+		
+		if (dropdownContent.style.display === "block") {
+			dropdownContent.style.display = "none";
+		} else {
+			dropdownContent.style.display = "block";
+		}
+	}
+
 
 </script>
 <style>
+
+	BODY::after {
+    background-image: url({{ url_for('static', filename='pictures/background.jpg') }});
+    background-repeat: no-repeat;
+    background-size: 1300px 600px;
+    background-attachment: fixed;
+  content: "";
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+	.chatButton {
+		background: none;
+		border: 1px solid rgb(233,216,243);
+		padding-left: 8px;
+		padding-right: 8px;
+		padding-bottom: 5px;
+		font-family: 'Graphik';
+		font-weight: bold;
+		font-size: 18px;
+		transition: 0.3s;
+	}
+
+
+
+	.chatButton:hover {
+		background: rgb(233,216,243);
+	}
+
+
+
+	.chatPane {
+		box-shadow: 2px 2px 4px grey;
+		width: 350px;
+		height: 400px;
+	}
+
+
+
+	.chatTitle {
+		font-family: 'Graphik';
+		font-size: 28px;
+		font-weight: bold;
+		padding: 20px;
+	}
+
+
+
+	.botIcon {
+		background: #f3f3f3;
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		margin-left: 15px;
+	}
+
+
+
+	.bi-chat-square-dots {
+		padding: 7px;
+		margin-top: 2px;
+	}
+
+
+
+	.botMessage {
+		background: #f3f3f3;
+		border-radius: 2px;
+		padding: 10px;
+		font-family: 'Graphik';
+		font-size: 14px;
+		width: 140px;
+		margin-left: 150px;
+	}
+
+
+
+	.chatInput {
+		position: absolute;
+		outline: none;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		border-bottom: 1px solid black;
+		font-family: 'Graphik';
+		fnt-size: 16px;
+		width: 300px;
+		margin-top: 100px;
+		margin-left: 20px;
+		padding: 3px;
+	}
+	.dropdown-container {
+		display: none;
+		background-color: #262626;
+		padding-left: 8px;
+	}
+
+
 	h1 h2 h3 h4 h5 {
 		color:black;
 	}
@@ -349,58 +577,76 @@ a, a:hover, a:focus {
 	text-decoration: none;
 	transition: all 0.3s;
 }
- 
 
 .collapsible {
-    background-color: #fff;
-    border-top: 5px solid #a100ff;
-    border-left: 1px solid #e4e4e4;
-    border-bottom: 1px solid #e4e4e4;
-    border-right: 1px solid #e4e4e4;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    width: 500px;
-    height: 120px;
-    text-align: left;
-    font: Graphik;
-    font-size: 15px;
-    margin-top: 20px;
-    margin-left: 20px;
-    transition: 0.3s;
+	background-color: #fff;
+	border-top: 5px solid #a100ff;
+	box-shadow: 2px 0px 4px grey;
+	color: black;
+	cursor: pointer;
+	padding: 10px;
+	width: 500px;
+	height: 120px;
+	text-align: left;
+	font: Graphik;
+	font-size: 15px;
+	margin-top: 20px;
+	margin-left: 20px;
+
+}
+.collapsible.collapsed{
+	background-color: #fff;
+	border-top: 5px solid #a100ff;
+	box-shadow: 2px 2px 4px grey;
+	color: white;
+	cursor: pointer;
+	padding: 10px;
+	width: 500px;
+	height: 120px;
+	text-align: left;
+	font: Graphik;
+	font-size: 15px;
+	margin-top: 20px;
+	margin-left: 20px;
 }
 
 .collapsible .projectTitle {
 	position: absolute;
 	font-family: 'Graphik';
-    font-weight: bold;
+	font-weight: bold;
 	color: black;
 	font-size: 20px;
-    float: left;
-    margin-left: 5px;
-    margin-top: 30px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 30px;
 }
 
 .collapsible .service {
 	position: absolute;
 	font-family: 'Graphik';
-    font-weight: bold;
+	font-weight: bold;
 	color: black;
+	/*background: linear-gradient(90deg, rgba(186,196,250,0.8412407199207808) 27%, rgba(98,195,241,0.47429394120929624) 62%, rgba(255,255,255,0.6171510840664391) 97%);*/
 	font-size: 15px;
-    float: left;
-    margin-top: 66px;
-    margin-left: 5px;
+	float: left;
+	margin-top: 66px;
+	margin-left: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	background-color: rgb(0,215,0,0.3);
+	border-radius: 20px;
 }
 
 .country {
 	position: absolute;
 	font-family: 'Graphik';
-    font-weight: normal;
+	font-weight: normal;
 	color: black;
 	right: -42px;
 	top: 0px;
 	font-size: 12px;
-    float: left;
+	float: left;
 }
 
 .divider {
@@ -408,20 +654,20 @@ a, a:hover, a:focus {
 	background: #d9d9d9;
 	right: -10px;
 	top: 1px;
-    width: 2px;
-    height: 20px;
-    float: left;
-    
+	width: 2px;
+	height: 20px;
+	float: left;
+
 }
 
 .collapsible .location {
 	position: absolute;
 	font-family: 'Graphik';
-    font-weight: normal;
+	font-weight: normal;
 	color: black;
 	font-size: 12px;
-    float: left;
-    margin-top: 7px;
+	float: left;
+	margin-top: 7px;
 
 
 }
@@ -429,103 +675,123 @@ a, a:hover, a:focus {
 .collapsible .dates {
 	position: absolute;
 	font-family: 'Graphik';
-    font-weight: normal;
+	font-weight: normal;
 	color: black;
 	font-size: 14px;
-    float: left;
-    margin-top: 70px;
-    margin-left: 120px;
+	float: left;
+	margin-top: 70px;
+	margin-left: 120px;
+}
+.collapsible:hover{
+	background-color: #e4e4e4;
+}
+.collapsible:hover ~ .collapsing{
+	background-color: #e4e4e4;
 }
 
-.collapsible:hover {
-    background-color: #e4e4e4;
+.collapsible:hover ~ .collapse{
+	background-color: #e4e4e4;
 }
+/*
+.collapse:hover{
+	background-color: #e4e4e4;
+}
+
+
+.collapse:hover + .collapsible{
+	background-color: #e4e4e4;
+}*/
+
+
 
 .collapsing{
 	padding: 0 15px;
-    margin-top: 5px;
-    margin-left: 20px;
-    width: 500px;
-    background-color: #fff;
-    border-left: #e4e4e4;
+	margin-left: 20px;
+	top:-2px;
+	width: 500px;
+	background-color: #fff;
+	box-shadow: 2px 2px 4px grey;
+	border-top: none;
 }
 
 .collapse {
-    padding: 0 15px;
-    margin-top: 5px;
-    margin-left: 20px;
-    width: 500px;
-    background-color: #fff;
-    border-left: #e4e4e4;
+	padding: 0 15px;
+	margin-left: 20px;
+	top:-2px;
+	width: 500px;
+	background-color: #fff;
+	box-shadow: 2px 2px 4px grey;
+	border-top: none;
+	overflow-y: hidden;
 }
- 
 
 
- 
+
+
 /*---Save Button---*/
 .save {
-    background: none;
-    border: none;
-    outline: none;
-    width: 0px;
-    height: 0px;
-    position: absolute;
-    margin-left: 457px;
-    margin-top: -110px;
+	background: none;
+	border: none;
+	outline: none;
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	margin-left: 457px;
+	margin-top: -110px;
 }
 
 
 
 .save .bi-bookmark-fill {
-      display: none;
+	display: none;
 }
 
 
 
 .save:hover .bi-bookmark,
 .save:active .bi-bookmark{
-      display: none;
+	display: none;
 }
 
 
 
 .save:hover .bi-bookmark-fill,
 .save:active .bi-bookmark-fill{
-      display: block;
+	display: block;
 }
 
 
 
 /*---Trash Button---*/
 .trash {
-    background: none;
-    border: none;
-    outline: none;
-    position: absolute;
-    margin-left: 483px;
-    margin-top: -110px;
+	background: none;
+	border: none;
+	outline: none;
+	position: absolute;
+	margin-left: 483px;
+	margin-top: -110px;
 }
 
 
 
 .trash .bi-trash-fill {
-  display: none;
+	display: none;
 }
 
 
 
 .trash:hover .bi-trash,
 .trash:active .bi-trash {
-  display: none;
+	display: none;
 }
 
 
 
 .trash:hover .bi-trash-fill,
 .trash:active .bi-trash-fill {
-      display: block;
+	display: block;
 }
- 
+
 
 
 </style>

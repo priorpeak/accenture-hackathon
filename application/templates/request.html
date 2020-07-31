@@ -1,9 +1,8 @@
-<!-- Place contents here -->
 {%for i in range(0,len)%}
 
 <div id="box{{loop.index}}"> <!--one box container-->
 
-	<div class="collapsible" data-toggle="collapse" href="#descrip{{loop.index}}">
+	<div class="collapsible collapsed" data-toggle="collapse" href="#descrip{{loop.index}}">
 		<div class="projectTitle">{{name[i]}}</div>
 		<div class="service">Technology?</div>
 		<div class="dates">Start: {{start_date[i]}} End:{{end_date[i]}}</div>
@@ -11,8 +10,6 @@
 			<div class="divider"></div> 
 			<div class="country">USA </div>
 		</div>
-		
-		
 
 	</div>
 	<!---Save Button--->
