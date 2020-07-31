@@ -6,6 +6,7 @@ from application import app
 from application.Backend import run
 
 filter_list = []
+saved_project_list=[]
 @app.route('/')
 @app.route('/home',methods=['GET','POST'])
 def home():
@@ -41,21 +42,18 @@ def home():
         loc_requirement.append(response[str(project)]['loc_requirement'])
 
     return render_template("home.html", len = len(name), client = client, start_date = start_date, end_date = end_date,name = name, loc_requirement = loc_requirement, location = location, )
+
+
 @app.route('/saved_projects', methods=['GET','POST'])
 def saved_info():
-    #response = request.get_json()
-    #id_number = response["id"]
-    #if (id_number != 'N/A'):
-     #   temp_list.append(id_number)
-    #return render_template("saved.html", ids = temp_list)
     response = request.get_json()
-    categories = response["categorytab"]
-    checked = response["checked"]
-    if categories in filter_list:
-        filter_list.remove(categories)
-    else:
-        filter_list.append(categories)
-    return render_template("saved.html", ids=filter_list)
+    id_number = response["id"]
+    if (id_number != 'N/A'):
+       saved_project_list=[].append(id_number)
+    return render_template("saved.html", ids = saved_project_list=[])
+
+
+
 
 
 @app.route('/project_info', methods=['GET','POST'])
@@ -68,7 +66,7 @@ def project_info():
         filter_list.remove(categories)
     else:
         filter_list.append(categories)
-
+    #pass categories into the function to get response
 
     ids = []
     title_list = []

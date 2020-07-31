@@ -184,13 +184,13 @@
 
 
 		</div><!-- end of link top tabs and content-->
-		<div> <!--chatbox-->
-			<button class="chatButton">ChatBot</button>
-			<div class="chatPane">
+		<div class="chatbox"> <!--chatbox-->
+			<button class="chatButton" onclick="chatBox()">ChatBot</button>
+			<div class="chatPane" id="chatPane">
 				<div class="chat">
-					<div class="chatTitle">Title</div>
+					<div class="chatTitle">ASK @Accenture</div>
 					<div class="botIcon">
-						<svg width="1.3em" height="1.3em" viewBox="0 0 16 16" class="bi bi-chat-square-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+						<svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-chat-square-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2.5a2 2 0 0 1 1.6.8L8 14.333 9.9 11.8a2 2 0 0 1 1.6-.8H14a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
 							<path d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
 						</svg>
@@ -244,7 +244,7 @@
 				$("#place_for_request").html(data);
 			}); */
 			$.ajax({
-				url:"/saved_projects",
+				url:"/projects_info",
 				type:"POST",
 				contentType: 'application/json;charset=UTF-8',
 				data: JSON.stringify({"categorytab":category , "checked": $(id)[0].checked})
@@ -256,8 +256,8 @@
 				//$('div#title_list').html(data.title_list)
 				$("#stored_saved_info").html(data);
 			});
-		
-	}
+
+		}
 
 /*
 	$('[id*="tab-"]').click(function (e) {
@@ -410,134 +410,169 @@
 		}
 	}
 
+	function chatBox() {
+		var box = document.getElementById("chatPane");
+		if (box.style.display === "none") {
+			box.style.display = "block";
+		} else {
+			box.style.display = "none";
+		}
+	}
+
 
 </script>
 <style>
 
 	BODY::after {
-    background-image: url({{ url_for('static', filename='pictures/background.jpg') }});
-    background-repeat: no-repeat;
-    background-size: 1300px 600px;
-    background-attachment: fixed;
-  content: "";
-  opacity: 0.4;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+		background-image: url({{ url_for('static', filename='pictures/background.jpg') }});
+background-repeat: no-repeat;
+background-size: 1300px 600px;
+background-attachment: fixed;
+content: "";
+opacity: 0.4;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+position: absolute;
+z-index: -1;
+}.chatbox {
+	margin-left: 80px;
+	margin-top: 30px;
+	position: static;
 }
-	.chatButton {
-		background: none;
-		border: 1px solid rgb(233,216,243);
-		padding-left: 8px;
-		padding-right: 8px;
-		padding-bottom: 5px;
-		font-family: 'Graphik';
-		font-weight: bold;
-		font-size: 18px;
-		transition: 0.3s;
-	}
 
 
 
-	.chatButton:hover {
-		background: rgb(233,216,243);
-	}
+.chatButton {
+	background: none;
+	position: relative;
+	box-shadow: 1px 1px 4px grey;
+	border: none;
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-bottom: 5px;
+	font-family: 'Graphik';
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.3s;
+	margin-top: 10px;
+	margin-left: 260px;
+}
 
 
 
-	.chatPane {
-		box-shadow: 2px 2px 4px grey;
-		width: 350px;
-		height: 400px;
-	}
+.chatButton:focus {
+	outline: 0;
+}
 
 
 
-	.chatTitle {
-		font-family: 'Graphik';
-		font-size: 28px;
-		font-weight: bold;
-		padding: 20px;
-	}
+.chatButton:hover {
+	background: rgb(161,0,255,0.7);
+}
 
 
 
-	.botIcon {
-		background: #f3f3f3;
-		width: 35px;
-		height: 35px;
-		border-radius: 50%;
-		margin-left: 15px;
-	}
+.chatPane {
+	background: #fff;
+	box-shadow: 1px 1px 4px grey;
+	width: 350px;
+	height: 500px;
+	margin-top: 10px;
+	display: none;
+}
 
 
 
-	.bi-chat-square-dots {
-		padding: 7px;
-		margin-top: 2px;
-	}
+.chatTitle {
+	font-family: 'Graphik';
+	font-size: 28px;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-top: 10px;
+}
 
 
 
-	.botMessage {
-		background: #f3f3f3;
-		border-radius: 2px;
-		padding: 10px;
-		font-family: 'Graphik';
-		font-size: 14px;
-		width: 140px;
-		margin-left: 150px;
-	}
+.botIcon {
+	position: relative;
+	background: #f3f3f3;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-top: 340px;
+	margin-left: 15px;
+}
 
 
 
-	.chatInput {
-		position: absolute;
-		outline: none;
-		border-top: none;
-		border-left: none;
-		border-right: none;
-		border-bottom: 1px solid black;
-		font-family: 'Graphik';
-		fnt-size: 16px;
-		width: 300px;
-		margin-top: 100px;
-		margin-left: 20px;
-		padding: 3px;
-	}
-	.dropdown-container {
-		display: none;
-		background-color: #262626;
-		padding-left: 8px;
-	}
+.bi-chat-square-dots {
+	padding: 7px;
+	margin-left: 1.5px;
+	margin-top: 2.5px;
+}
 
 
-	h1 h2 h3 h4 h5 {
-		color:black;
-	}
-	.wrapper{
-		display: flex;
-		width: 100%;
-		align-items:stretch;
 
-	}
+.botMessage {
+	position: relative;
+	background: #f3f3f3;
+	border-radius: 2px;
+	padding: 10px;
+	font-family: 'Graphik';
+	font-size: 14px;
+	width: 140px;
+	margin-top: -35px;
+	margin-left: 190px;
+}
 
 
-	#sidebar{
-		min-width: 250px;
-		max-width: 250px;
-		min-height: 100vh;
-		background: #7386D5;
-		color: #fff;
-		/*transition: all 0.3s;*/
-	}
-	#sidebar .sidebar-header {
-		padding: 20px;
-		background: #6d7fcc;
-	}
+
+.chatInput {
+	position: absolute;
+	outline: none;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid black;
+	font-family: 'Graphik';
+	font-size: 16px;
+	width: 310px;
+	margin-top: 20px;
+	margin-left: 20px;
+	padding: 3px;
+}
+.dropdown-container {
+	display: none;
+	background-color: #262626;
+	padding-left: 8px;
+}
+
+
+h1 h2 h3 h4 h5 {
+	color:black;
+}
+.wrapper{
+	display: flex;
+	width: 100%;
+	align-items:stretch;
+
+}
+
+
+#sidebar{
+	min-width: 250px;
+	max-width: 250px;
+	min-height: 100vh;
+	background: #7386D5;
+	color: #fff;
+	/*transition: all 0.3s;*/
+}
+#sidebar .sidebar-header {
+	padding: 20px;
+	background: #6d7fcc;
+}
 /*
 #sidebar ul.components {
     padding: 20px 0;
@@ -581,8 +616,8 @@ a, a:hover, a:focus {
 .collapsible {
 	background-color: #fff;
 	border-top: 5px solid #a100ff;
-	box-shadow: 2px 0px 4px grey;
-	color: black;
+	box-shadow: 2px 2px 4px grey;
+	color: white;
 	cursor: pointer;
 	padding: 10px;
 	width: 500px;
@@ -700,97 +735,93 @@ a, a:hover, a:focus {
 
 .collapse:hover + .collapsible{
 	background-color: #e4e4e4;
-}*/
+	}*/
 
 
 
-.collapsing{
-	padding: 0 15px;
-	margin-left: 20px;
-	top:-2px;
-	width: 500px;
-	background-color: #fff;
-	box-shadow: 2px 2px 4px grey;
-	border-top: none;
-}
+	.collapsing{
+		padding: 0 15px;
+		margin-left: 20px;
+		width: 500px;
+		background-color: #fff;
+		box-shadow: 2px 2px 4px grey;
 
-.collapse {
-	padding: 0 15px;
-	margin-left: 20px;
-	top:-2px;
-	width: 500px;
-	background-color: #fff;
-	box-shadow: 2px 2px 4px grey;
-	border-top: none;
-	overflow-y: hidden;
-}
+	}
+
+	.collapse {
+		padding: 0 15px;
+		margin-left: 20px;
+		width: 500px;
+		background-color: #fff;
+		box-shadow: 2px 2px 4px grey;
+	}
 
 
 
 
-/*---Save Button---*/
-.save {
-	background: none;
-	border: none;
-	outline: none;
-	width: 0px;
-	height: 0px;
-	position: absolute;
-	margin-left: 457px;
-	margin-top: -110px;
-}
+	/*---Save Button---*/
+	.save {
+		background: none;
+		border: none;
+		outline: none;
+		width: 0px;
+		height: 0px;
+		position: absolute;
+		margin-left: 457px;
+		margin-top: -110px;
+	}
 
 
 
-.save .bi-bookmark-fill {
-	display: none;
-}
+	.save .bi-bookmark-fill {
+		display: none;
+	}
 
 
 
-.save:hover .bi-bookmark,
-.save:active .bi-bookmark{
-	display: none;
-}
+	.save:hover .bi-bookmark,
+	.save:active .bi-bookmark{
+		display: none;
+	}
 
 
 
-.save:hover .bi-bookmark-fill,
-.save:active .bi-bookmark-fill{
-	display: block;
-}
+	.save:hover .bi-bookmark-fill,
+	.save:active .bi-bookmark-fill{
+		display: block;
+	}
 
 
 
-/*---Trash Button---*/
-.trash {
-	background: none;
-	border: none;
-	outline: none;
-	position: absolute;
-	margin-left: 483px;
-	margin-top: -110px;
-}
+	/*---Trash Button---*/
+	.trash {
+		background: none;
+		border: none;
+		outline: none;
+		position: absolute;
+		margin-left: 483px;
+		margin-top: -110px;
+	}
 
 
 
-.trash .bi-trash-fill {
-	display: none;
-}
+	.trash .bi-trash-fill {
+		display: none;
+	}
 
 
 
-.trash:hover .bi-trash,
-.trash:active .bi-trash {
-	display: none;
-}
+	.trash:hover .bi-trash,
+	.trash:active .bi-trash {
+		display: none;
+	}
 
 
 
-.trash:hover .bi-trash-fill,
-.trash:active .bi-trash-fill {
-	display: block;
-}
+	.trash:hover .bi-trash-fill,
+	.trash:active .bi-trash-fill {
+		display: block;
+	}
 
 
 
