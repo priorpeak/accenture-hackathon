@@ -166,6 +166,7 @@
 								</svg>
 							</button>
 							<div class="collapse" id = "descrip{{loop.index}}">
+								<div id="blank"></div>
 								Project Description: words
 								<div class="loc_req">Required?: {{loc_requirement[i]}}</div>
 								<div class="skills">Skills: {{skills[i]}}</div>
@@ -424,28 +425,54 @@
 
 
 </script>
-<style>
 
-	BODY::after {
-		background-image: url({{ url_for('static', filename='pictures/background.jpg') }});
-background-repeat: no-repeat;
-background-size: 1300px 600px;
-background-attachment: fixed;
-content: "";
-opacity: 0.4;
-top: 0;
-left: 0;
-bottom: 0;
-right: 0;
-position: absolute;
-z-index: -1;
-}.chatbox {
+
+
+<style>
+/*---Overall---*/
+.wrapper{
+	display: flex;
+	width: 100%;
+	align-items:stretch;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	/*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 15%, rgba(0,212,255,1) 100%);*/
+}
+
+a, a:hover, a:focus {
+	color: inherit;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+
+/*---Background Image---*/
+BODY::after {
+	background-image: url({{ url_for('static', filename='pictures/background.jpg') }});
+	background-repeat: no-repeat;
+	background-size: 1300px 600px;
+	background-attachment: fixed;
+	content: "";
+	opacity: 0.4;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;
+}
+
+
+
+
+/*---ChatBox---*/
+.chatbox {
 	margin-left: 80px;
 	margin-top: 30px;
 	position: static;
 }
-
-
 
 .chatButton {
 	background: none;
@@ -463,19 +490,13 @@ z-index: -1;
 	margin-left: 260px;
 }
 
-
-
 .chatButton:focus {
 	outline: 0;
 }
 
-
-
 .chatButton:hover {
 	background: rgb(161,0,255,0.7);
 }
-
-
 
 .chatPane {
 	background: #fff;
@@ -486,8 +507,6 @@ z-index: -1;
 	display: none;
 }
 
-
-
 .chatTitle {
 	font-family: 'Rubik';
 	font-size: 28px;
@@ -495,8 +514,6 @@ z-index: -1;
 	padding-left: 20px;
 	padding-top: 10px;
 }
-
-
 
 .botIcon {
 	position: relative;
@@ -508,15 +525,11 @@ z-index: -1;
 	margin-left: 15px;
 }
 
-
-
 .bi-chat-square-dots {
 	padding: 7px;
 	margin-left: 1.5px;
 	margin-top: 2.5px;
 }
-
-
 
 .botMessage {
 	position: relative;
@@ -529,8 +542,6 @@ z-index: -1;
 	margin-top: -35px;
 	margin-left: 190px;
 }
-
-
 
 .chatInput {
 	position: absolute;
@@ -546,76 +557,60 @@ z-index: -1;
 	margin-left: 20px;
 	padding: 3px;
 }
-.dropdown-container {
-	display: none;
-	background-color: #262626;
-	padding-left: 8px;
-}
 
 
-h1 h2 h3 h4 h5 {
-	color:black;
-}
-.wrapper{
-	display: flex;
-	width: 100%;
-	align-items:stretch;
-
-}
 
 
+
+
+
+
+/*---Sidebar---*/
 #sidebar{
 	min-width: 250px;
 	max-width: 250px;
 	min-height: 100vh;
-	background: #7386D5;
+	background: #a29bfe;
+	/*background: #9c88ff;*/
 	color: #fff;
 	/*transition: all 0.3s;*/
 }
+
 #sidebar .sidebar-header {
 	padding: 20px;
-	background: #6d7fcc;
+	/*background: #6d7fcc;*/
 }
 /*
 #sidebar ul.components {
     padding: 20px 0;
     border-bottom: 1px solid #47748b;
-    }*/
+}*/
 
-    #sidebar ul p {
-    	color: #fff;
-    	padding: 10px;
-    }
-
-    #sidebar ul li a {
-    	padding: 10px;
-    	font-size: 1.1em;
-    	display: block;
-    }
-    #sidebar ul li a:hover {
-    	color: #7386D5;
-    	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%);
-    }
-
-    body {
-    	font-family: 'Poppins', sans-serif;
-	/*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 15%, rgba(0,212,255,1) 100%);
-*/}
-
-p {
-	font-family: 'Poppins', sans-serif;
+#sidebar ul li a {
+	padding: 10px;
 	font-size: 1.1em;
-	font-weight: 300;
-	line-height: 1.7em;
-	color: #999;
+	display: block;
 }
 
-a, a:hover, a:focus {
-	color: inherit;
-	text-decoration: none;
-	transition: all 0.3s;
+#sidebar ul li a:hover {
+	/*color: #7386D5;*/
+	color: #fff;
+	background: #6c5ce7;
+	/*background: #8c7ae6;*/
+	/*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%);*/
 }
 
+.dropdown-container {
+	display: none;
+	background-color: #778beb;
+	
+	padding-left: 8px;
+}
+
+
+
+
+/*---Box css---*/
 .collapsible {
 	background-color: #fff;
 	border-top: 5px solid #a100ff;
@@ -630,8 +625,8 @@ a, a:hover, a:focus {
 	font-size: 15px;
 	margin-top: 20px;
 	margin-left: 20px;
-
 }
+
 .collapsible.collapsed{
 	background-color: #fff;
 	border-top: 5px solid #a100ff;
@@ -706,8 +701,6 @@ a, a:hover, a:focus {
 	font-size: 12px;
 	float: left;
 	margin-top: 7px;
-
-
 }
 
 .collapsible .dates {
@@ -720,9 +713,11 @@ a, a:hover, a:focus {
 	margin-top: 70px;
 	margin-left: 120px;
 }
+
 .collapsible:hover{
 	background-color: #e4e4e4;
 }
+
 .collapsible:hover ~ .collapsing{
 	background-color: #e4e4e4;
 }
@@ -735,96 +730,81 @@ a, a:hover, a:focus {
 	background-color: #e4e4e4;
 }
 
-
 .collapse:hover + .collapsible{
 	background-color: #e4e4e4;
-	}*/
+}
+*/
 
+.collapsing{
+	padding: 0 15px;
+	margin-left: 20px;
+	width: 500px;
+	background-color: #fff;
+	box-shadow: 2px 2px 4px grey;
+}
 
-
-	.collapsing{
-		padding: 0 15px;
-		margin-left: 20px;
-		width: 500px;
-		background-color: #fff;
-		box-shadow: 2px 2px 4px grey;
-
-	}
-
-	.collapse {
-		padding: 0 15px;
-		margin-left: 20px;
-		width: 500px;
-		background-color: #fff;
-		box-shadow: 2px 2px 4px grey;
-	}
+.collapse {
+	padding: 0 15px;
+	margin-left: 20px;
+	width: 500px;
+	background-color: #fff;
+	box-shadow: 2px 2px 4px grey;
+}
 
 
 
 
-	/*---Save Button---*/
-	.save {
-		background: none;
-		border: none;
-		outline: none;
-		width: 0px;
-		height: 0px;
-		position: absolute;
-		margin-left: 457px;
-		margin-top: -110px;
-	}
+/*---Save Button---*/
+.save {
+	background: none;
+	border: none;
+	outline: none;
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	margin-left: 437px;
+	margin-top: -100px;
+}
+
+.save .bi-bookmark-fill {
+	display: none;
+}
+
+.save:hover .bi-bookmark,
+.save:active .bi-bookmark{
+	display: none;
+}
+
+.save:hover .bi-bookmark-fill,
+.save:active .bi-bookmark-fill{
+	display: block;
+}
 
 
 
-	.save .bi-bookmark-fill {
-		display: none;
-	}
+/*---Trash Button---*/
+.trash {
+	background: none;
+	border: none;
+	outline: none;
+	position: absolute;
+	margin-left: 473px;
+	margin-top: -100px;
+}
 
+.trash .bi-trash-fill {
+	display: none;
+}
 
+.trash:hover .bi-trash,
+.trash:active .bi-trash {
+	display: none;
+}
 
-	.save:hover .bi-bookmark,
-	.save:active .bi-bookmark{
-		display: none;
-	}
-
-
-
-	.save:hover .bi-bookmark-fill,
-	.save:active .bi-bookmark-fill{
-		display: block;
-	}
-
-
-
-	/*---Trash Button---*/
-	.trash {
-		background: none;
-		border: none;
-		outline: none;
-		position: absolute;
-		margin-left: 483px;
-		margin-top: -110px;
-	}
-
-
-
-	.trash .bi-trash-fill {
-		display: none;
-	}
-
-
-
-	.trash:hover .bi-trash,
-	.trash:active .bi-trash {
-		display: none;
-	}
-
-
-
-	.trash:hover .bi-trash-fill,
-	.trash:active .bi-trash-fill {
-		display: block;
-	}
+.trash:hover .bi-trash-fill,
+.trash:active .bi-trash-fill {
+	display: block;
+}
 
 
 
