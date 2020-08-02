@@ -291,26 +291,31 @@ def preferences_for_user(json_string):
 	model = tc.load_model(model_name)
 	user = candidates[candidates['Candidate UID'] == int(user_uid)].unique()
 
-	items = projects
+	items = projects.copy()
+
+	print("*", len(items))
 
 	# Filter results by service
 	if len(services) > 0:
 		for service in services:
+			print(service)
 			items = items[items['Service'] == service]
+
+	print("**", len(items))
 
 	# Filter by start dates that occur after the user becomes free
 	items = items[items.apply(lambda x: date_match(user, x))]
-	# print("***", len(items))
+	print("***", len(items))
 
 	# Deal with binary filters (skills and location)
 	if skills_filter:
 		items = items[items.apply(lambda x: contains_skills(user, x))]
-		# print("****", len(items))
+		print("****", len(items))
 		# By default, apply no filter
 
 	if location_filter:
 		items = items[items.apply(lambda x: location_match(user, x))]
-		# print("*****", len(items))
+		print("*****", len(items))
 		# By default, apply no filter
 
 	# Deal with talent segment filter
@@ -322,7 +327,7 @@ def preferences_for_user(json_string):
 		# By default, filter by the user's talent segment
 		project_name = str(user['Talent Segment'][0]) + ' Project'
 		items = items[items['Project Name'] == project_name]
-	# print("******", len(items))
+	print("******", len(items))
 
 	# Deal with level filter
 	if len(level_filter) > 0:
@@ -333,7 +338,7 @@ def preferences_for_user(json_string):
 		# By default, filter by the user's current level as greater and two higher as lesser
 		user_level = int(user['Level'][0])
 		items = items[items.apply(lambda x: in_range(user_level - 2, user_level, x))]
-	# print("*******", len(items))
+	print("*******", len(items))
 
 	recs = model.recommend([user_uid], items=items['Project UID'], exclude_known = False, k=n)
 
@@ -364,38 +369,38 @@ def preferences_for_user(json_string):
 
 # For recording
 if __name__ == '__main__':
-	args = sys.argv[1:]
+	# args = sys.argv[1:]
 
-	user_uid = int(args[0])
-	skills_filter = str(args[1])
+	# user_uid = int(args[0])
+	# skills_filter = str(args[1])
 
-	user = candidates[candidates['Candidate UID'] == int(user_uid)].unique()
-	user_service = user['Service'][0]
+	# user = candidates[candidates['Candidate UID'] == int(user_uid)].unique()
+	# user_service = user['Service'][0]
 
-	json_string = '{"user": %d,' % user_uid + \
-			  '"service": "%s",' % user_service + \
-			  '"segment_filter": [],' + \
-			  '"skills_filter": %s,' % skills_filter + \
-			  '"level_filter": [],' + \
-			  '"location_filter": false' + \
-			'}'
+	# json_string = '{"user": %d,' % user_uid + \
+	# 		  '"service": "%s",' % user_service + \
+	# 		  '"segment_filter": [],' + \
+	# 		  '"skills_filter": %s,' % skills_filter + \
+	# 		  '"level_filter": [],' + \
+	# 		  '"location_filter": false' + \
+	# 		'}'
 
-	time.sleep(2)
-	print()
-	print("------------------------------------------------------")
-	print("------------------------------------------------------")
-	print("Serving recommendations for User with UID %d" % user_uid)
-	print("------------------------------------------------------")
-	print("------------------------------------------------------")
+	# time.sleep(2)
+	# print()
+	# print("------------------------------------------------------")
+	# print("------------------------------------------------------")
+	# print("Serving recommendations for User with UID %d" % user_uid)
+	# print("------------------------------------------------------")
+	# print("------------------------------------------------------")
 
-	time.sleep(2)
-	print(format_user(user))
+	# time.sleep(2)
+	# print(format_user(user))
 
-	print("------------------------------------------------------")
-	print("------------------------------------------------------")
+	# print("------------------------------------------------------")
+	# print("------------------------------------------------------")
 	
-	prefs = preferences_for_user(json_string)
-	print(format_preferences(prefs))
-	print("------------------------------------------------------")
-	print("------------------------------------------------------")
-
+	# prefs = preferences_for_user(json_string)
+	# print(format_preferences(prefs))
+	# print("------------------------------------------------------")
+	# print("------------------------------------------------------")
+	print(preferences_for_user('{"user": 0,"service": ["Technology"],"segment_filter": [],"skills_filter": false,"level_filter": [],"location_filter": true}'))

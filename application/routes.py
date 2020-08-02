@@ -1,6 +1,8 @@
 import sys
 
 from flask import Flask, render_template, url_for, flash, redirect, jsonify, request
+import json
+
 from application import app
 
 from application.Backend import run
@@ -109,17 +111,17 @@ def project_info():
             service_list.remove(categories)
         else:
             service_list.append(categories)
-    else if (tab == "Segment"):
+    elif (tab == "Segment"):
         if categories in segment_list:
             segment_list.remove(categories)
         else:
             segment_list.append(categories)
-    else if (tab == "Skills"):
+    elif (tab == "Skills"):
         if categories in skills_list:
             skills_list.remove(categories)
         else:
             skills_list.append(categories)
-    else if (tab == "Location")
+    elif (tab == "Location"):
         if categories in location_list:
             location_list.remove(categories)
         else:
@@ -127,7 +129,7 @@ def project_info():
 
     #input: filter_list (list of categories checked in front-end)
     #output: response, all projects that correspond to the categories
-    print(filter_list)
+    filter_list = [service_list, segment_list, skills_list, location_list]
 
     # [[services],[segments],[skills (or nothing)],[level (or nothing)]]
     skills_filter = 'true' if filter_list[2] else 'false'
@@ -135,14 +137,18 @@ def project_info():
     
     #page refresh, filter must refresh as well: need a solution
     filters = '{"user": 0,' + \
-              '"service": %s,' % str(filter_list[0]) + \
-              '"segment_filter": %s,' % str(filter_list[1]) + \
+              '"service": %s,' % json.dumps(filter_list[0]) + \
+              '"segment_filter": %s,' % json.dumps(filter_list[1]) + \
               '"skills_filter": %s,' % skills_filter + \
               '"level_filter": [],' + \
               '"location_filter": %s' % location_filter + \
             '}'
 
+    print(filters)
+
     response = run.preferences_for_user(filters)
+
+    print(response)
     
     #test responses
     # response = {'user': 0, '1683': {'start_date': '2020-07-01', 'end_date': '2020-07-15', 'client': 'B', 'name': 'Strategy Project', 'skills': ['Critical thinking'], 'location': 'NYC', 'loc_requirement': 'No'}, '4286': {'start_date': '2020-12-01', 'end_date': '2020-12-15', 'client': 'F', 'name': 'Strategy Project', 'skills': ['Excel'], 'location': 'Chicago', 'loc_requirement': 'No'}, '1368': {'start_date': '2020-10-01', 'end_date': '2020-12-15', 'client': 'G', 'name': 'Strategy Project', 'skills': ['Excel'], 'location': 'Chicago', 'loc_requirement': 'No'}, '2266': {'start_date': '2020-12-01', 'end_date': '2020-12-15', 'client': 'G', 'name': 'Strategy Project', 'skills': ['Critical thinking', 'Critical thinking', 'Critical thinking'], 'location': 'Boston', 'loc_requirement': 'No'}, '2044': {'start_date': '2020-07-01', 'end_date': '2020-07-15', 'client': 'B', 'name': 'Strategy Project', 'skills': ['Excel', 'Excel', 'Excel'], 'location': 'NYC', 'loc_requirement': 'No'}, '4464': {'start_date': '2020-06-01', 'end_date': '2020-11-15', 'client': 'A', 'name': 'Strategy Project', 'skills': ['Critical thinking'], 'location': 'DC', 'loc_requirement': 'Yes'}, '53': {'start_date': '2020-06-01', 'end_date': '2020-09-15', 'client': 'A', 'name': 'Strategy Project', 'skills': ['Excel', 'Excel'], 'location': 'Denver', 'loc_requirement': 'Yes'}, '4038': {'start_date': '2020-06-01', 'end_date': '2020-12-15', 'client': 'H', 'name': 'Strategy Project', 'skills': ['Critical thinking', 'Excel', 'Excel'], 'location': 'Chicago', 'loc_requirement': 'Yes'}, '42': {'start_date': '2020-11-01', 'end_date': '2020-11-15', 'client': 'G', 'name': 'Strategy Project', 'skills': ['Critical thinking'], 'location': 'NYC', 'loc_requirement': 'No'}, '3253': {'start_date': '2020-06-01', 'end_date': '2020-07-15', 'client': 'C', 'name': 'Strategy Project', 'skills': ['Critical thinking'], 'location': 'Chicago', 'loc_requirement': 'No'}, 'projects': [1683, 4286, 1368, 2266, 2044, 4464, 53, 4038, 42, 3253]}
@@ -179,4 +185,4 @@ def project_info():
 
 
 
-    return render_template("request.html",ids = ids, skills = skills, len = len(name), client = client, start_date = start_date, end_date = end_date,name = name, loc_requirement = loc_requirement, location = location, )
+    return render_template("request.html",ids = ids, skills = skills, len = len(name), client = client, start_date = start_date, end_date = end_date,name = name, loc_requirement = loc_requirement, location = location, service = service)
