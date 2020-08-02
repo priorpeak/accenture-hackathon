@@ -39,20 +39,20 @@
 				</li>
 				<div class="dropdown-container">
 					<div class="custom-control custom-checkbox" >
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked" onclick="filterFunction(this, 'Services')">
 						<label class="custom-control-label" for="defaultUnchecked">Technology</label>
 					</div>
 
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked2" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked2" onclick="filterFunction(this, 'Services')">
 						<label class="custom-control-label" for="defaultUnchecked2">Strategy</label>
 					</div>
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked3" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked3" onclick="filterFunction(this, 'Services')">
 						<label class="custom-control-label" for="defaultUnchecked3">Interactive</label>
 					</div>
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked4" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked4" onclick="filterFunction(this, 'Services')">
 						<label class="custom-control-label" for="defaultUnchecked4">Operations</label>
 					</div>
 
@@ -62,51 +62,51 @@
 				</li>
 				<div class="dropdown-container">
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked5" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked5" onclick="filterFunction(this, 'Segment')">
 						<label class="custom-control-label" for="defaultUnchecked5">Account Leadership</label>
 					</div>
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked6" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked6" onclick="filterFunction(this, 'Segment')">
 						<label class="custom-control-label" for="defaultUnchecked6">Business</label>
 					</div>
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked7" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked7" onclick="filterFunction(this, 'Segment')">
 						<label class="custom-control-label" for="defaultUnchecked7">Design</label>
 					</div>
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked8" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked8" onclick="filterFunction(this, 'Segment')">
 						<label class="custom-control-label" for="defaultUnchecked8">Engineering</label>
 					</div>
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked9" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked9" onclick="filterFunction(this, 'Segment')">
 						<label class="custom-control-label" for="defaultUnchecked9">Finance</label>
 					</div>
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked10" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked10" onclick="filterFunction(this, 'Segment')">
 						<label class="custom-control-label" for="defaultUnchecked10">Human Resources</label>
 					</div>
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked11" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked11" onclick="filterFunction(this, 'Segment')">
 						<label class="custom-control-label" for="defaultUnchecked11">IT Operations</label>
 					</div>
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked12" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked12" onclick="filterFunction(this, 'Segment')">
 						<label class="custom-control-label" for="defaultUnchecked12">Legal</label>
 					</div>
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked13" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked13" onclick="filterFunction(this, 'Segment')">
 						<label class="custom-control-label" for="defaultUnchecked13">Security</label>
 					</div>
 					<div class="custom-control custom-checkbox">
-						<input type="checkbox" class="custom-control-input" id="defaultUnchecked14" onclick="filterFunction(this)">
+						<input type="checkbox" class="custom-control-input" id="defaultUnchecked14" onclick="filterFunction(this, 'Segment')">
 						<label class="custom-control-label" for="defaultUnchecked14">Strategy</label>
 					</div>
 				</div>
-				<li id="" onclick="filterFunction('Skills')">
+				<li id="" onclick="filterFunction('Skills', 'Skills')">
 					<a href="#three" aria-controls="three" role="tab" data-toggle="tab">Skills</a>
 				</li>
-				<li id="" onclick="filterFunction('Level')">
-					<a href="#four" aria-controls="four" role="tab" data-toggle="tab">Level</a>
+				<li id="" onclick="filterFunction('Location', 'Location')">
+					<a href="#four" aria-controls="four" role="tab" data-toggle="tab">Location</a>
 				</li>
 
 			</ul> <!-- end of side bar lists-->
@@ -133,7 +133,6 @@
 							<div class="collapsible collapsed" data-toggle="collapse" href="#descrip{{loop.index}}">
 								<div class="projectTitle">{{name[i]}}</div>
 								<div class="service">{{service[i]}}</div>
-
 								<div class="dates">Start: {{start_date[i]}}   End: {{end_date[i]}}</div>
 								<div class="location">{{location[i]}}
 									<div class="divider"></div> 
@@ -229,8 +228,8 @@
 		$('#saved').removeClass('active show')
 		$('#available').addClass('active show')
 	}*/
-	function filterFunction(id){
-		if (id == 'Skills' || id == 'Level')
+	function filterFunction(id, tab){
+		if (id == 'Skills' || id == 'Location')
 		{
 			console.log(id);
 			var category = id;
@@ -261,7 +260,7 @@
 				url:"/project_info",
 				type:"POST",
 				contentType: 'application/json;charset=UTF-8',
-				data: JSON.stringify({"categorytab":category , "checked": checked})
+				data: JSON.stringify({"categorytab":category , "checked": checked, "tab", tab})
 			}).done(function(data){
 				//console.log(data)
 				//$('div#info').html(data.tab)

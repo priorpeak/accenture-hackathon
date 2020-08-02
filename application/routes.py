@@ -13,7 +13,10 @@ json_string = '{"user": 0,' + \
               '"location_filter": false' + \
             '}'
 
-filter_list = []
+service_list = []
+segment_list = []
+skills_list = []
+location_list = []
 
 @app.route('/')
 @app.route('/home',methods=['GET','POST'])
@@ -100,11 +103,27 @@ def project_info():
     response = request.get_json()
     categories = response["categorytab"]
     checked = response["checked"]
-    if categories in filter_list:
-        filter_list.remove(categories)
-    else:
-        filter_list.append(categories)
-
+    tab = response["tab"]
+    if (tab == "Services"):
+        if categories in service_list:
+            service_list.remove(categories)
+        else:
+            service_list.append(categories)
+    else if (tab == "Segment"):
+        if categories in segment_list:
+            segment_list.remove(categories)
+        else:
+            segment_list.append(categories)
+    else if (tab == "Skills"):
+        if categories in skills_list:
+            skills_list.remove(categories)
+        else:
+            skills_list.append(categories)
+    else if (tab == "Location")
+        if categories in location_list:
+            location_list.remove(categories)
+        else:
+            location_list.append(categories)
 
     #input: filter_list (list of categories checked in front-end)
     #output: response, all projects that correspond to the categories
@@ -152,8 +171,8 @@ def project_info():
         service.append(response[str(project)]['service'])
 
     #test responses
-    name[1] = "filter_result1"
-    name[0] = "filter result 2"
+    #name[1] = "filter_result1"
+    #name[0] = "filter result 2"
     #test responses
 
 
