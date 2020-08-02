@@ -20,6 +20,13 @@ segment_list = []
 skills_list = []
 location_list = []
 
+def format_skills(skills):
+    result = ''
+    for skill in skills:
+        result += skill + ', '
+
+    return result[:-2]
+
 @app.route('/')
 @app.route('/home',methods=['GET','POST'])
 def home():
@@ -35,6 +42,7 @@ def home():
     location = []
     loc_requirement = []
     service = []
+    level = []
 
     for project in response['projects']:
         ids.append(str(project))
@@ -42,12 +50,13 @@ def home():
         end_date.append(response[str(project)]['end_date'])
         client.append(response[str(project)]['client'])
         name.append(response[str(project)]['name'])
-        skills.append(response[str(project)]['skills'])
+        skills.append(format_skills(response[str(project)]['skills']))
         location.append(response[str(project)]['location'])
         loc_requirement.append(response[str(project)]['loc_requirement'])
         service.append(response[str(project)]['service'])
+        level.append(response[str(project)]['level'])
 
-    return render_template("home.html", ids = ids, skills = skills, len = len(name), client = client, start_date = start_date, end_date = end_date,name = name, loc_requirement = loc_requirement, location = location, service = service)
+    return render_template("home.html", ids = ids, skills = skills, len = len(name), client = client, start_date = start_date, end_date = end_date,name = name, loc_requirement = loc_requirement, location = location, service = service, level = level)
 
 
 @app.route('/saved_projects', methods=['GET','POST'])
@@ -76,6 +85,7 @@ def saved_info():
     location = []
     loc_requirement = []
     service = []
+    level = []
 
     for project in response['projects']:
         ids.append(str(project))
@@ -83,17 +93,18 @@ def saved_info():
         end_date.append(response[str(project)]['end_date'])
         client.append(response[str(project)]['client'])
         name.append(response[str(project)]['name'])
-        skills.append(response[str(project)]['skills'])
+        skills.append(format_skills(response[str(project)]['skills']))
         location.append(response[str(project)]['location'])
         loc_requirement.append(response[str(project)]['loc_requirement'])
         service.append(response[str(project)]['service'])
+        level.append(response[str(project)]['level'])
 
     #test responses
     # name[1] = "saved result 1"
     # name[0] = "saved result 2"
     #test responses
 
-    return render_template("saved.html",ids = ids, skills = skills, len = len(name), client = client, start_date = start_date, end_date = end_date,name = name, loc_requirement = loc_requirement, location = location, service = service)
+    return render_template("saved.html",ids = ids, skills = skills, len = len(name), client = client, start_date = start_date, end_date = end_date,name = name, loc_requirement = loc_requirement, location = location, service = service, level=level)
 
 
 
@@ -107,6 +118,8 @@ def project_info():
     checked = response["checked"]
     tab = response["tab"]
     if (tab == "Services"):
+        if categories == "Strategy &amp; Consulting":
+            categories = "Strategy & Consulting"
         if categories in service_list:
             service_list.remove(categories)
         else:
@@ -164,6 +177,7 @@ def project_info():
     location = []
     loc_requirement = []
     service = []
+    level = []
 
     for project in response['projects']:
         ids.append(str(project))
@@ -171,10 +185,11 @@ def project_info():
         end_date.append(response[str(project)]['end_date'])
         client.append(response[str(project)]['client'])
         name.append(response[str(project)]['name'])
-        skills.append(response[str(project)]['skills'])
+        skills.append(format_skills(response[str(project)]['skills']))
         location.append(response[str(project)]['location'])
         loc_requirement.append(response[str(project)]['loc_requirement'])
         service.append(response[str(project)]['service'])
+        level.append(response[str(project)]['level'])
 
     #test responses
     #name[1] = "filter_result1"
@@ -185,4 +200,4 @@ def project_info():
 
 
 
-    return render_template("request.html",ids = ids, skills = skills, len = len(name), client = client, start_date = start_date, end_date = end_date,name = name, loc_requirement = loc_requirement, location = location, service = service)
+    return render_template("request.html",ids = ids, skills = skills, len = len(name), client = client, start_date = start_date, end_date = end_date,name = name, loc_requirement = loc_requirement, location = location, service = service, level=level)
