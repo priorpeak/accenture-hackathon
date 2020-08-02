@@ -5,13 +5,21 @@ from application import app
 
 from application.Backend import run
 
-
+json_string = '{"user": 0,' + \
+              '"service": "",' + \
+              '"segment_filter": [],' + \
+              '"skills_filter": true,' + \
+              '"level_filter": [],' + \
+              '"location_filter": false' + \
+            '}'
+            
 filter_list = []
 
 @app.route('/')
 @app.route('/home',methods=['GET','POST'])
 def home():
-    response = run.get_preferences()
+    # response = run.get_preferences()
+    response = run.preferences_for_user(json_string)
     
     ids = []
     start_date = []

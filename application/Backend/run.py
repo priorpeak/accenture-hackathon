@@ -5,11 +5,14 @@ import sys
 import time
 import turicreate as tc
 
-candidates = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/candidate_data_new.csv')
-projects = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/project_data_new.csv')
+candidates = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/candidate_data_new.csv', \
+								column_type_hints=[int,str,str,int,str,str,str,str])
+projects = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/project_data_new.csv', \
+								column_type_hints=[int,str,str,str,str,str,str,str,str,str])
 
 model_name = './application/Backend/recommendations.model'
-ratings = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/model_data_new.csv')
+ratings = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/model_data_new.csv', \
+								column_type_hints=[int,int,int])
 
 db_fn = './application/Backend/savedProjects'
 
@@ -361,40 +364,38 @@ def preferences_for_user(json_string):
 
 # For recording
 if __name__ == '__main__':
-	# args = sys.argv[1:]
+	args = sys.argv[1:]
 
-	# user_uid = int(args[0])
-	# skills_filter = str(args[1])
+	user_uid = int(args[0])
+	skills_filter = str(args[1])
 
-	# user = candidates[candidates['Candidate UID'] == int(user_uid)].unique()
-	# user_service = user['Service'][0]
+	user = candidates[candidates['Candidate UID'] == int(user_uid)].unique()
+	user_service = user['Service'][0]
 
-	# json_string = '{"user": %d,' % user_uid + \
-	# 		  '"service": "%s",' % user_service + \
-	# 		  '"segment_filter": [],' + \
-	# 		  '"skills_filter": %s,' % skills_filter + \
-	# 		  '"level_filter": [],' + \
-	# 		  '"location_filter": false' + \
-	# 		'}'
+	json_string = '{"user": %d,' % user_uid + \
+			  '"service": "%s",' % user_service + \
+			  '"segment_filter": [],' + \
+			  '"skills_filter": %s,' % skills_filter + \
+			  '"level_filter": [],' + \
+			  '"location_filter": false' + \
+			'}'
 
-	# time.sleep(2)
-	# print()
-	# print("------------------------------------------------------")
-	# print("------------------------------------------------------")
-	# print("Serving recommendations for User with UID %d" % user_uid)
-	# print("------------------------------------------------------")
-	# print("------------------------------------------------------")
+	time.sleep(2)
+	print()
+	print("------------------------------------------------------")
+	print("------------------------------------------------------")
+	print("Serving recommendations for User with UID %d" % user_uid)
+	print("------------------------------------------------------")
+	print("------------------------------------------------------")
 
-	# time.sleep(2)
-	# print(format_user(user))
+	time.sleep(2)
+	print(format_user(user))
 
-	# print("------------------------------------------------------")
-	# print("------------------------------------------------------")
+	print("------------------------------------------------------")
+	print("------------------------------------------------------")
 	
-	# prefs = preferences_for_user(json_string)
-	# print(format_preferences(prefs))
-	# print("------------------------------------------------------")
-	# print("------------------------------------------------------")
-
-	make_db()
+	prefs = preferences_for_user(json_string)
+	print(format_preferences(prefs))
+	print("------------------------------------------------------")
+	print("------------------------------------------------------")
 
