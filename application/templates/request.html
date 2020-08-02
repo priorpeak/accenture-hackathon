@@ -4,12 +4,14 @@
 
 	<div class="collapsible collapsed" data-toggle="collapse" href="#descrip{{loop.index}}">
 		<div class="projectTitle">{{name[i]}}</div>
-		<div class="service">Technology?</div>
-		<div class="dates">Start: {{start_date[i]}} End:{{end_date[i]}}</div>
+		<div class="service">{{service[i]}}</div>
+		<div class="dates">Start: {{start_date[i]}}   End: {{end_date[i]}}</div>
 		<div class="location">{{location[i]}}
 			<div class="divider"></div> 
-			<div class="country">USA </div>
+			<div class="country">USA</div>
 		</div>
+
+
 
 	</div>
 	<!---Save Button--->
@@ -36,6 +38,7 @@
 		</svg>
 	</button>
 	<div class="collapse" id = "descrip{{loop.index}}">
+		<div id="blank"></div>
 		Project Description: words
 		<div class="loc_req">Required?: {{loc_requirement[i]}}</div>
 		<div class="skills">Skills: {{skills[i]}}</div>
