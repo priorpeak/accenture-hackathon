@@ -13,12 +13,21 @@ ratings = tc.SFrame.read_csv('./application/Backend/Data Creation/Data/model_dat
 
 db_fn = './application/Backend/savedProjects'
 
+json_string = '{"user": 0,' + \
+              '"service": "",' + \
+              '"segment_filter": [],' + \
+              '"skills_filter": true,' + \
+              '"level_filter": [],' + \
+              '"location_filter": false' + \
+            '}'
+
 ### HELPER FUNCTIONS ###
 
 def date_match(user, item):
 	'''
 	Determines if a user becomes free before the start date of the item
 	'''
+
 	date_free = datetime.fromisoformat(str(user['Coming Available'][0]))
 	start_date = datetime.fromisoformat(str(item['Start Date']))
 
@@ -60,7 +69,7 @@ def make_db():
 	db = dict()
 	for i in range(1001):
 		db[str(i)] = set()
-	dbfile = open(db_fn, 'ab')
+	dbfile = open(db_fn, 'wb')
 
 	pickle.dump(db, dbfile)
 	dbfile.close()
@@ -112,6 +121,22 @@ def format_preferences(prefs):
 
 ### MAIN FUNCTIONS ###
 
+def store_preferences(json_string):
+	'''
+	Store preferences to load into routes.py
+	'''
+	preference_file = open('./application/Backend/preferences', 'wb+')
+	preferences = preferences_for_user(json_string)
+
+	pickle.dump(preferences, preference_file)
+	preference_file.close()
+
+def get_preferences():
+	with open('./application/Backend/preferences', 'rb') as file:
+		prefs = pickle.load(file)
+
+		return prefs
+
 def store_project(user_uid, project_uid):
 	'''
 	Stores project as "saved" under user.
@@ -130,7 +155,6 @@ def store_project(user_uid, project_uid):
 	else:
 		db[user] = [int(project_uid)]
 
-	print(db)
 	pickle.dump(db, dbfile)
 	dbfile.close()
 
@@ -157,24 +181,29 @@ def saved_projects_information(user_uid):
 		return item['Project UID'] in project_uids
 
 	items = projects[projects.apply(lambda x: in_uids(x))]
-	response = dict()
 
+	response = dict()
+	projects_list = list()
 	for item in items:
 		project_uid = int(item['Project UID'])
 		key = str(project_uid)
 
 		rec = projects[projects['Project UID'] == project_uid].unique()
-		contents = {'start_date': items['Start Date'][0].split(' ')[0], \
-					'end_date': items['End Date'][0].split(' ')[0], \
-					'client': items['Client'][0], \
-					'name': items['Project Name'][0], \
-					'skills': list(set(str(rec['Required Skills'][0]).split('/')[:-1])), \
-					'location': items['Location'][0], \
-					'loc_requirement': items['Local Requirement'][0], \
-					'level': items['Level'][0], \
-					'service': items['Service'][0]}
 
+		contents = {'start_date': rec['Start Date'][0].split(' ')[0], \
+					'end_date': rec['End Date'][0].split(' ')[0], \
+					'client': rec['Client'][0], \
+					'name': rec['Project Name'][0], \
+					'skills': list(set(str(rec['Required Skills'][0]).split('/')[:-1])), \
+					'location': rec['Location'][0], \
+					'loc_requirement': rec['Local Requirement'][0], \
+					'level': rec['Level'][0], \
+					'service': rec['Service'][0]}
+
+		projects_list.append(project_uid)
 		response[key] = contents
+
+	response['projects'] = projects_list
 
 	return response
 
@@ -238,7 +267,6 @@ def preferences_for_user(json_string):
 	# Data variables
 	global candidates, projects, model_name, ratings
 
-
 	# Parse the JSON string and extract required information
 	request = json.loads(json_string)
 	user_uid = int(request['user'])
@@ -260,9 +288,11 @@ def preferences_for_user(json_string):
 	model = tc.load_model(model_name)
 	user = candidates[candidates['Candidate UID'] == int(user_uid)].unique()
 
-	# Filter results by service
 	items = projects
-	items = items[items['Service'] == service]
+
+	# Filter results by service
+	if service != '':
+		items = items[items['Service'] == service]
 	# print("**", len(items))
 
 	# Filter by start dates that occur after the user becomes free
@@ -331,38 +361,40 @@ def preferences_for_user(json_string):
 
 # For recording
 if __name__ == '__main__':
-	args = sys.argv[1:]
+	# args = sys.argv[1:]
 
-	user_uid = int(args[0])
-	skills_filter = str(args[1])
+	# user_uid = int(args[0])
+	# skills_filter = str(args[1])
 
-	user = candidates[candidates['Candidate UID'] == int(user_uid)].unique()
-	user_service = user['Service'][0]
+	# user = candidates[candidates['Candidate UID'] == int(user_uid)].unique()
+	# user_service = user['Service'][0]
 
-	json_string = '{"user": %d,' % user_uid + \
-			  '"service": "%s",' % user_service + \
-			  '"segment_filter": [],' + \
-			  '"skills_filter": %s,' % skills_filter + \
-			  '"level_filter": [],' + \
-			  '"location_filter": false' + \
-			'}'
+	# json_string = '{"user": %d,' % user_uid + \
+	# 		  '"service": "%s",' % user_service + \
+	# 		  '"segment_filter": [],' + \
+	# 		  '"skills_filter": %s,' % skills_filter + \
+	# 		  '"level_filter": [],' + \
+	# 		  '"location_filter": false' + \
+	# 		'}'
 
-	time.sleep(2)
-	print()
-	print("------------------------------------------------------")
-	print("------------------------------------------------------")
-	print("Serving recommendations for User with UID %d" % user_uid)
-	print("------------------------------------------------------")
-	print("------------------------------------------------------")
+	# time.sleep(2)
+	# print()
+	# print("------------------------------------------------------")
+	# print("------------------------------------------------------")
+	# print("Serving recommendations for User with UID %d" % user_uid)
+	# print("------------------------------------------------------")
+	# print("------------------------------------------------------")
 
-	time.sleep(2)
-	print(format_user(user))
+	# time.sleep(2)
+	# print(format_user(user))
 
-	print("------------------------------------------------------")
-	print("------------------------------------------------------")
+	# print("------------------------------------------------------")
+	# print("------------------------------------------------------")
 	
-	prefs = preferences_for_user(json_string)
-	print(format_preferences(prefs))
-	print("------------------------------------------------------")
-	print("------------------------------------------------------")
+	# prefs = preferences_for_user(json_string)
+	# print(format_preferences(prefs))
+	# print("------------------------------------------------------")
+	# print("------------------------------------------------------")
+
+	make_db()
 
