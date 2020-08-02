@@ -247,7 +247,7 @@
 				$("#place_for_request").html(data);
 			}); */
 			$.ajax({
-				url:"/projects_info",
+				url:"/project_info",
 				type:"POST",
 				contentType: 'application/json;charset=UTF-8',
 				data: JSON.stringify({"categorytab":category , "checked": $(id)[0].checked})
@@ -257,7 +257,7 @@
 
 				console.log("endrequest")
 				//$('div#title_list').html(data.title_list)
-				$("#stored_saved_info").html(data);
+				$("#place_for_request").html(data);
 			});
 
 		}
