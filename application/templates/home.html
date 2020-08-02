@@ -102,10 +102,10 @@
 						<label class="custom-control-label" for="defaultUnchecked14">Strategy</label>
 					</div>
 				</div>
-				<li id="" onclick="filterFunction('Skills', 'Skills')">
+				<li id="skills" onclick="filterFunction('Skills', 'Skills')">
 					<a href="#three" aria-controls="three" role="tab" data-toggle="tab">Skills</a>
 				</li>
-				<li id="" onclick="filterFunction('Location', 'Location')">
+				<li id="location" onclick="filterFunction('Location', 'Location')">
 					<a href="#four" aria-controls="four" role="tab" data-toggle="tab">Location</a>
 				</li>
 
@@ -229,11 +229,37 @@
 		$('#available').addClass('active show')
 	}*/
 	function filterFunction(id, tab){
-		if (id == 'Skills' || id == 'Location')
+		if (id == 'Skills')
 		{
 			console.log(id);
 			var category = id;
+
 			var checked = true;
+			if (document.getElementById("skills").style.background == "rgb(125, 120, 194)")
+			{
+
+				document.getElementById("skills").style.background = "rgb(162, 155, 254)";
+			}
+			else
+			{
+				document.getElementById("skills").style.background = "rgb(125, 120, 194)";
+			}
+		}
+		else if (id == 'Location'){
+			console.log(id);
+			var category = id;
+			var checked = true;
+			if (document.getElementById("location").style.background == "rgb(125, 120, 194)")
+			{
+
+				document.getElementById("location").style.background = "rgb(162, 155, 254)";
+			}
+			else
+			{
+				document.getElementById("location").style.background = "rgb(125, 120, 194)";
+			}
+
+
 		}
 		else{
 			var category = $(id)[0].nextElementSibling.innerHTML;
@@ -513,7 +539,7 @@ BODY::after {
 	width: 350px;
 	height: 500px;
 	margin-top: 10px;
-	display: none;
+	display: block;
 }
 
 .chatTitle {
@@ -608,6 +634,7 @@ BODY::after {
 	/*background: #8c7ae6;*/
 	/*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%);*/
 }
+
 
 .dropdown-container {
 	display: none;
@@ -720,7 +747,7 @@ BODY::after {
 	font-size: 14px;
 	float: left;
 	margin-top: 70px;
-	margin-left: 210px;
+	margin-left: 250px;
 }
 
 .collapsible:hover{
