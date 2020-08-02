@@ -219,7 +219,7 @@ def preferences_for_user(json_string):
 	Args:
 		json_string (str): The details of the request in the format
 			'{"user": <USER_UID>,
-			  "service": "<SERVICE>",
+			  "service": ["<SERVICE_1>", "<SERVICE_2>", ...],
 			  "segment_filter": ["<SEGMENT_1>", "<SEGMENT_2>", ...],
 			  "skills_filter": <SKILLS_BOOL>,
 			  "level_filter": [<LOW_LVL>, <HIGH_LVL>],
@@ -273,7 +273,7 @@ def preferences_for_user(json_string):
 	# Parse the JSON string and extract required information
 	request = json.loads(json_string)
 	user_uid = int(request['user'])
-	service = str(request['service'])
+	services = str(request['service'])
 	if 'n' in request:
 		n = int(request['n'])
 	else:
@@ -294,9 +294,9 @@ def preferences_for_user(json_string):
 	items = projects
 
 	# Filter results by service
-	if service != '':
-		items = items[items['Service'] == service]
-	# print("**", len(items))
+	if len(services) > 0:
+		for service in services:
+			items = items[items['Service'] == service]
 
 	# Filter by start dates that occur after the user becomes free
 	items = items[items.apply(lambda x: date_match(user, x))]
