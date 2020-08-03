@@ -293,27 +293,27 @@ def preferences_for_user(json_string):
 
 	items = projects.copy()
 
-	print("*", len(items))
+	# print("*", len(items))
 
 	# Filter results by service
 	if len(services) > 0:
 		items = items[items.apply(lambda x: x['Service'] in services)]
 
-	print("**", len(items))
+	# print("**", len(items))
 
 	# Filter by start dates that occur after the user becomes free
 	items = items[items.apply(lambda x: date_match(user, x))]
-	print("***", len(items))
+	# print("***", len(items))
 
 	# Deal with binary filters (skills and location)
 	if skills_filter:
 		items = items[items.apply(lambda x: contains_skills(user, x))]
-		print("****", len(items))
+		# print("****", len(items))
 		# By default, apply no filter
 
 	if location_filter:
 		items = items[items.apply(lambda x: location_match(user, x))]
-		print("*****", len(items))
+		# print("*****", len(items))
 		# By default, apply no filter
 
 	# Deal with talent segment filter
@@ -321,10 +321,9 @@ def preferences_for_user(json_string):
 		items = items[items.apply(lambda x: x['Project Name'] in segment_filter)]
 	else:
 		# By default, filter by the user's talent segment
-		# project_name = str(user['Talent Segment'][0]) + ' Project'
-		# items = items[items['Project Name'] == project_name]
-		pass
-	print("******", len(items))
+		project_name = str(user['Talent Segment'][0]) + ' Project'
+		items = items[items['Project Name'] == project_name]
+	# print("******", len(items))
 
 	# Deal with level filter
 	if len(level_filter) > 0:
@@ -335,7 +334,7 @@ def preferences_for_user(json_string):
 		# By default, filter by the user's current level as greater and two higher as lesser
 		user_level = int(user['Level'][0])
 		items = items[items.apply(lambda x: in_range(user_level - 2, user_level, x))]
-	print("*******", len(items))
+	# print("*******", len(items))
 
 	recs = model.recommend([user_uid], items=items['Project UID'], exclude_known = False, k=n)
 
@@ -369,15 +368,12 @@ if __name__ == '__main__':
 	args = sys.argv[1:]
 
 	user_uid = int(args[0])
-	skills_filter = str(args[1])
-
 	user = candidates[candidates['Candidate UID'] == int(user_uid)].unique()
-	user_service = user['Service'][0]
 
 	json_string = '{"user": %d,' % user_uid + \
-			  '"service": "%s",' % user_service + \
+			  '"service": [],' + \
 			  '"segment_filter": [],' + \
-			  '"skills_filter": %s,' % skills_filter + \
+			  '"skills_filter": true,' + \
 			  '"level_filter": [],' + \
 			  '"location_filter": false' + \
 			'}'
@@ -400,4 +396,3 @@ if __name__ == '__main__':
 	print(format_preferences(prefs))
 	print("------------------------------------------------------")
 	print("------------------------------------------------------")
-	
